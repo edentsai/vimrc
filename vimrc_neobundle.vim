@@ -721,6 +721,21 @@
         " }
         NeoBundle 'tpope/vim-surround'
     " }
+    " tpope/vim-speeddating - Use CTRL-A/CTRL-X to increment dates, times, and more {
+        NeoBundle 'tpope/vim-speeddating', {
+            \ 'autoload': {
+                \ 'mappings': ['<C-a>', '<C-x>'],
+            \ }
+        \ }
+
+        let g:speeddating_no_mappings = 1
+
+        nmap <leader>d<C-a> <Plug>SpeedDatingUp<Leader>d
+        nmap <leader>d<C-x> <Plug>SpeedDatingDown<Leader>d
+        nmap <leader>d+ <Plug>SpeedDatingUp<Leader>d
+        nmap <leader>d- <Plug>SpeedDatingDown<Leader>d
+        nmap <leader>dn <Plug>SpeedDatingNowUTC<Leader>d
+    " }
 " }
 
 " NeoBundle - Running {
