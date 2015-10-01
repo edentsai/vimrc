@@ -16,9 +16,15 @@
 [submodule "bundles/supertab"]
     path = bundles/supertab
     url = https://github.com/ervandew/supertab
+[submodule "bundles/tlib_vim"]
+    path = bundles/tlib_vim
+    url = https://github.com/tomtom/tlib_vim
 [submodule "bundles/undotree"]
     path = bundles/undotree
     url = https://github.com/mbbill/undotree
+[submodule "bundles/vim-addon-mw-utils"]
+    path = bundles/vim-addon-mw-utils
+    url = https://github.com/MarcWeber/vim-addon-mw-utils
 [submodule "bundles/vim-airline"]
     path = bundles/vim-airline
     url = https://github.com/bling/vim-airline
@@ -31,6 +37,12 @@
 [submodule "bundles/vim-indent-guides"]
     path = bundles/vim-indent-guides
     url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "bundles/vim-snipmate"]
+    path = bundles/vim-snipmate
+    url = https://github.com/garbas/vim-snipmate
+[submodule "bundles/vim-snippets"]
+    path = bundles/vim-snippets
+    url = https://github.com/honza/vim-snippets
 [submodule "bundles/vim-startify"]
     path = bundles/vim-startify
     url = https://github.com/mhinz/vim-startify

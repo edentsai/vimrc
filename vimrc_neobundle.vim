@@ -245,6 +245,27 @@
         let g:SuperTabDefaultCompletionType = 'context'
         let g:SuperTabContextDefaultCompletionType = '<C-p>'
     " }
+    " garbas/vim-snipmate - Provide support for textual snippets {
+        NeoBundleLazy 'garbas/vim-snipmate', {
+            \ 'depends': [
+                \ 'MarcWeber/vim-addon-mw-utils',
+                \ 'tomtom/tlib_vim',
+                \ 'honza/vim-snippets'
+            \ ],
+            \ 'autoload': {
+                \ 'insert': 1
+            \ }
+        \ }
+
+        let g:commentChar = {
+            \ 'vim'   : '"',
+            \ 'c'     : '//',
+            \ 'cpp'   : '//',
+            \ 'sh'    : '#',
+            \ 'python': '#',
+            \ 'php'   : '//'
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
