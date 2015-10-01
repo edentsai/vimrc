@@ -127,6 +127,30 @@
         set noerrorbells                " Disable the error bells.
     " }
 " }
+" Auto Commands {
+    " File & Directory {
+        " " Auto reload vimrc when editing it {
+        "     autocmd! BufWritePost .vimrc source %
+        " " }
+        " Auto remove all trailing whitespace when save file {
+            autocmd BufWritePre * :%s/\s\+$//e
+        " }
+        " Resize the divsions if the Vim window size changes {
+            autocmd VimResized * exe "normal! \<c-w>="
+        " }
+        " Restore cursor to file position in previous editing session {
+            set viminfo='10,\"100,:20,%,n~/.viminfo
+            autocmd BufReadPost *
+                \ if line("'\"") > 0 |
+                    \ if line("'\"") <= line("$") |
+                        \ exe("norm '\"") |
+                    \ else |
+                        \ exe "norm $" |
+                    \ endif |
+                \ endif
+        " }
+    " }
+" }
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')
