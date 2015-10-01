@@ -1204,6 +1204,31 @@
         autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
     " }
 " }
+" PHP {
+    " rayburgemeestre/phpfolding.vim - Automatic folding of PHP {
+        NeoBundleLazy 'rayburgemeestre/phpfolding.vim', {
+            \ 'autoload': {
+                \ 'filetypes': ['php'],
+                \ 'commands': [
+                    \ 'EnablePHPFolds',
+                    \ 'EnableFastPHPFolds',
+                \ ]
+            \ }
+        \ }
+
+        let php_folding = 1
+
+        if neobundle#tap('phpfolding.vim')
+            function! neobundle#hooks.on_source(bundle)
+                nnoremap <Bslash>pf :EnableFastPHPFolds<CR>
+            endfunction
+            call neobundle#untap()
+        endif
+
+        " " Refresh PHPFolds on insert leave
+        " autocmd InsertLeave *.php if &modified && exists(":EnableFastPHPFolds") | :EnableFastPHPFolds
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

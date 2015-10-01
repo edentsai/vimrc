@@ -43,6 +43,9 @@
 [submodule "bundles/nerdtree"]
     path = bundles/nerdtree
     url = https://github.com/scrooloose/nerdtree
+[submodule "bundles/phpfolding.vim"]
+    path = bundles/phpfolding.vim
+    url = https://github.com/rayburgemeestre/phpfolding.vim
 [submodule "bundles/supertab"]
     path = bundles/supertab
     url = https://github.com/ervandew/supertab
