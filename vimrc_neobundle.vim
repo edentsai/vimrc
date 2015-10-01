@@ -383,6 +383,23 @@
         endif
 
     " }
+    " SirVer/ultisnips - The ultimate snippet solution for Vim {
+        NeoBundle 'SirVer/ultisnips', {
+            \ 'depends': [
+                \ 'honza/vim-snippets',
+                \ 'garbas/vim-snipmate'
+            \ ],
+        \ }
+
+        let g:UltiSnipsExpandTrigger = '<C-Bslash>'
+        let g:UltiSnipsJumpForwardTrigger = '<C-p>'
+        let g:UltiSnipsJumpBackwardTrigger = '<C-n>'
+        let g:UltiSnipsListSnippets = '<C-z>'
+        let g:UltiSnipsEnableSnipMate = 1
+        let g:UltiSnipsEditSplit = 'vertical'
+        let g:UltiSnipsSnippetsDir = $HOME . '/.vim/UltiSnips'
+        let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+    " }
 " }
 
 " NeoBundle - Running {

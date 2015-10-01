@@ -31,6 +31,9 @@
 [submodule "bundles/tlib_vim"]
     path = bundles/tlib_vim
     url = https://github.com/tomtom/tlib_vim
+[submodule "bundles/ultisnips"]
+    path = bundles/ultisnips
+    url = https://github.com/SirVer/ultisnips
 [submodule "bundles/undotree"]
     path = bundles/undotree
     url = https://github.com/mbbill/undotree
