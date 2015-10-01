@@ -1,6 +1,9 @@
 [submodule "bundles/ag.vim"]
     path = bundles/ag.vim
     url = https://github.com/rking/ag.vim
+[submodule "bundles/clever-f.vim"]
+    path = bundles/clever-f.vim
+    url = https://github.com/rhysd/clever-f.vim
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim
