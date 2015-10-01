@@ -55,6 +55,9 @@
 [submodule "bundles/vim-indent-guides"]
     path = bundles/vim-indent-guides
     url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "bundles/vim-matchit"]
+    path = bundles/vim-matchit
+    url = https://github.com/edsono/vim-matchit
 [submodule "bundles/vim-snipmate"]
     path = bundles/vim-snipmate
     url = https://github.com/garbas/vim-snipmate
