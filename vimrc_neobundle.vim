@@ -1156,6 +1156,13 @@
         let g:html5_microdata_attributes_complete = 1
         let g:html5_aria_attributes_complete = 1
     " }
+    " othree/html5-syntax.vim - HTML5 syntax for Vim {
+        NeoBundleLazy 'othree/html5-syntax.vim', {
+            \ 'autoload': {
+                \ 'filetypes': ['htm', 'html']
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
