@@ -527,6 +527,24 @@
         map <Leader>?  <Plug>(incsearch-backward)
         map <Leader>g/ <Plug>(incsearch-stay)
     " }
+    " haya14busa/vim-asterisk - *-Improved {
+        NeoBundleLazy 'haya14busa/vim-asterisk', {
+            \ 'autoload': {
+                \ 'mappings': ['<Plug>(asterisk-']
+            \ }
+        \ }
+
+        let g:asterisk#keeppos = 1
+
+        map *   <Plug>(asterisk-*)
+        map #   <Plug>(asterisk-#)
+        map g*  <Plug>(asterisk-g*)
+        map g#  <Plug>(asterisk-g#)
+        map z*  <Plug>(asterisk-z*)
+        map gz* <Plug>(asterisk-gz*)
+        map z#  <Plug>(asterisk-z#)
+        map gz# <Plug>(asterisk-gz#)
+    " }
 " }
 
 " NeoBundle - Running {

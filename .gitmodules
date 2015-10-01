@@ -52,6 +52,9 @@
 [submodule "bundles/vim-airline"]
     path = bundles/vim-airline
     url = https://github.com/bling/vim-airline
+[submodule "bundles/vim-asterisk"]
+    path = bundles/vim-asterisk
+    url = https://github.com/haya14busa/vim-asterisk
 [submodule "bundles/vim-bufferline"]
     path = bundles/vim-bufferline
     url = https://github.com/bling/vim-bufferline
