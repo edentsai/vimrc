@@ -1193,6 +1193,17 @@
         let g:vim_json_syntax_conceal = 0
     " }
 " }
+" Markdown {
+    " tpope/vim-markdown - Markdown runtime files {
+        NeoBundleLazy 'tpope/vim-markdown', {
+            \ 'autoload': {
+                \ 'filetypes': ['markdown', 'md']
+            \ }
+        \ }
+
+        autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

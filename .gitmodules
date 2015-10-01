@@ -124,6 +124,9 @@
 [submodule "bundles/vim-json"]
     path = bundles/vim-json
     url = https://github.com/elzr/vim-json
+[submodule "bundles/vim-markdown"]
+    path = bundles/vim-markdown
+    url = https://github.com/tpope/vim-markdown
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit
