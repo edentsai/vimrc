@@ -10,6 +10,9 @@
 [submodule "bundles/vimproc.vim"]
     path = bundles/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim
+[submodule "bundles/winresizer"]
+    path = bundles/winresizer
+    url = https://github.com/jimsei/winresizer
 [submodule "bundles/xterm-color-table.vim"]
     path = bundles/xterm-color-table.vim
     url = https://github.com/guns/xterm-color-table.vim
