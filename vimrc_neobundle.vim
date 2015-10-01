@@ -545,6 +545,18 @@
         map z#  <Plug>(asterisk-z#)
         map gz# <Plug>(asterisk-gz#)
     " }
+    " junegunn/vim-easy-align - a vim alignment plugin {
+        NeoBundleLazy 'junegunn/vim-easy-align', {
+            \ 'autoload': {
+                \ 'mappings': ['<Plug>(asterisk-']
+            \ }
+        \ }
+
+        " start interactive easyalign in visual mode (e.g. vip<CR>)
+        vmap <CR> <Plug>(EasyAlign)
+        " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+        nmap ga <Plug>(EasyAlign)
+    " }
 " }
 
 " NeoBundle - Running {

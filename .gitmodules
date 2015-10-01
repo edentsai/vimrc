@@ -61,6 +61,9 @@
 [submodule "bundles/vim-diff-enhanced"]
     path = bundles/vim-diff-enhanced
     url = https://github.com/chrisbra/vim-diff-enhanced
+[submodule "bundles/vim-easy-align"]
+    path = bundles/vim-easy-align
+    url = https://github.com/junegunn/vim-easy-align
 [submodule "bundles/vim-easymotion"]
     path = bundles/vim-easymotion
     url = https://github.com/easymotion/vim-easymotion
