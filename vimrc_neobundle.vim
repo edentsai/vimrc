@@ -1046,6 +1046,20 @@
             \ }
         \ }
     " }
+    " hail2u/vim-css3-syntax - Add CSS3 syntax support to vim's built-in `syntax/css.vim`{
+        NeoBundleLazy 'hail2u/vim-css3-syntax', {
+            \ 'autoload': {
+                \ 'filetypes': ['css', 'htm', 'html', 'xhtml', 'phtml']
+            \ }
+        \ }
+
+        if neobundle#tap('vim-css3-syntax')
+            function! neobundle#hooks.on_source(bundle)
+                autocmd FileType css setlocal iskeyword+=-
+            endfunction
+            call neobundle#untap()
+        endif
+    " }
 " }
 
 " NeoBundle - Running {

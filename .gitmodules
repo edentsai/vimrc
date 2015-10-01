@@ -79,6 +79,9 @@
 [submodule "bundles/vim-css-color"]
     path = bundles/vim-css-color
     url = https://github.com/ap/vim-css-color
+[submodule "bundles/vim-css3-syntax"]
+    path = bundles/vim-css3-syntax
+    url = https://github.com/hail2u/vim-css3-syntax
 [submodule "bundles/vim-diff-enhanced"]
     path = bundles/vim-diff-enhanced
     url = https://github.com/chrisbra/vim-diff-enhanced
