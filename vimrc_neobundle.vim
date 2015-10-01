@@ -234,6 +234,18 @@
         nnoremap <Bslash><Bslash> :NERDTreeToggle<CR>
     " }
 " }
+" Syntax & Completion {
+    " ervandew/supertab - Allows you to use <Tab> for all your insert completion needs {
+        NeoBundleLazy 'ervandew/supertab', {
+            \ 'autoload': {
+                \ 'insert': 1
+            \ }
+        \ }
+
+        let g:SuperTabDefaultCompletionType = 'context'
+        let g:SuperTabContextDefaultCompletionType = '<C-p>'
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

@@ -13,6 +13,9 @@
 [submodule "bundles/nerdtree"]
     path = bundles/nerdtree
     url = https://github.com/scrooloose/nerdtree
+[submodule "bundles/supertab"]
+    path = bundles/supertab
+    url = https://github.com/ervandew/supertab
 [submodule "bundles/undotree"]
     path = bundles/undotree
     url = https://github.com/mbbill/undotree
