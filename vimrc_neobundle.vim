@@ -1038,6 +1038,15 @@
         \ }
     " }
 " }
+" CSS {
+    " ap/vim-css-color - Highlight colors in css files {
+        NeoBundleLazy 'ap/vim-css-color', {
+            \ 'autoload': {
+                \ 'filetypes': ['css', 'htm', 'html', 'xhtml', 'phtml']
+            \ }
+        \ }
+    " }
+" }
 
 " NeoBundle - Running {
     " End {
