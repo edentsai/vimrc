@@ -94,6 +94,27 @@
         set showmatch                  " When a bracket is inserted, briefly jump to the matching one.
         set matchtime=3                " Tenths of a second to show the matching paren when 'showmatch' is set.
     " }
+    " Wildmenu {
+        set completeopt=longest,menu    " A list of options for insert mode completion.
+        set pumheight=10                " Maximum number of items to show in the popup menu for Insert mode completion.
+        set wildchar=<Tab>              " Character you have to type to start wildcard expansion in the command-line.
+        set wildmenu                    " Enable command-line completion operates in an enhanced mode.
+        set wildmode=list:longest,full  " Completion mode is used for the character specified with 'wildchar'.
+
+        " A list of file patterns is ignored when expanding wildcards.
+        set wildignore+=*.sw?                       " Vim swap files
+        set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~ " Backup files
+        set wildignore+=*.luac                      " Lua byte code
+        set wildignore+=*.jar                       " Java archives
+        set wildignore+=*.pyc                       " Python byte code
+        set wildignore+=*.stats                     " Pylint stats
+        set wildignore+=*.class,*.o
+        set wildignore+=*.zip
+        set wildignore+=*.exe
+
+        " Files with these suffixes get a lower priority when multiple files match a wildcard
+        set suffixes=.bak,~,.o,.info,.swp,.obj
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
