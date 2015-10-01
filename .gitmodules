@@ -10,6 +10,9 @@
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim
+[submodule "bundles/emmet-vim"]
+    path = bundles/emmet-vim
+    url = https://github.com/mattn/emmet-vim
 [submodule "bundles/html-textobjects"]
     path = bundles/html-textobjects
     url = https://github.com/mjbrownie/html-textobjects

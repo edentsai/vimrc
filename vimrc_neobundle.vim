@@ -1137,6 +1137,15 @@
         let g:airline#extensions#branch#format = 0
     " }
 " }
+" HTML, XML {
+    " mattn/emmet-vim - The essential toolkit for web-developers {
+        NeoBundleLazy 'mattn/emmet-vim', {
+            \ 'autoload': {
+                \ 'filetypes': ['xml', 'htm', 'html', 'css', 'markdown']
+            \ }
+        \ }
+    " }
+" }
 
 " NeoBundle - Running {
     " End {
