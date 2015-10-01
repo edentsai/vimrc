@@ -336,6 +336,53 @@
         " Configure vim-airline extension
         let g:airline#extensions#syntastic#enabled = 1
     " }
+    " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
+        NeoBundleLazy 'Shougo/neocomplete.vim', {
+            \ 'depends': ['Shougo/vimproc.vim'],
+            \ 'autoload': {
+                \ 'insert': 1
+            \ }
+        \ }
+
+        let g:neocomplete#enable_cursor_hold_i = 0
+        let g:acp_enableAtStartup = 0
+        let g:neocomplete#enable_auto_select = 1
+        let g:neocomplete#enable_at_startup = 1
+        let g:neocomplete#enable_smart_case = 1
+        let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+        let g:neocomplete#min_keyword_length = 2
+        let g:neocomplete#auto_completion_start_length = 3
+        let g:neocomplete#manual_completion_start_length = 3
+        let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+        " Define keyword.
+        if !exists('g:neocomplete#keyword_patterns')
+            let g:neocomplete#keyword_patterns = {}
+        endif
+        let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+        " Enable heavy omni completion.
+        if !exists('g:neocomplete#sources#omni#input_patterns')
+            let g:neocomplete#sources#omni#input_patterns = {}
+        endif
+        let g:neocomplete#sources#omni#input_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+
+        if neobundle#tap('neocomplete.vim')
+            function! neobundle#hooks.on_source(bundle)
+                " <TAB>: completion.
+                inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+                " <BackSpace>: close popup and delete backword char.
+                inoremap <expr><BackSpace> neocomplete#smart_close_popup() . "\<C-h>"
+
+                " <C-h>, <Left>: close popup and move backword char.
+                inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<Left>"
+                inoremap <expr><Left> neocomplete#smart_close_popup() . "\<Left>"
+            endfunction
+            call neobundle#untap()
+        endif
+
+    " }
 " }
 
 " NeoBundle - Running {
