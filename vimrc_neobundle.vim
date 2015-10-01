@@ -1094,6 +1094,33 @@
         " autocmd BufWritePre *.csv :%UnArrangeColumn
     " }
 " }
+" Git {
+    " mhinz/vim-signify - Show a VCS diff using Vim's sign column {
+        NeoBundle 'mhinz/vim-signify', {
+            \ 'depends': ['bling/vim-airline']
+        \ }
+
+        let g:signify_vcs_list = ['git']
+        let g:signify_disable_by_default = 0
+        let g:signify_line_highlight = 0
+        let g:signify_mapping_toggle = '<leader>gt'
+        let g:signify_mapping_prev_hunk = '<leader>gk'
+        let g:signify_mapping_next_hunk = '<leader>gj'
+
+        " Configure vim-airline extension
+        let g:airline#extensions#hunks#enabled = 1
+        let g:airline#extensions#hunks#non_zero_only = 1
+        let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
+
+        " TODO
+        " hi SignifySignAdd      ctermfg=119 ctermbg=none  cterm=bold
+        " hi SignifySignDelete   ctermfg=167 ctermbg=none  cterm=bold
+        " hi SignifySignChange   ctermfg=227 ctermbg=none  cterm=bold
+
+        " highlight link SignifySignChangeDelete    SignifySignChange
+        " highlight link SignifySignDeleteFirstLine SignifySignDelete
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

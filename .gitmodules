@@ -118,6 +118,9 @@
 [submodule "bundles/vim-signature"]
     path = bundles/vim-signature
     url = https://github.com/kshenoy/vim-signature
+[submodule "bundles/vim-signify"]
+    path = bundles/vim-signify
+    url = https://github.com/mhinz/vim-signify
 [submodule "bundles/vim-snipmate"]
     path = bundles/vim-snipmate
     url = https://github.com/garbas/vim-snipmate
