@@ -1228,6 +1228,15 @@
         " " Refresh PHPFolds on insert leave
         " autocmd InsertLeave *.php if &modified && exists(":EnableFastPHPFolds") | :EnableFastPHPFolds
     " }
+    " shawncplus/phpcomplete.vim - Improved PHP omnicompletion {
+        NeoBundleLazy 'shawncplus/phpcomplete.vim', {
+            \ 'autoload': {
+                \ 'filetypes': 'php'
+            \ }
+        \ }
+
+        let g:phpcomplete_relax_static_constraint = 1
+    " }
 " }
 
 " NeoBundle - Running {
