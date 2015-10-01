@@ -198,6 +198,21 @@
 
         nmap <Bslash>u :UndotreeToggle<CR>
     " }
+    " mhinz/vim-startify - A start screen for Vim {
+        NeoBundleLazy 'mhinz/vim-startify', {
+            \ 'autoload': {
+                \ 'commands': ['Startify'],
+            \ }
+        \ }
+
+        let g:startify_change_to_dir = 1
+        let g:startify_files_number = 15
+        let g:startify_session_dir = '~/.vim/session'
+        let g:startify_session_autoload = 0
+        let g:startify_session_persistence = 1
+        let g:startify_session_delete_btartify_session_delete_buffersffers = 1
+        let g:startify_bookmarks = ['~/.dotfiles']
+    " }
 " }
 
 " NeoBundle - Running {
