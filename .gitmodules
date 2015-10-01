@@ -4,6 +4,9 @@
 [submodule "bundles/clever-f.vim"]
     path = bundles/clever-f.vim
     url = https://github.com/rhysd/clever-f.vim
+[submodule "bundles/csv.vim"]
+    path = bundles/csv.vim
+    url = https://github.com/chrisbra/csv.vim
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim

@@ -1061,6 +1061,39 @@
         endif
     " }
 " }
+" CSV {
+    " chrisbra/csv.vim - A Filetype plugin for csv files {
+        NeoBundleLazy 'chrisbra/csv.vim', {
+            \ 'depends': ['bling/vim-airline'],
+            \ 'autoload': {
+                \ 'commands': ['ArrangeColumn'],
+                \ 'filetypes': ['csv', 'tsv']
+            \ }
+        \ }
+
+        let g:csv_autocmd_arrange = 0
+        let g:csv_no_conceal = 0
+
+        if neobundle#tap('csv.vim')
+            function! neobundle#hooks.on_source(bundle)
+                nnoremap <Bslash>ac :%ArrangeColumn<CR>:Header 1<CR>
+                nnoremap <Bslash>uac :%UnArrangeColumn<CR>:Header 1<CR>
+            endfunction
+            call neobundle#untap()
+        endif
+
+        highlight link CSVColumnHeaderEven IndentGuidesEven
+        highlight link CSVColumnHeaderOdd IndentGuidesOdd
+        highlight link CSVColumnEven IndentGuidesEven
+        highlight link CSVColumnOdd IndentGuidesOdd
+
+        " Configure vim-airline extension
+        let g:airline#extensions#csv#enabled = 1
+        let g:airline#extensions#csv#column_display = 'Name'
+
+        " autocmd BufWritePre *.csv :%UnArrangeColumn
+    " }
+" }
 
 " NeoBundle - Running {
     " End {
