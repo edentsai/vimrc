@@ -52,6 +52,9 @@
 [submodule "bundles/phpfolding.vim"]
     path = bundles/phpfolding.vim
     url = https://github.com/rayburgemeestre/phpfolding.vim
+[submodule "bundles/promptline.vim"]
+    path = bundles/promptline.vim
+    url = https://github.com/edkolev/promptline.vim
 [submodule "bundles/supertab"]
     path = bundles/supertab
     url = https://github.com/ervandew/supertab
