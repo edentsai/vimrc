@@ -1282,6 +1282,15 @@
     "     let airline#extensions#promptline#snapshot_file = '~/.bash/prompts/promptline.sh'
     " " }
 " }
+" TMUX {
+    " vimez/vim-tmux - Vim syntax highlighting for tmux.conf {
+        NeoBundleLazy 'vimez/vim-tmux', {
+            \ 'autoload': {
+                \ 'filetypes': ['conf', 'tmux']
+            \ }
+        \ }
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

@@ -232,6 +232,9 @@
 [submodule "bundles/vim-textobj-xml-attribute"]
     path = bundles/vim-textobj-xml-attribute
     url = https://github.com/akiyan/vim-textobj-xml-attribute
+[submodule "bundles/vim-tmux"]
+    path = bundles/vim-tmux
+    url = https://github.com/vimez/vim-tmux
 [submodule "bundles/vim-unimpaired"]
     path = bundles/vim-unimpaired
     url = https://github.com/tpope/vim-unimpaired
