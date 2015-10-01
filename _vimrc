@@ -24,6 +24,30 @@
         " A list of encodings considered when starting to edit an existing file.
         set fileencodings=utf-8,ucs-bom,ig5,gb2312,latin1
     " }
+    " Terminal Options {
+        set t_Co=256                    " Number of colors in terminal
+        set ttyfast                     " Indicates a fast terminal connection
+    " }
+    " Interfaces {
+        set colorcolumn=120             " Highlight the screen column.
+        set cursorcolumn                " Highlight the screen column of the cursor.
+        set cursorline                  " Highlight the screen line of the cursor.
+        set hidden                      " Hidden a buffer when it is abandoned.
+        set laststatus=2                " Always show the status line.
+        set lazyredraw                  " Enable lazy redraw.
+        set number                      " Show number line.
+        set numberwidth=5               " Speficy the width of number line.
+        set ruler                       " Show the line and column number of the cursor position.
+        set scrolloff=4                 " Minimal number of screen lines to keep above and below the cursor.
+        set showcmd                     " Show command in the last line of the screen.
+        set showmode                    " Show the mode line.
+        set showtabline=2               " Always show the tab line.
+        set title                       " Set the terminal title to the current file.
+        set fillchars+=vert:│           " Characters to fill the statuslines and vertical separators.
+
+        " Strings to use in 'list' mode and for the :list command.
+        set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
