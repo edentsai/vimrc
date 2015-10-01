@@ -92,6 +92,13 @@
         let g:airline#extensions#bufferline#enabled = 1
         let g:airline#extensions#bufferline#overwrite_variables = 1
     " }
+    " guns/xterm-color-table.vim - All 256 xterm colors with their RGB equivalents {
+        NeoBundleLazy 'guns/xterm-color-table.vim', {
+            \ 'autoload': {
+                \ 'commands': ['XtermColorTable'],
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
