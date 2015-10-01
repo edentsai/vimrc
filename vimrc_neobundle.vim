@@ -644,6 +644,16 @@
         let g:clever_f_mark_cursor = 1
         let g:clever_f_repeat_last_char_inputs = ["\<CR>"]
     " }
+    " terryma/vim-expand-region - Allows you to visually select increasingly larger regions of text using the same key combination {
+        NeoBundleLazy 'terryma/vim-expand-region', {
+            \ 'autoload': {
+                \ 'mappings': ['<Plug>(expand_region_']
+            \ }
+        \ }
+
+        vmap v <Plug>(expand_region_expand)
+        vmap V <Plug>(expand_region_shrink)
+    "  }
 " }
 
 " NeoBundle - Running {
