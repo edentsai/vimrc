@@ -85,6 +85,9 @@
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit
+[submodule "bundles/vim-multiple-cursors"]
+    path = bundles/vim-multiple-cursors
+    url = https://github.com/terryma/vim-multiple-cursors
 [submodule "bundles/vim-signature"]
     path = bundles/vim-signature
     url = https://github.com/kshenoy/vim-signature
