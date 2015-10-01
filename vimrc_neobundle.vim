@@ -213,6 +213,13 @@
         let g:startify_session_delete_btartify_session_delete_buffersffers = 1
         let g:startify_bookmarks = ['~/.dotfiles']
     " }
+    " rking/ag.vim - The silver searcher, 'ag', a replacement for the Perl module / CLI script 'ack' {
+        NeoBundleLazy 'rking/ag.vim', {
+            \ 'autoload': {
+                \ 'commands': ['Ag'],
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
