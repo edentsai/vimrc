@@ -7,6 +7,9 @@
 [submodule "bundles/neobundle.vim"]
     path = bundles/neobundle.vim
     url = https://github.com/Shougo/neobundle.vim
+[submodule "bundles/undotree"]
+    path = bundles/undotree
+    url = https://github.com/mbbill/undotree
 [submodule "bundles/vim-airline"]
     path = bundles/vim-airline
     url = https://github.com/bling/vim-airline

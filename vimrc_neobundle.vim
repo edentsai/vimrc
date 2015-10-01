@@ -180,6 +180,24 @@
         let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 
     " }
+    " mbbill/undotree - The ultimate undo history visualizer for Vim {
+        NeoBundleLazy 'mbbill/undotree', {
+            \ 'autoload': {
+                \ 'commands': [
+                    \ 'UndotreeToggle',
+                    \ 'UndotreeShow',
+                    \ 'UndotreeHide'
+                \ ],
+            \ }
+        \ }
+
+        let g:undotree_SplitWidth = 30
+        let g:undotree_DiffpanelHeight = 15
+        let g:undotree_DiffAutoOpen = 1
+        let g:undotree_SetFocusWhenToggle = 1
+
+        nmap <Bslash>u :UndotreeToggle<CR>
+    " }
 " }
 
 " NeoBundle - Running {
