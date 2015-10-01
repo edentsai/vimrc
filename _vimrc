@@ -234,6 +234,24 @@
             nnoremap gV `[v`]
         " }
     " }
+    " Cursor {
+        " Move cursor in insert mode by <C-hjkl> {
+            inoremap <C-h> <Left>
+            inoremap <C-j> <Down>
+            inoremap <C-k> <Up>
+            inoremap <C-l> <Right>
+        " }
+        " Move cursor by display lines when wrapping {
+            nnoremap j gj
+            nnoremap k gk
+            nnoremap $ g$
+            nnoremap ^ g^
+            nnoremap 0 g0
+        " }
+        " Use <Leader><CR> as G {
+            nnoremap <Leader><CR> G
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
