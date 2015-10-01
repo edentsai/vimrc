@@ -1172,6 +1172,17 @@
         \ }
     " }
 " }
+" Javascript {
+    " pangloss/vim-javascript - Vastly improved Javascript indentation and syntax support in Vim {
+        NeoBundleLazy 'pangloss/vim-javascript', {
+            \ 'autoload': {
+                \ 'filetypes': ['htm', 'html', 'javascript']
+            \ }
+        \ }
+
+        let javascript_enable_domhtmlcss = 1
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

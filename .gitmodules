@@ -118,6 +118,9 @@
 [submodule "bundles/vim-interestingwords"]
     path = bundles/vim-interestingwords
     url = https://github.com/vasconcelloslf/vim-interestingwords
+[submodule "bundles/vim-javascript"]
+    path = bundles/vim-javascript
+    url = https://github.com/pangloss/vim-javascript
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit
