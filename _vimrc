@@ -86,6 +86,14 @@
         set foldmethod=syntax           " Folding by syntax highlight for the current window
         set foldnestmax=2               " The maximum nesting of oflds for the 'foldmethod' is 'indent' and 'syntax'
     " }
+    " Search {
+        set hlsearch                   " Highlight all matches of search pattern.
+        set incsearch                  " Enable incremental search.
+        set ignorecase                 " Ignore case in search patterns.
+        set smartcase                  " Disable 'ignorecase' if the search pattern contains upper case characters.
+        set showmatch                  " When a bracket is inserted, briefly jump to the matching one.
+        set matchtime=3                " Tenths of a second to show the matching paren when 'showmatch' is set.
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
