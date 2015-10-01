@@ -252,6 +252,17 @@
             nnoremap <Leader><CR> G
         " }
     " }
+    " File, Directory {
+        " File operations {
+            nnoremap <Leader>w :update<CR>
+            nnoremap <Leader>q :quit<CR>
+            nnoremap <Leader>wq :update<CR>:q<CR>
+            nnoremap <Leader>qa :qa<CR>
+        " }
+        " `<Leader>cd` to the directory containing the file in the buffer {
+            nnoremap <Leader>cd :lcd %:h<CR>
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
