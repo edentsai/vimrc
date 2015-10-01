@@ -196,6 +196,22 @@
             \ setlocal foldlevel=1
 
     " }
+    " Omni Completion {
+        autocmd FileType c setlocal omnifunc=ccomplete#Complete
+        autocmd FileType java setlocal omnifunc=javacomplete#Complet
+        autocmd FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+        " Use syntax complete if nothing else available {
+            if has("autocmd") && exists("+omnifunc")
+                autocmd Filetype *
+                    \ if &omnifunc == "" |
+                    \     setlocal omnifunc=syntaxcomplete#Complete |
+                    \ endif
+            endif
+            set cot-=preview        " Disable doc preview in omnicomplete
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
