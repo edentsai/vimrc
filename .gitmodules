@@ -76,6 +76,9 @@
 [submodule "bundles/tlib_vim"]
     path = bundles/tlib_vim
     url = https://github.com/tomtom/tlib_vim
+[submodule "bundles/tmuxline.vim"]
+    path = bundles/tmuxline.vim
+    url = https://github.com/edkolev/tmuxline.vim
 [submodule "bundles/ultisnips"]
     path = bundles/ultisnips
     url = https://github.com/SirVer/ultisnips

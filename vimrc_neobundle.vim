@@ -1290,6 +1290,34 @@
             \ }
         \ }
     " }
+    " " edkolev/tmuxline.vim - Simple tmux statusline generator with support for powerline symbols and airline integration {
+    "     NeoBundleLazy 'edkolev/tmuxline.vim', {
+    "         \ 'depends': ['bling/vim-airline'],
+    "         \ 'autoload': {
+    "             \ 'commands': ['Tmuxline']
+    "         \ }
+    "     \ }
+
+    "     let g:tmuxline_powerline_separators = 0
+    "     let g:tmuxline_theme = 'nightly_fox'
+    "     let g:tmuxline_preset = {
+    "         \ 'a'   : ['#(whoami)@#h'],
+    "         \ 'b'   : ['❐ #S'],
+    "         \ 'c'   : [''],
+    "         \ 'win' : ['[#I] #W'],
+    "         \ 'cwin': ['[#I] #W'],
+    "         \ 'x'   : [''],
+    "         \ 'y'   : ['%a', '%Y-%m-%d %H:%M:%S'],
+    "         \ 'options': {
+    "             \ 'status-justify': 'left'
+    "         \ }
+    "     \ }
+
+    "     " Configure vim-airline extension
+    "     let g:airline#extensions#tmuxline#enabled = 1
+    "     let airline#extensions#tmuxline#color_template = 'replace'
+    "     let airline#extensions#tmuxline#snapshot_file = '~/.tmux/colorschemes/tmuxlineSnapshot.conf'
+    " " }
 " }
 
 " NeoBundle - Running {
