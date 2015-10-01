@@ -97,6 +97,9 @@
 [submodule "bundles/vim-expand-region"]
     path = bundles/vim-expand-region
     url = https://github.com/terryma/vim-expand-region
+[submodule "bundles/vim-fugitive"]
+    path = bundles/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
 [submodule "bundles/vim-indent-guides"]
     path = bundles/vim-indent-guides
     url = https://github.com/nathanaelkane/vim-indent-guides
