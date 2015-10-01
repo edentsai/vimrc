@@ -598,6 +598,41 @@
         " }
         NeoBundle 'kshenoy/vim-signature'
     " }
+    " nishigori/increment-activator - Enhance to increment candidates {
+        NeoBundleLazy 'nishigori/increment-activator', {
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ '<Plug>(increment-activator-'
+                \ ]
+            \ }
+        \ }
+
+        let g:increment_activator_no_default_key_mappings = 1
+        let g:increment_activator_no_default_candidates = 0
+        let g:increment_activator_filetype_candidates = {
+            \ 'php': [
+                \ ['public', 'protected', 'private'],
+                \ ['class', 'interface', 'trait'],
+            \ ],
+            \ 'git-rebase-todo': [
+                \ ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
+            \ ],
+            \ 'go': [
+            \   ['true', 'false', 'iota', 'nil'],
+            \   ['byte', 'complex64', 'complex128'],
+            \   ['int', 'int8', 'int16', 'int32', 'int64'],
+            \   ['uint', 'uint8', 'uint16', 'uint32', 'uint64'],
+            \   ['float32', 'float64'],
+            \   ['interface', 'struct'],
+            \ ],
+        \ }
+
+        nmap <C-a> <Plug>(increment-activator-increment)
+        nmap <C-x> <Plug>(increment-activator-decrement)
+
+        imap <C-a> <Plug>(increment-activator-increment)
+        imap <C-x> <Plug>(increment-activator-decrement)
+    " }
 " }
 
 " NeoBundle - Running {

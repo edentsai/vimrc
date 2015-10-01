@@ -4,6 +4,9 @@
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim
+[submodule "bundles/increment-activator"]
+    path = bundles/increment-activator
+    url = https://github.com/nishigori/increment-activator
 [submodule "bundles/incsearch.vim"]
     path = bundles/incsearch.vim
     url = https://github.com/haya14busa/incsearch.vim
