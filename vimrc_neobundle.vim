@@ -130,6 +130,18 @@
         let g:rehash256 = 0
     " }
 " }
+" File & Directory Management {
+    " chrisbra/vim-diff-enhanced - Better Diff options for Vim {
+        NeoBundleLazy 'chrisbra/vim-diff-enhanced', {
+            \ 'autoload' : {
+                \ 'commands' : [
+                    \ 'EnhancedDiff',
+                    \ 'PatienceDiff',
+                \ ]
+            \ }
+        \ }
+    " }
+" }
 
 " NeoBundle - Running {
     " End {
