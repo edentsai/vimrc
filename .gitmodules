@@ -64,6 +64,9 @@
 [submodule "bundles/vim-bufferline"]
     path = bundles/vim-bufferline
     url = https://github.com/bling/vim-bufferline
+[submodule "bundles/vim-commentary"]
+    path = bundles/vim-commentary
+    url = https://github.com/tpope/vim-commentary
 [submodule "bundles/vim-diff-enhanced"]
     path = bundles/vim-diff-enhanced
     url = https://github.com/chrisbra/vim-diff-enhanced
