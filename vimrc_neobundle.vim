@@ -736,6 +736,13 @@
         nmap <leader>d- <Plug>SpeedDatingDown<Leader>d
         nmap <leader>dn <Plug>SpeedDatingNowUTC<Leader>d
     " }
+    " tpope/vim-repeat - Extend repeatitions by the '.' key {
+        NeoBundleLazy 'tpope/vim-repeat', {
+            \ 'autoload': {
+                \ 'mappings': ['.'],
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
