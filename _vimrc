@@ -150,6 +150,52 @@
                 \ endif
         " }
     " }
+    " Vim, Tmux, Conf {
+        autocmd FileType vim,tmux,conf
+            \ setlocal foldmethod=marker |
+            \ setlocal foldlevel=1
+    " }
+    " PHP {
+        autocmd FileType php
+            \ setlocal syntax=php |
+            \ setlocal omnifunc=phpcomplete#CompletePHP
+    " }
+    " HTML, PHTML {
+        autocmd FileType htm,html,phtml
+            \ setlocal syntax=html |
+            \ setlocal omnifunc=htmlcomplete#CompleteTags |
+            \ setlocal foldmethod=manual |
+            \ nnoremap <Bslash>f zfat |
+            \ vnoremap <Bslash>f zfat
+        autocmd BufNewFile,BufRead *.phtml setlocal filetype=html
+    " }
+    " XML {
+        autocmd FileType xml
+            \ setlocal syntax=xml |
+            \ setlocal omnifunc=xmlcomplete#CompleteTags
+    " }
+    " CSS, SCSS, SASS {
+        autocmd FileType css,scss,sass
+            \ setlocal syntax=css |
+            \ setlocal omnifunc=csscomplete#CompleteCSS |
+            \ setlocal foldmethod=marker |
+            \ setlocal foldmarker={,} |
+            \ setlocal foldlevel=1
+    " }
+    " Javascript {
+        autocmd Filetype javascript,js
+            \ setlocal syntax=javascript |
+            \ setlocal omnifunc=javascriptcomplete#CompleteJS |
+            \ setlocal foldmethod=marker |
+            \ setlocal foldlevel=1 |
+            \ setlocal foldnestmax=3
+    " }
+    " JSON {
+        autocmd Filetype json
+            \ setlocal foldmethod=syntax |
+            \ setlocal foldlevel=1
+
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
