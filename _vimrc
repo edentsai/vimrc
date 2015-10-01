@@ -48,6 +48,21 @@
         " Strings to use in 'list' mode and for the :list command.
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
     " }
+    " History, File, Directory {
+        set history=500                 " How many commands be stored in history.
+        set autochdir                   " Auto change to the directory containing the file which was opened file.
+        set nobackup                    " Do not make a backup before overwriting a file.
+        set noswapfile                  " Do not use a swapfile for the buffer.
+
+        " List of directory names for the backup/swap/undo files,
+        " And make the directories if no exists.
+        set backupdir=$HOME/.vim/tmp/backup/
+        set directory=$HOME/.vim/tmp/swap/
+        set undodir=$HOME/.vim/tmp/undo/
+        silent! call MakeDirIfNoExists(&backupdir)
+        silent! call MakeDirIfNoExists(&directory)
+        silent! call MakeDirIfNoExists(&undodir)
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
