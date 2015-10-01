@@ -4,6 +4,9 @@
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim
+[submodule "bundles/incsearch.vim"]
+    path = bundles/incsearch.vim
+    url = https://github.com/haya14busa/incsearch.vim
 [submodule "bundles/MatchTag"]
     path = bundles/MatchTag
     url = https://github.com/gregsexton/MatchTag

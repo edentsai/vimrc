@@ -490,6 +490,43 @@
             \ }
         \ }
     " }
+    " haya14busa/incsearch.vim - incrementally highlights ALL pattern matches unlike default 'incsearch' {
+        NeoBundle 'haya14busa/incsearch.vim', {
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ '<Plug>(incsearch-',
+                    \ '<Over>(incsearch-'
+                \ ]
+            \ }
+        \ }
+
+        " Fixes some keys in TMUX
+        " Using '[Z' instead of '<S-Tab>' in TMUX
+        if '' != system('echo $TMUX')
+            let g:incsearch_cli_key_mappings = {
+                \ "[Z" : {
+                    \ "key" : "<Over>(incsearch-prev)",
+                    \ "noremap" : 1,
+                \ },
+                \ "\<S-Tab>" : {
+                    \ "key" : "<Over>(incsearch-prev)",
+                    \ "noremap" : 1,
+                \ },
+                \ "\<C-f>" : {
+                    \ "key" : "<Over>(incsearch-scroll-f)",
+                    \ "noremap" : 1,
+                \ },
+                \ "\<C-b>" : {
+                    \ "key" : "<Over>(incsearch-scroll-b)",
+                    \ "noremap" : 1,
+                \ },
+            \ }
+        endif
+
+        map <Leader>/  <Plug>(incsearch-forward)
+        map <Leader>?  <Plug>(incsearch-backward)
+        map <Leader>g/ <Plug>(incsearch-stay)
+    " }
 " }
 
 " NeoBundle - Running {
