@@ -235,16 +235,16 @@
     " }
 " }
 " Syntax & Completion {
-    " ervandew/supertab - Allows you to use <Tab> for all your insert completion needs {
-        NeoBundleLazy 'ervandew/supertab', {
-            \ 'autoload': {
-                \ 'insert': 1
-            \ }
-        \ }
+    " " ervandew/supertab - Allows you to use <Tab> for all your insert completion needs {
+    "     NeoBundleLazy 'ervandew/supertab', {
+    "         \ 'autoload': {
+    "             \ 'insert': 1
+    "         \ }
+    "     \ }
 
-        let g:SuperTabDefaultCompletionType = 'context'
-        let g:SuperTabContextDefaultCompletionType = '<C-p>'
-    " }
+    "     let g:SuperTabDefaultCompletionType = 'context'
+    "     let g:SuperTabContextDefaultCompletionType = '<C-p>'
+    " " }
     " garbas/vim-snipmate - Provide support for textual snippets {
         NeoBundleLazy 'garbas/vim-snipmate', {
             \ 'depends': [
