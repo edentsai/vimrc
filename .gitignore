@@ -1,3 +1,8 @@
 # Ignore Max OSX files.
 .DS_Store
 Thumbs.db
+
+# Ignore plugins' files
+/bundles
+/bundles/.neobundle
+/bundles/NeoBundle.lock
