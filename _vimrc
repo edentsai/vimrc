@@ -115,6 +115,17 @@
         " Files with these suffixes get a lower priority when multiple files match a wildcard
         set suffixes=.bak,~,.o,.info,.swp,.obj
     " }
+    " Mouse, Keyboard {
+        set mouse=                      " Disable the use of the mouse.
+        set selection=exclusive         " Defines the behavior of the selection.
+        set selectmode=key,mouse        " Start a selection by mouse or shifted special keys
+        set timeoutlen=1000             " The time in milliseconds that is waited for a key code or mapped key sequence to complete.
+    " }
+    " Sound {
+        set t_vb=
+        set novisualbell                " Disable the visual bell.
+        set noerrorbells                " Disable the error bells.
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
