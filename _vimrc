@@ -297,6 +297,23 @@
             nnoremap <C-w> <C-w><C-w>
         "}
     " }
+    " Tabs {
+        " Continuous moving cursor to other tabs {
+            nmap <C-t><C-p> gT<C-t>
+            nmap <C-t><C-n> gt<C-t>
+        " }
+        " Mapping <C-t># switch to the #number tab {
+            nnoremap <C-t>1 1gt
+            nnoremap <C-t>2 2gt
+            nnoremap <C-t>3 3gt
+            nnoremap <C-t>4 4gt
+            nnoremap <C-t>5 5gt
+            nnoremap <C-t>6 6gt
+            nnoremap <C-t>7 7gt
+            nnoremap <C-t>8 8gt
+            nnoremap <C-t>9 9gt
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
