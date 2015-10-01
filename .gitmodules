@@ -22,6 +22,9 @@
 [submodule "bundles/syntastic"]
     path = bundles/syntastic
     url = https://github.com/scrooloose/syntastic
+[submodule "bundles/tabular"]
+    path = bundles/tabular
+    url = https://github.com/godlygeek/tabular
 [submodule "bundles/tagbar"]
     path = bundles/tagbar
     url = https://github.com/majutsushi/tagbar

@@ -474,6 +474,15 @@
             \ }
         \ }
     " }
+    " godlygeek/tabular - vim script for text filtering and alignment {
+        NeoBundleLazy 'godlygeek/tabular', {
+            \ 'autoload': {
+                \ 'commands': ['Tabularize']
+            \ }
+        \ }
+
+        noremap <Leader><Tab>/ :Tabularize /
+    " }
 " }
 
 " NeoBundle - Running {
