@@ -1,3 +1,6 @@
+[submodule "bundles/ctrlp.vim"]
+    path = bundles/ctrlp.vim
+    url = https://github.com/kien/ctrlp.vim
 [submodule "bundles/molokai"]
     path = bundles/molokai
     url = https://github.com/tomasr/molokai
