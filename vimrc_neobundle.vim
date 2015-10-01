@@ -776,6 +776,268 @@
         nmap <Bslash>y :YRShow<CR>
     " }
 " }
+" Text Object Selection {
+    " Reference: http://d.hatena.ne.jp/osyo-manga/20130717/1374069987
+    " kana/vim-textobj-user - Create your own text objects {
+        " Key mapping in Visual Mode {
+        "   'kana/vim-textobj-entire'                : `ae`, `ie`
+        "   'kana/vim-textobj-line'                  : `al`, `il`
+        "   'kana/vim-textobj-function'              : `af`, `if`
+        "   'kana/vim-textobj-syntax'                : `ay`, `iy`
+        "   'kana/vim-textobj-lastpat'               : `a/`, `i/`
+        "   'kana/vim-textobj-indent'                : `aI`, `iI`
+        "   'kana/vim-textobj-fold'                  : `az`, `iz`
+        "   'kana/vim-textobj-diff'                  : `adf`, `idf`
+        "   'kana/vim-textobj-datetime'              : `ada`, `ida`
+        "   'kana/vim-textobj-underscore'            : `a_`, `i_`
+        "   'thinca/vim-textobj-between'             : `aF`, `iF`
+        "   'thinca/vim-textobj-comment'             : `ac`, `ic`
+        "   'thinca/vim-textobj-function-javascript' : `af`, `if`
+        "   'akiyan/vim-textobj-xml-attribute'       : `axa`, `ixa`
+        "   'akiyan/vim-textobj-php'                 : `ap`, `ip`
+        "   'saihoooooooo/vim-textobj-space'         : `aS`, `iS`
+        "   'mattn/vim-textobj-url'                  : `au`, `iu`
+        "   'h1mesuke/textobj-wiw'                   : `a,w`, `i,w` (Snake case word)
+        "   'mjbrownie/html-textobjects'             : `ahf`, `ihf`
+        "   'sgur/vim-textobj-parameter'             : `a,`, `i,`
+        "   'vimtaku/vim-textobj-keyvalue'           : `dak`, `dik`, `dav`, `div`
+        " }
+        NeoBundleLazy 'kana/vim-textobj-user'
+    " }
+    " kana/vim-textobj-datetime - Text objects for date and time {
+        NeoBundleLazy 'kana/vim-textobj-datetime', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ada'],
+                    \ ['xo', 'ida']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-diff - Text objects for ouputs of diff(1) {
+        NeoBundleLazy 'kana/vim-textobj-diff', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'adf'],
+                    \ ['xo', 'idf']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-entire - Text objects for entire buffer {
+        NeoBundleLazy 'kana/vim-textobj-entire', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ae'],
+                    \ ['xo', 'ie']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-fold - Text objects for foldings {
+        NeoBundleLazy 'kana/vim-textobj-fold', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'az'],
+                    \ ['xo', 'iz']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-function - Text objects for functions {
+        NeoBundleLazy 'kana/vim-textobj-function', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'af'],
+                    \ ['xo', 'if']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-indent - Text objects for indented blocks of lines {
+        NeoBundleLazy 'kana/vim-textobj-indent', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'aI'],
+                    \ ['xo', 'iI']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-lastpat - Text objects for the last searched pattern {
+        NeoBundleLazy 'kana/vim-textobj-lastpat', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'a/'],
+                    \ ['xo', 'i/']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-line - Text objects for the current line {
+        NeoBundleLazy 'kana/vim-textobj-line', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'al'],
+                    \ ['xo', 'il']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-underscore - Underscore text-object for Vim {
+        NeoBundleLazy 'kana/vim-textobj-underscore', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'a_'],
+                    \ ['xo', 'i_']
+                \ ]
+            \ }
+        \ }
+    " }
+    " kana/vim-textobj-syntax - Text objects for syntax highlighted items {
+        NeoBundleLazy 'kana/vim-textobj-syntax', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ay'],
+                    \ ['xo', 'iy']
+                \ ]
+            \ }
+        \ }
+    " }
+    " akiyan/vim-textobj-php - Vim text object plugin for PHP view template {
+        NeoBundleLazy 'akiyan/vim-textobj-php', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ap'],
+                    \ ['xo', 'ip']
+                \ ]
+            \ }
+        \ }
+    " }
+    " akiyan/vim-textobj-xml-attribute - Text objects for xml attribute {
+        NeoBundleLazy 'akiyan/vim-textobj-xml-attribute', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'axa'],
+                    \ ['xo', 'ixa']
+                \ ]
+            \ }
+        \ }
+    " }
+    " h1mesuke/textobj-wiw - Text object to select a range of words for humans {
+        NeoBundleLazy 'h1mesuke/textobj-wiw', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'a,w'],
+                    \ ['xo', 'i,w']
+                \ ]
+            \ }
+        \ }
+    " }
+    " mattn/vim-textobj-url - Text objects for url {
+        NeoBundleLazy 'mattn/vim-textobj-url', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'au'],
+                    \ ['xo', 'iu']
+                \ ]
+            \ }
+        \ }
+    " }
+    " mjbrownie/html-textobjects - Some advanced vim html textobject mappings {
+        NeoBundleLazy 'mjbrownie/html-textobjects', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ahf'],
+                    \ ['xo', 'ihf']
+                \ ]
+            \ }
+        \ }
+    " }
+    " saihoooooooo/vim-textobj-space - Text objects for continuity space {
+        NeoBundleLazy 'saihoooooooo/vim-textobj-space', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'aS'],
+                    \ ['xo', 'iS']
+                \ ]
+            \ }
+        \ }
+    " }
+    " sgur/vim-textobj-parameter - Text objects for parameter {
+        NeoBundleLazy 'sgur/vim-textobj-parameter', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'a,'],
+                    \ ['xo', 'i,']
+                \ ]
+            \ }
+        \ }
+    " }
+    " thinca/vim-textobj-between - Text objects for a range between a character {
+        NeoBundleLazy 'thinca/vim-textobj-between', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'aF'],
+                    \ ['xo', 'iF']
+                \ ]
+            \ }
+        \ }
+    " }
+    " thinca/vim-textobj-comment - Text objects for a comment {
+        NeoBundleLazy 'thinca/vim-textobj-comment', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'ac'],
+                    \ ['xo', 'ic']
+                \ ]
+            \ }
+        \ }
+    " }
+    " thinca/vim-textobj-function-javascript - Text objects for functions in javascript {
+        NeoBundleLazy 'thinca/vim-textobj-function-javascript', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'af'],
+                    \ ['xo', 'if']
+                \ ]
+            \ }
+        \ }
+    " }
+    " vimtaku/vim-textobj-keyvalue - Text objects for key-value {
+        NeoBundleLazy 'vimtaku/vim-textobj-keyvalue', {
+            \ 'depends': ['kana/vim-textobj-user'],
+            \ 'autoload': {
+                \ 'mappings': [
+                    \ ['xo', 'dak'],
+                    \ ['xo', 'dik'],
+                    \ ['xo', 'dav'],
+                    \ ['xo', 'div']
+                \ ]
+            \ }
+        \ }
+    " }
+" }
 
 " NeoBundle - Running {
     " End {

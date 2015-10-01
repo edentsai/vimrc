@@ -7,6 +7,9 @@
 [submodule "bundles/ctrlp.vim"]
     path = bundles/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim
+[submodule "bundles/html-textobjects"]
+    path = bundles/html-textobjects
+    url = https://github.com/mjbrownie/html-textobjects
 [submodule "bundles/increment-activator"]
     path = bundles/increment-activator
     url = https://github.com/nishigori/increment-activator
@@ -43,6 +46,9 @@
 [submodule "bundles/tagbar-phpctags.vim"]
     path = bundles/tagbar-phpctags.vim
     url = https://github.com/vim-php/tagbar-phpctags.vim
+[submodule "bundles/textobj-wiw"]
+    path = bundles/textobj-wiw
+    url = https://github.com/h1mesuke/textobj-wiw
 [submodule "bundles/tlib_vim"]
     path = bundles/tlib_vim
     url = https://github.com/tomtom/tlib_vim
@@ -118,6 +124,66 @@
 [submodule "bundles/vim-surround"]
     path = bundles/vim-surround
     url = https://github.com/tpope/vim-surround
+[submodule "bundles/vim-textobj-between"]
+    path = bundles/vim-textobj-between
+    url = https://github.com/thinca/vim-textobj-between
+[submodule "bundles/vim-textobj-comment"]
+    path = bundles/vim-textobj-comment
+    url = https://github.com/thinca/vim-textobj-comment
+[submodule "bundles/vim-textobj-datetime"]
+    path = bundles/vim-textobj-datetime
+    url = https://github.com/kana/vim-textobj-datetime
+[submodule "bundles/vim-textobj-diff"]
+    path = bundles/vim-textobj-diff
+    url = https://github.com/kana/vim-textobj-diff
+[submodule "bundles/vim-textobj-entire"]
+    path = bundles/vim-textobj-entire
+    url = https://github.com/kana/vim-textobj-entire
+[submodule "bundles/vim-textobj-fold"]
+    path = bundles/vim-textobj-fold
+    url = https://github.com/kana/vim-textobj-fold
+[submodule "bundles/vim-textobj-function"]
+    path = bundles/vim-textobj-function
+    url = https://github.com/kana/vim-textobj-function
+[submodule "bundles/vim-textobj-function-javascript"]
+    path = bundles/vim-textobj-function-javascript
+    url = https://github.com/thinca/vim-textobj-function-javascript
+[submodule "bundles/vim-textobj-indent"]
+    path = bundles/vim-textobj-indent
+    url = https://github.com/kana/vim-textobj-indent
+[submodule "bundles/vim-textobj-keyvalue"]
+    path = bundles/vim-textobj-keyvalue
+    url = https://github.com/vimtaku/vim-textobj-keyvalue
+[submodule "bundles/vim-textobj-lastpat"]
+    path = bundles/vim-textobj-lastpat
+    url = https://github.com/kana/vim-textobj-lastpat
+[submodule "bundles/vim-textobj-line"]
+    path = bundles/vim-textobj-line
+    url = https://github.com/kana/vim-textobj-line
+[submodule "bundles/vim-textobj-parameter"]
+    path = bundles/vim-textobj-parameter
+    url = https://github.com/sgur/vim-textobj-parameter
+[submodule "bundles/vim-textobj-php"]
+    path = bundles/vim-textobj-php
+    url = https://github.com/akiyan/vim-textobj-php
+[submodule "bundles/vim-textobj-space"]
+    path = bundles/vim-textobj-space
+    url = https://github.com/saihoooooooo/vim-textobj-space
+[submodule "bundles/vim-textobj-syntax"]
+    path = bundles/vim-textobj-syntax
+    url = https://github.com/kana/vim-textobj-syntax
+[submodule "bundles/vim-textobj-underscore"]
+    path = bundles/vim-textobj-underscore
+    url = https://github.com/kana/vim-textobj-underscore
+[submodule "bundles/vim-textobj-url"]
+    path = bundles/vim-textobj-url
+    url = https://github.com/mattn/vim-textobj-url
+[submodule "bundles/vim-textobj-user"]
+    path = bundles/vim-textobj-user
+    url = https://github.com/kana/vim-textobj-user
+[submodule "bundles/vim-textobj-xml-attribute"]
+    path = bundles/vim-textobj-xml-attribute
+    url = https://github.com/akiyan/vim-textobj-xml-attribute
 [submodule "bundles/vim-unimpaired"]
     path = bundles/vim-unimpaired
     url = https://github.com/tpope/vim-unimpaired
