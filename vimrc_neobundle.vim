@@ -266,6 +266,49 @@
             \ 'php'   : '//'
         \ }
     " }
+    " majutsushi/tagbar - Browsing the tags of source code files {
+        NeoBundleLazy 'majutsushi/tagbar', {
+            \ 'depends': [
+                \ 'bling/vim-airline',
+                \ 'vim-php/tagbar-phpctags.vim'
+            \ ],
+            \ 'autoload': {
+                \ 'commands': ['TagbarToggle'],
+            \ }
+        \ }
+
+        noremap <Bslash>t :TagbarToggle<CR>
+
+        let g:tagbar_autoclose = 1
+        let g:tagbar_autofoucs = 1
+        let g:tagbar_autopreview = 0
+        let g:tarbar_autoshowtag = 1
+        let g:tagbar_foldlevel = 1
+        let g:tabbar_indent = 2
+        let g:tagbar_iconchars = ['▶ ', '▼ ']
+        let g:tagbar_left = 0
+        let g:tagbar_show_linenumbers = 0
+        let g:tagbar_show_visibility = 1
+        let g:tagbar_sort = 0
+        let g:tagbar_vertical = 0
+        let g:tagbar_width = 40
+        let g:tagbar_type_css = {
+            \ 'ctagstype': 'Css',
+            \ 'kinds': [
+                \ 'c:classes',
+                \ 's:selectors',
+                \ 'i:identities'
+            \ ]
+        \ }
+
+        " Configure tagbar-phpctags plugin
+        let g:tagbar_phpctags_bin = '~/.vim/bin/phpctags'
+        let g:tagbar_phpctags_memory_limit = '128M'
+
+        " Configure vim-airline extension
+        let g:airline#extensions#tagbar#enabled = 0
+        let g:airline#extensions#tagbar#flags = ''
+    " }
 " }
 
 " NeoBundle - Running {

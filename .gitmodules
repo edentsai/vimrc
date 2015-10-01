@@ -16,6 +16,12 @@
 [submodule "bundles/supertab"]
     path = bundles/supertab
     url = https://github.com/ervandew/supertab
+[submodule "bundles/tagbar"]
+    path = bundles/tagbar
+    url = https://github.com/majutsushi/tagbar
+[submodule "bundles/tagbar-phpctags.vim"]
+    path = bundles/tagbar-phpctags.vim
+    url = https://github.com/vim-php/tagbar-phpctags.vim
 [submodule "bundles/tlib_vim"]
     path = bundles/tlib_vim
     url = https://github.com/tomtom/tlib_vim
