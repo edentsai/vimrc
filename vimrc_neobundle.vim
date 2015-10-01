@@ -220,6 +220,19 @@
             \ }
         \ }
     " }
+    " scrooloose/nerdtree - A tree explorer plugin for Vim {
+        NeoBundleLazy 'scrooloose/nerdtree', {
+            \ 'autoload': {
+                \ 'commands': ['NERDTreeToggle']
+            \ }
+        \ }
+
+        let NERDTreeShowLineNumbers = 1
+        let NERDTreeShowHidden = 0
+        let NERDTreeIgnore = ['\~$', '\.lo$', '\.la$', '\.pyc']
+
+        nnoremap <Bslash><Bslash> :NERDTreeToggle<CR>
+    " }
 " }
 
 " NeoBundle - Running {

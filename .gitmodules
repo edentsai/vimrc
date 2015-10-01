@@ -10,6 +10,9 @@
 [submodule "bundles/neobundle.vim"]
     path = bundles/neobundle.vim
     url = https://github.com/Shougo/neobundle.vim
+[submodule "bundles/nerdtree"]
+    path = bundles/nerdtree
+    url = https://github.com/scrooloose/nerdtree
 [submodule "bundles/undotree"]
     path = bundles/undotree
     url = https://github.com/mbbill/undotree
