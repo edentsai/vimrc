@@ -103,6 +103,9 @@
 [submodule "bundles/vim-startify"]
     path = bundles/vim-startify
     url = https://github.com/mhinz/vim-startify
+[submodule "bundles/vim-unimpaired"]
+    path = bundles/vim-unimpaired
+    url = https://github.com/tpope/vim-unimpaired
 [submodule "bundles/vimproc.vim"]
     path = bundles/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim
