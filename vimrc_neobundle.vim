@@ -557,6 +557,24 @@
         " Start interactive EasyAlign for a motion/text object (e.g. gaip)
         nmap ga <Plug>(EasyAlign)
     " }
+    " jeetsukumaran/vim-indentwise - A Vim plugin for indent-level based motion {
+        NeoBundleLazy 'jeetsukumaran/vim-indentwise', {
+            \ 'autoload': {
+                \ 'mappings': ['<Plug>(IndentWise']
+            \ }
+        \ }
+
+        map <Leader>[- <Plug>(IndentWisePreviousLesserIndent)
+        map <Leader>[= <Plug>(IndentWisePreviousEqualIndent)
+        map <Leader>[+ <Plug>(IndentWisePreviousGreaterIndent)
+        map <Leader>]- <Plug>(IndentWiseNextLesserIndent)
+        map <Leader>]= <Plug>(IndentWiseNextEqualIndent)
+        map <Leader>]+ <Plug>(IndentWiseNextGreaterIndent)
+        map <Leader>[_ <Plug>(IndentWisePreviousAbsoluteIndent)
+        map <Leader>]_ <Plug>(IndentWiseNextAbsoluteIndent)
+        map <Leader>[% <Plug>(IndentWiseBlockScopeBoundaryBegin)
+        map <Leader>]% <Plug>(IndentWiseBlockScopeBoundaryEnd)
+    " }
 " }
 
 " NeoBundle - Running {

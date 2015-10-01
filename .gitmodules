@@ -70,6 +70,9 @@
 [submodule "bundles/vim-indent-guides"]
     path = bundles/vim-indent-guides
     url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "bundles/vim-indentwise"]
+    path = bundles/vim-indentwise
+    url = https://github.com/jeetsukumaran/vim-indentwise
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit
