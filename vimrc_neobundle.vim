@@ -83,6 +83,15 @@
             call neobundle#untap()
         endif
     " }
+    " bling/vim-bufferline - Super simple vim plugin to show the list of buffers in the command bar {
+        NeoBundle 'bling/vim-bufferline', {
+            \ 'depends': ['bling/vim-airline']
+        \ }
+
+        " Configure vim-airline extension
+        let g:airline#extensions#bufferline#enabled = 1
+        let g:airline#extensions#bufferline#overwrite_variables = 1
+    " }
 " }
 
 " NeoBundle - Running {

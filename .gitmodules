@@ -4,6 +4,9 @@
 [submodule "bundles/vim-airline"]
     path = bundles/vim-airline
     url = https://github.com/bling/vim-airline
+[submodule "bundles/vim-bufferline"]
+    path = bundles/vim-bufferline
+    url = https://github.com/bling/vim-bufferline
 [submodule "bundles/vimproc.vim"]
     path = bundles/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim
