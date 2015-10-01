@@ -1,3 +1,6 @@
+[submodule "bundles/molokai"]
+    path = bundles/molokai
+    url = https://github.com/tomasr/molokai
 [submodule "bundles/neobundle.vim"]
     path = bundles/neobundle.vim
     url = https://github.com/Shougo/neobundle.vim

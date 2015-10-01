@@ -123,6 +123,12 @@
         let g:indent_guides_start_level = 1
         let g:indent_guides_enable_on_vim_startup = 1
     " }
+    " tomasr/molokai - Molokai color scheme for Vim {
+        NeoBundle 'tomasr/molokai'
+
+        let g:molokai_original = 0
+        let g:rehash256 = 0
+    " }
 " }
 
 " NeoBundle - Running {
