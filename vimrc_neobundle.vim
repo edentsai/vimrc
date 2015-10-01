@@ -710,6 +710,17 @@
             \ }
         \ }
     " }
+    " tpope/vim-surround - To surround vim objects with a pair of identical chars {
+        " Key mappings in Normal mode {
+        "   ds  : Delete surrondings
+        "   c   : Change surrondings
+        "   ys  : takes a valid Vim motion or text object as the first object,
+        "         and wraps it using the second argument
+        "   yss : Operates on the current line, ignoring leading whitespace.
+        "
+        " }
+        NeoBundle 'tpope/vim-surround'
+    " }
 " }
 
 " NeoBundle - Running {
