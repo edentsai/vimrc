@@ -1,6 +1,9 @@
 [submodule "bundles/neobundle.vim"]
     path = bundles/neobundle.vim
     url = https://github.com/Shougo/neobundle.vim
+[submodule "bundles/vim-airline"]
+    path = bundles/vim-airline
+    url = https://github.com/bling/vim-airline
 [submodule "bundles/vimproc.vim"]
     path = bundles/vimproc.vim
     url = https://github.com/Shougo/vimproc.vim
