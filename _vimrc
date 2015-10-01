@@ -63,6 +63,29 @@
         silent! call MakeDirIfNoExists(&directory)
         silent! call MakeDirIfNoExists(&undodir)
     " }
+    " Text Editor {
+        set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
+        set virtualedit=all             " Allow virtual editing in all modes.
+
+        " Indent
+        set autoindent                  " Copy indent from current line when starting a new line.
+        set copyindent                  " Copy the existing lines indent when autoindenting a new line.
+        set smartindent                 " Do smart autoindenting when starting a new line.
+        set shiftwidth=4                " Number of spaces to use for each step of (auto)indent.
+
+        " <Tab>
+        set expandtab                   " Use the appropriate number of spaces to insert a <Tab>.
+        set tabstop=4                   " Number of spaces that a <Tab> in the file counts for.
+        set softtabstop=4               " Number of spaces that a <Tab> counts for while performing editing operations.
+
+        " Folding
+        set foldenable                  " Enable folding
+        set foldlevel=2                 " Folds with a higher level will be closed.
+        set foldlevelstart=1            " Sets 'foldlevel' when starting to edit another buffer in a window
+        set foldmarker={,}              " The start and end marker used when the 'foldmethod' is 'marker'
+        set foldmethod=syntax           " Folding by syntax highlight for the current window
+        set foldnestmax=2               " The maximum nesting of oflds for the 'foldmethod' is 'indent' and 'syntax'
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
