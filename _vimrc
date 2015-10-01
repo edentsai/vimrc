@@ -213,6 +213,12 @@
         " }
     " }
 " }
+" Mapping Keys {
+    " <leader> & <Localleader> {
+        let mapleader = "\<Space>"
+        let maplocalleader = "\<Space>"
+    " }
+" }
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')
