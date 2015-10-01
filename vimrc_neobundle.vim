@@ -1237,6 +1237,13 @@
 
         let g:phpcomplete_relax_static_constraint = 1
     " }
+    " StanAngeloff/php.vim {
+        NeoBundleLazy 'StanAngeloff/php.vim', {
+            \ 'autoload': {
+                \ 'filetypes': 'php'
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
