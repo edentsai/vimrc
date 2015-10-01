@@ -124,6 +124,9 @@
 [submodule "bundles/vim-multiple-cursors"]
     path = bundles/vim-multiple-cursors
     url = https://github.com/terryma/vim-multiple-cursors
+[submodule "bundles/vim-ragtag"]
+    path = bundles/vim-ragtag
+    url = https://github.com/tpope/vim-ragtag
 [submodule "bundles/vim-repeat"]
     path = bundles/vim-repeat
     url = https://github.com/tpope/vim-repeat

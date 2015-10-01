@@ -1163,6 +1163,14 @@
             \ }
         \ }
     " }
+    " tpope/vim-ragtag - HTML/XML mappings {
+        NeoBundleLazy 'tpope/vim-ragtag', {
+            \ 'autoload': {
+                \ 'filetypes': ['xml', 'htm', 'html', 'xhtml', 'phtml'],
+                \ 'mappings': ['<Plug>ragtag']
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
