@@ -16,6 +16,9 @@
 [submodule "bundles/supertab"]
     path = bundles/supertab
     url = https://github.com/ervandew/supertab
+[submodule "bundles/syntastic"]
+    path = bundles/syntastic
+    url = https://github.com/scrooloose/syntastic
 [submodule "bundles/tagbar"]
     path = bundles/tagbar
     url = https://github.com/majutsushi/tagbar
