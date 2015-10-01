@@ -314,6 +314,31 @@
             nnoremap <C-t>9 9gt
         " }
     " }
+    " Text Editor {
+        " Continuous indent {
+            nnoremap > >>
+            nnoremap < <<
+            vnoremap < <gv
+            vnoremap > >gv
+            nnoremap <TAB> >>
+            vnoremap <TAB> >gv
+            if system('echo $TMUX') == ''
+                nnoremap <S-TAB> <<
+                vnoremap <S-TAB> <gv
+            else
+                nnoremap [Z <<
+                vnoremap [Z <gv
+            endif
+        " }
+        " Convert the current word to uppercase / lowercase {
+            nnoremap <Leader>uc viwU
+            nnoremap <Leader>lc viwu
+        " }
+        " Easier increment / decrement {
+            nmap <silent> + <C-a>
+            nmap <silent> - <C-x>
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
