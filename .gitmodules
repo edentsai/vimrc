@@ -121,6 +121,9 @@
 [submodule "bundles/vim-javascript"]
     path = bundles/vim-javascript
     url = https://github.com/pangloss/vim-javascript
+[submodule "bundles/vim-json"]
+    path = bundles/vim-json
+    url = https://github.com/elzr/vim-json
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit

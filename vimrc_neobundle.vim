@@ -1183,6 +1183,16 @@
         let javascript_enable_domhtmlcss = 1
     " }
 " }
+" JSON {
+    " elzr/vim-json - Distinct highlighting of keywords vs values {
+        NeoBundleLazy 'elzr/vim-json', {
+            \ 'autoload': {
+                \ 'filetypes': ['json']
+            \ }
+        \ }
+        let g:vim_json_syntax_conceal = 0
+    " }
+" }
 
 " NeoBundle - Running {
     " End {
