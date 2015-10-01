@@ -483,6 +483,13 @@
 
         noremap <Leader><Tab>/ :Tabularize /
     " }
+    " gregsexton/MatchTag - highlights the matching HTML tag when the cursor is positioned on a tag {
+        NeoBundleLazy 'gregsexton/MatchTag', {
+            \ 'autoload': {
+                \ 'filetypes': ['xml', 'htm', 'html', 'xhtml', 'phtml']
+            \ }
+        \ }
+    " }
 " }
 
 " NeoBundle - Running {
