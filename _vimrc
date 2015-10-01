@@ -339,6 +339,22 @@
             nmap <silent> - <C-x>
         " }
     " }
+    " Search {
+        " Keep search pattern at the center of the screen {
+            nnoremap <silent> n nzz
+            nnoremap <silent> N Nzz
+            nnoremap <silent> * *zz
+            nnoremap <silent> # #zz
+        " }
+        " Continuous replacing all search matches {
+            " 1. I search things usual way using `/something`
+            " 2. I hit `cw`, replace first match, and hit <Esc>
+            " 3. I hit `n.n.n.n.n.` reviewing and replacing all matches
+            vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+                \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+            omap s :normal vs<CR>
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
