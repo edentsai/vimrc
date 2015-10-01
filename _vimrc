@@ -263,6 +263,31 @@
             nnoremap <Leader>cd :lcd %:h<CR>
         " }
     " }
+    " Toggle Modes {
+        " Toggle list chars mode {
+            nnoremap <Bslash>lc :set invlist<CR> :echo 'Set list =' &list<CR>
+        " }
+        " Toggle paste mode {
+            nnoremap <Bslash>p :set invpaste<CR> :echo 'Set paste =' &paste<CR>
+        " }
+        " Toggle highlight search Mode {
+            nnoremap <Bslash>s :nohlsearch<CR>
+        " }
+        " Toggle Wrap mode {
+            nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &invwrap<CR>
+        " }
+        " Toggle folding {
+            nnoremap <Bslash>f za
+            vnoremap <Bslash>f za
+        " }
+        " Toggle number line {
+            nnoremap <Bslash>n :set invnumber<CR> :echo 'Set number =' &number<CR>
+            nnoremap <Bslash>rn :set invrelativenumber<CR> :echo 'Set relativenumber =' &relativenumber<CR>
+        " }
+        " Toggle spell checking with english {
+            nnoremap <Bslash>se :setlocal invspell spelllang=en<CR> :echo 'Set spell =' &spell<CR>
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
