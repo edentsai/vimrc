@@ -759,6 +759,22 @@
         nnoremap <silent> n :call WordNavigation('forward')<CR>
         nnoremap <silent> N :call WordNavigation('backward')<CR>
     " }
+    " vim-scripts/YankRing.vim - Maintains a history of previous yanks, changes and deletes {
+        NeoBundleLazy 'vim-scripts/YankRing.vim', {
+            \ 'autoload': {
+                \ 'mappings': ['y', 'p', 'c', 'd', 'Y', 'P', 'C', 'D'],
+                \ 'commands': ['YRShow'],
+            \ }
+        \ }
+
+        let g:yankring_history_dir = $HOME . '/.vim/tmp'
+        let g:yankring_max_history = 25
+        let g:yankring_max_element_length = 1048576 " 1M
+        let g:yankring_ignore_duplicate = 1
+        let g:yankring_paste_check_default_register = 1
+
+        nmap <Bslash>y :YRShow<CR>
+    " }
 " }
 
 " NeoBundle - Running {

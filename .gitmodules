@@ -52,6 +52,9 @@
 [submodule "bundles/undotree"]
     path = bundles/undotree
     url = https://github.com/mbbill/undotree
+[submodule "bundles/YankRing.vim"]
+    path = bundles/YankRing.vim
+    url = https://github.com/vim-scripts/YankRing.vim
 [submodule "bundles/vim-addon-mw-utils"]
     path = bundles/vim-addon-mw-utils
     url = https://github.com/MarcWeber/vim-addon-mw-utils
