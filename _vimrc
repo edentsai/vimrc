@@ -218,6 +218,22 @@
         let mapleader = "\<Space>"
         let maplocalleader = "\<Space>"
     " }
+    " Copy, Paste {
+        " Copy & Paste with system clipboard {
+            map <Leader>Y "+y$
+            map <Leader>y "+y
+            map <Leader>P "+P
+            map <Leader>p "+p
+            map <Leader>d "+d
+        " }
+        " Paste mutiple lines multiple time with simple ppp {
+            nnoremap <silent> p p`]
+            vnoremap <silent> p p`]
+        " }
+        " Quickly select text you just pasted {
+            nnoremap gV `[v`]
+        " }
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
