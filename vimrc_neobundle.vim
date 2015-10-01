@@ -743,6 +743,22 @@
             \ }
         \ }
     " }
+    " vasconcelloslf/vim-interestingwords - Allows you to highlight and navigate through (multiple) different words in a buffer {
+        NeoBundleLazy 'vasconcelloslf/vim-interestingwords', {
+            \ 'autoload': {
+                \ 'functions': [
+                    \ 'InterestingWords',
+                    \ 'UncolorAllWords',
+                    \ 'WordNavigation',
+                \ ]
+            \ }
+        \ }
+
+        nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
+        nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
+        nnoremap <silent> n :call WordNavigation('forward')<CR>
+        nnoremap <silent> N :call WordNavigation('backward')<CR>
+    " }
 " }
 
 " NeoBundle - Running {

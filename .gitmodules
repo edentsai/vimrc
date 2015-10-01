@@ -85,6 +85,9 @@
 [submodule "bundles/vim-indentwise"]
     path = bundles/vim-indentwise
     url = https://github.com/jeetsukumaran/vim-indentwise
+[submodule "bundles/vim-interestingwords"]
+    path = bundles/vim-interestingwords
+    url = https://github.com/vasconcelloslf/vim-interestingwords
 [submodule "bundles/vim-matchit"]
     path = bundles/vim-matchit
     url = https://github.com/edsono/vim-matchit
