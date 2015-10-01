@@ -288,6 +288,15 @@
             nnoremap <Bslash>se :setlocal invspell spelllang=en<CR> :echo 'Set spell =' &spell<CR>
         " }
     " }
+    " Windows {
+        " Moving cursor to other windows {
+            nnoremap <C-h> <C-w>h
+            nnoremap <C-j> <C-w>j
+            nnoremap <C-k> <C-w>k
+            nnoremap <C-l> <C-w>l
+            nnoremap <C-w> <C-w><C-w>
+        "}
+    " }
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
