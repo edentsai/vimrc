@@ -356,6 +356,11 @@
         " }
     " }
 " }
+" Bundles (Plugins) {
+    if filereadable($HOME . '/.vim/vimrc_neobundle.vim')
+        source $HOME/.vim/vimrc_neobundle.vim
+    endif
+" }
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')

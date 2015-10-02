@@ -1,3 +1,9 @@
 # Ignore Max OSX files.
 .DS_Store
 Thumbs.db
+
+# Ignore plugins' files
+/bundles
+/bundles/.neobundle
+/bundles/NeoBundle.lock
+/tmp/yankring_history_v2.txt
