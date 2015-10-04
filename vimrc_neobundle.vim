@@ -123,10 +123,11 @@
         let g:indent_guides_start_level = 1
         let g:indent_guides_enable_on_vim_startup = 1
     " }
-    " tomasr/molokai - Molokai color scheme for Vim {
-        NeoBundle 'tomasr/molokai'
+    " edentsai/extended-molokai - Extended molokai color scheme for Vim {
+        NeoBundle 'edentsai/extended-molokai'
 
         let g:molokai_original = 0
+        let g:molokai_transparent = 0
         let g:rehash256 = 0
     " }
 " }
@@ -420,9 +421,6 @@
         let g:EasyMotion_use_upper = 1
         let g:EasyMotion_do_special_mapping = 1
         let g:EasyMotion_startofline = 0
-
-        highlight link EasyMotionTarget ErrorMsg
-        highlight link EasyMotionShade  Comment
 
         if neobundle#tap('vim-easymotion')
             function! neobundle#hooks.on_source(bundle)
@@ -1082,10 +1080,6 @@
             call neobundle#untap()
         endif
 
-        highlight link CSVColumnHeaderEven IndentGuidesEven
-        highlight link CSVColumnHeaderOdd IndentGuidesOdd
-        highlight link CSVColumnEven IndentGuidesEven
-        highlight link CSVColumnOdd IndentGuidesOdd
 
         " Configure vim-airline extension
         let g:airline#extensions#csv#enabled = 1
@@ -1111,14 +1105,6 @@
         let g:airline#extensions#hunks#enabled = 1
         let g:airline#extensions#hunks#non_zero_only = 1
         let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
-
-        " TODO
-        " hi SignifySignAdd      ctermfg=119 ctermbg=none  cterm=bold
-        " hi SignifySignDelete   ctermfg=167 ctermbg=none  cterm=bold
-        " hi SignifySignChange   ctermfg=227 ctermbg=none  cterm=bold
-
-        " highlight link SignifySignChangeDelete    SignifySignChange
-        " highlight link SignifySignDeleteFirstLine SignifySignDelete
     " }
     " tpope/vim-fugitive - A git wrapper so awesome {
         NeoBundleLazy 'tpope/vim-fugitive', {

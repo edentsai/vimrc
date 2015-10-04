@@ -13,6 +13,9 @@
 [submodule "bundles/emmet-vim"]
     path = bundles/emmet-vim
     url = https://github.com/mattn/emmet-vim
+[submodule "bundles/extended-molokai"]
+    path = bundles/extended-molokai
+    url = https://github.com/edentsai/extended-molokai
 [submodule "bundles/html-textobjects"]
     path = bundles/html-textobjects
     url = https://github.com/mjbrownie/html-textobjects
@@ -31,9 +34,6 @@
 [submodule "bundles/MatchTag"]
     path = bundles/MatchTag
     url = https://github.com/gregsexton/MatchTag
-[submodule "bundles/molokai"]
-    path = bundles/molokai
-    url = https://github.com/tomasr/molokai
 [submodule "bundles/neobundle.vim"]
     path = bundles/neobundle.vim
     url = https://github.com/Shougo/neobundle.vim
