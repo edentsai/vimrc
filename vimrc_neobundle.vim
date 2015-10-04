@@ -8,7 +8,7 @@
             silent !mkdir -p $HOME/.vim/bundles
             silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundles/neobundle.vim
 
-            autocmd VimEnter * NeoBundleCheck
+            autocmd VimEnter * NeoBundleInstall
         endif
     " }
     " Set up NeoBundle {
