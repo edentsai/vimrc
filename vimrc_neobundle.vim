@@ -1064,13 +1064,12 @@
         NeoBundleLazy 'chrisbra/csv.vim', {
             \ 'depends': ['bling/vim-airline'],
             \ 'autoload': {
-                \ 'commands': ['ArrangeColumn'],
-                \ 'filetypes': ['csv', 'tsv']
+                \ 'filetypes': ['csv', 'tsv'],
             \ }
         \ }
 
-        let g:csv_autocmd_arrange = 0
-        let g:csv_no_conceal = 0
+        " let g:csv_autocmd_arrange = 0
+        let g:csv_autocmd_arrange_size = 512*512
 
         if neobundle#tap('csv.vim')
             function! neobundle#hooks.on_source(bundle)
@@ -1080,12 +1079,12 @@
             call neobundle#untap()
         endif
 
+        " autocmd BufReadPre *.csv setlocal filetype=csv
+        " autocmd BufWritePre *.csv :%UnArrangeColumn
 
         " Configure vim-airline extension
         let g:airline#extensions#csv#enabled = 1
         let g:airline#extensions#csv#column_display = 'Name'
-
-        " autocmd BufWritePre *.csv :%UnArrangeColumn
     " }
 " }
 " Git {
