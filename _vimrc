@@ -361,6 +361,9 @@
         source $HOME/.vim/vimrc_neobundle.vim
     endif
 " }
+" Colorscheme {
+    colorscheme molokai
+" }
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')
