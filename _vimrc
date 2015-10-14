@@ -242,11 +242,17 @@
         " }
     " }
     " Cursor {
-        " Move cursor in insert mode by <C-hjkl> {
-            inoremap <C-h> <Left>
-            inoremap <C-j> <Down>
-            inoremap <C-k> <Up>
-            inoremap <C-l> <Right>
+        " Move cursor in insert mode by <M-hjkl> {
+            inoremap <M-h> <Left>
+            inoremap <M-j> <Down>
+            inoremap <M-k> <Up>
+            inoremap <M-l> <Right>
+
+            " For iTerm2/Mac OSX if the option key acts as Normal
+            inoremap ˙ <Left>
+            inoremap ∆ <Down>
+            inoremap ˚ <Up>
+            inoremap ¬ <Right>
         " }
         " Move cursor by display lines when wrapping {
             nnoremap j gj
