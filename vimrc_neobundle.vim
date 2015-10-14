@@ -1223,13 +1223,13 @@
 
         let g:phpcomplete_relax_static_constraint = 1
     " }
-    " StanAngeloff/php.vim {
-        NeoBundleLazy 'StanAngeloff/php.vim', {
-            \ 'autoload': {
-                \ 'filetypes': 'php'
-            \ }
-        \ }
-    " }
+    " " StanAngeloff/php.vim {
+    "     NeoBundleLazy 'StanAngeloff/php.vim', {
+    "         \ 'autoload': {
+    "             \ 'filetypes': 'php'
+    "         \ }
+    "     \ }
+    " " }
 " }
 " Shell, Bash {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
