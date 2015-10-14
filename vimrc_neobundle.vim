@@ -599,6 +599,7 @@
     " nishigori/increment-activator - Enhance to increment candidates {
         NeoBundleLazy 'nishigori/increment-activator', {
             \ 'autoload': {
+                \ 'filetypes': ['gitrebase'],
                 \ 'mappings': [
                     \ '<Plug>(increment-activator-'
                 \ ]
@@ -612,7 +613,7 @@
                 \ ['public', 'protected', 'private'],
                 \ ['class', 'interface', 'trait'],
             \ ],
-            \ 'git-rebase-todo': [
+            \ 'gitrebase': [
                 \ ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
             \ ],
             \ 'go': [
