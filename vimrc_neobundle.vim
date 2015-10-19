@@ -336,6 +336,8 @@
 
         " Configure vim-airline extension
         let g:airline#extensions#syntastic#enabled = 1
+
+        nmap <Bslash>c :SyntasticToggleMode
     " }
     " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
         NeoBundleLazy 'Shougo/neocomplete.vim', {
@@ -599,6 +601,7 @@
     " nishigori/increment-activator - Enhance to increment candidates {
         NeoBundleLazy 'nishigori/increment-activator', {
             \ 'autoload': {
+                \ 'filetypes': ['gitrebase'],
                 \ 'mappings': [
                     \ '<Plug>(increment-activator-'
                 \ ]
@@ -612,7 +615,7 @@
                 \ ['public', 'protected', 'private'],
                 \ ['class', 'interface', 'trait'],
             \ ],
-            \ 'git-rebase-todo': [
+            \ 'gitrebase': [
                 \ ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
             \ ],
             \ 'go': [
@@ -699,6 +702,7 @@
             \ }
         \ }
 
+        autocmd Filetype cfg let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
@@ -1222,13 +1226,13 @@
 
         let g:phpcomplete_relax_static_constraint = 1
     " }
-    " StanAngeloff/php.vim {
-        NeoBundleLazy 'StanAngeloff/php.vim', {
-            \ 'autoload': {
-                \ 'filetypes': 'php'
-            \ }
-        \ }
-    " }
+    " " StanAngeloff/php.vim {
+    "     NeoBundleLazy 'StanAngeloff/php.vim', {
+    "         \ 'autoload': {
+    "             \ 'filetypes': 'php'
+    "         \ }
+    "     \ }
+    " " }
 " }
 " Shell, Bash {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
