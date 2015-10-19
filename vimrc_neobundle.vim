@@ -700,6 +700,7 @@
             \ }
         \ }
 
+        autocmd Filetype cfg let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
