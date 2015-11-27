@@ -633,9 +633,6 @@
 
         nmap <C-a> <Plug>(increment-activator-increment)
         nmap <C-x> <Plug>(increment-activator-decrement)
-
-        imap <C-a> <Plug>(increment-activator-increment)
-        imap <C-x> <Plug>(increment-activator-decrement)
     " }
     " rhysd/clever-f.vim - Extended f, F, t and T key mappings for Vim {
         NeoBundle 'rhysd/clever-f.vim'
