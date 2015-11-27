@@ -1108,6 +1108,13 @@
         let g:airline#extensions#hunks#enabled = 1
         let g:airline#extensions#hunks#non_zero_only = 1
         let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
+
+        nnoremap <Bslash>gt :SignifyToggle<CR>
+        nnoremap <Bslash>gh :SignifyToggleHighlight<CR>
+        nnoremap <Bslash>gr :SignifyRefresh<CR>
+        nnoremap <Bslash>gd :SignifyDebug<CR>
+        nmap <Bslash>gj <plug>(signify-next-hunk)
+        nmap <Bslash>gk <plug>(signify-prev-hunk)
     " }
     " tpope/vim-fugitive - A git wrapper so awesome {
         NeoBundleLazy 'tpope/vim-fugitive', {
