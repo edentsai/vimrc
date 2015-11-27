@@ -1139,6 +1139,45 @@
         let g:airline#extensions#branch#format = 0
     " }
 " }
+" Golang {
+    " fatih/vim-go - Go development plugin for Vim {
+        NeoBundleLazy 'fatih/vim-go', {
+            \ 'autoload': {
+                \ 'filetypes': ['go']
+            \ }
+        \ }
+
+        let g:go_fmt_autosave = 0
+    " }
+    " nsf/gocode - An autocompletion daemon for the Go programming language {
+        NeoBundleLazy 'nsf/gocode', {
+            \ 'autoload': {
+                \ 'filetypes': ['go']
+            \ }
+        \ }
+    " }
+    " rjohnsondev/vim-compiler-go - Vim compiler plugin for Go (golang) {
+        NeoBundleLazy 'rjohnsondev/vim-compiler-go', {
+            \ 'autoload': {
+                \ 'filetypes': ['go']
+            \ }
+        \ }
+    " }
+    " dgryski/vim-godef - Vim plugin providing godef support {
+        NeoBundleLazy 'dgryski/vim-godef', {
+            \ 'autoload': {
+                \ 'filetypes': ['go']
+            \ }
+        \ }
+    " }
+    " vim-jp/vim-go-extra - Extra plugin for golang {
+        NeoBundleLazy 'vim-jp/vim-go-extra', {
+            \ 'autoload': {
+                \ 'filetypes': ['go']
+            \ }
+        \ }
+    " }
+" }
 " HTML, XML {
     " mattn/emmet-vim - The essential toolkit for web-developers {
         NeoBundleLazy 'mattn/emmet-vim', {

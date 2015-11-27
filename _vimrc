@@ -160,6 +160,12 @@
             \ setlocal syntax=php |
             \ setlocal omnifunc=phpcomplete#CompletePHP
     " }
+    " Golang {
+        autocmd FileType go
+            \ setlocal noexpandtab |
+            \ setlocal syntax=go |
+            \ setlocal omnifunc=go#complete#Complete
+    " }
     " HTML, PHTML {
         autocmd FileType htm,html,phtml
             \ setlocal syntax=html |
