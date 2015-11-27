@@ -347,16 +347,17 @@
             \ }
         \ }
 
-        let g:neocomplete#enable_cursor_hold_i = 0
         let g:acp_enableAtStartup = 0
-        let g:neocomplete#enable_auto_select = 1
         let g:neocomplete#enable_at_startup = 1
+        let g:neocomplete#enable_auto_select = 1
         let g:neocomplete#enable_smart_case = 1
         let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
         let g:neocomplete#min_keyword_length = 2
         let g:neocomplete#auto_completion_start_length = 3
         let g:neocomplete#manual_completion_start_length = 3
         let g:neocomplete#sources#syntax#min_keyword_length = 3
+        let g:neocomplete#release_cache_time = 300
+        let g:neocomplete#skip_auto_completion_time = 0.5
 
         " Define keyword.
         if !exists('g:neocomplete#keyword_patterns')
@@ -381,6 +382,8 @@
                 " <C-h>, <Left>: close popup and move backword char.
                 inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<Left>"
                 inoremap <expr><Left> neocomplete#smart_close_popup() . "\<Left>"
+
+                inoremap <expr><C-l> neocomplete#complete_common_string()
             endfunction
             call neobundle#untap()
         endif
