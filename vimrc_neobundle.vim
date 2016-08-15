@@ -41,7 +41,9 @@
 " }
 " User Interfaces {
     " vim-airline/vim-airline - Lean & mean status/tabline for vim that's light as air {
-        NeoBundle 'vim-airline/vim-airline'
+        NeoBundle 'vim-airline/vim-airline', {
+            \ 'depends': ['vim-airline/vim-airline-themes']
+        \ }
 
         let g:airline_theme = 'murmur'
         let g:airline_detect_paste = 1
