@@ -40,8 +40,8 @@
     " }
 " }
 " User Interfaces {
-    " bling/vim-airline - Lean & mean status/tabline for vim that's light as air {
-        NeoBundle 'bling/vim-airline'
+    " vim-airline/vim-airline - Lean & mean status/tabline for vim that's light as air {
+        NeoBundle 'vim-airline/vim-airline'
 
         let g:airline_theme = 'murmur'
         let g:airline_detect_paste = 1
@@ -85,7 +85,7 @@
     " }
     " bling/vim-bufferline - Super simple vim plugin to show the list of buffers in the command bar {
         NeoBundle 'bling/vim-bufferline', {
-            \ 'depends': ['bling/vim-airline']
+            \ 'depends': ['vim-airline/vim-airline']
         \ }
 
         " Configure vim-airline extension
@@ -144,7 +144,7 @@
     " }
     " kien/ctrlp.vim - Full path fuzzy finder for Vim {
         NeoBundle 'kien/ctrlp.vim', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'commands': ['CtrlP'],
                 \ 'mappings': ['<Leader><C-p>'],
@@ -270,7 +270,7 @@
     " majutsushi/tagbar - Browsing the tags of source code files {
         NeoBundleLazy 'majutsushi/tagbar', {
             \ 'depends': [
-                \ 'bling/vim-airline',
+                \ 'vim-airline/vim-airline',
                 \ 'vim-php/tagbar-phpctags.vim'
             \ ],
             \ 'autoload': {
@@ -312,7 +312,7 @@
     " }
     " scrooloose/syntastic - A syntax checking plugin for Vim {
         NeoBundle 'scrooloose/syntastic', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'commands': ['SyntasticCheck'],
             \ }
@@ -1066,7 +1066,7 @@
 " CSV {
     " chrisbra/csv.vim - A Filetype plugin for csv files {
         NeoBundleLazy 'chrisbra/csv.vim', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'filetypes': ['csv', 'tsv'],
             \ }
@@ -1094,7 +1094,7 @@
 " Git {
     " mhinz/vim-signify - Show a VCS diff using Vim's sign column {
         NeoBundle 'mhinz/vim-signify', {
-            \ 'depends': ['bling/vim-airline']
+            \ 'depends': ['vim-airline/vim-airline']
         \ }
 
         let g:signify_vcs_list = ['git']
@@ -1118,7 +1118,7 @@
     " }
     " tpope/vim-fugitive - A git wrapper so awesome {
         NeoBundleLazy 'tpope/vim-fugitive', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'commands': [
                     \ 'Git', 'Gdiff', 'Gstatus', 'Gwrite', 'Gcd', 'Glcd',
@@ -1244,7 +1244,7 @@
 " Shell, Bash {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
     "     NeoBundle 'edkolev/promptline.vim', {
-    "         \ 'depends': ['bling/vim-airline'],
+    "         \ 'depends': ['vim-airline/vim-airline'],
     "         \ 'autoload': {
     "                 \ 'commands': ['Promptline', 'PromptlineSnapshot'],
     "         \ }
@@ -1288,7 +1288,7 @@
     " }
     " " edkolev/tmuxline.vim - Simple tmux statusline generator with support for powerline symbols and airline integration {
     "     NeoBundleLazy 'edkolev/tmuxline.vim', {
-    "         \ 'depends': ['bling/vim-airline'],
+    "         \ 'depends': ['vim-airline/vim-airline'],
     "         \ 'autoload': {
     "             \ 'commands': ['Tmuxline']
     "         \ }
