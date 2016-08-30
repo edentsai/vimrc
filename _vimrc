@@ -329,9 +329,11 @@
             vnoremap <TAB> >gv
             if system('echo $TMUX') == ''
                 nnoremap <S-TAB> <<
+                inoremap <S-TAB> <C-O><<
                 vnoremap <S-TAB> <gv
             else
                 nnoremap [Z <<
+                inoremap [Z <C-O><<
                 vnoremap [Z <gv
             endif
         " }
