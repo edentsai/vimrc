@@ -194,7 +194,6 @@
         autocmd Filetype json
             \ setlocal foldmethod=syntax |
             \ setlocal foldlevel=1
-
     " }
     " RAML {
         autocmd Filetype raml
