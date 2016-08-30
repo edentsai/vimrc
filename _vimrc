@@ -195,6 +195,13 @@
             \ setlocal foldmethod=syntax |
             \ setlocal foldlevel=1
     " }
+    " RAML {
+        autocmd Filetype raml
+            \ setlocal syntax=raml |
+            \ setlocal tabstop=2 |
+            \ setlocal softtabstop=2 |
+            \ setlocal shiftwidth=2
+    " }
     " Omni Completion {
         autocmd FileType c setlocal omnifunc=ccomplete#Complete
         autocmd FileType java setlocal omnifunc=javacomplete#Complet
