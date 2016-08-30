@@ -266,7 +266,8 @@
             \ 'cpp'   : '//',
             \ 'sh'    : '#',
             \ 'python': '#',
-            \ 'php'   : '//'
+            \ 'php'   : '//',
+            \ 'raml'   : '#'
         \ }
     " }
     " majutsushi/tagbar - Browsing the tags of source code files {
@@ -706,6 +707,7 @@
 
         autocmd Filetype cfg let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
+        autocmd Filetype raml let b:commentary_format='# %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
         NeoBundleLazy 'tpope/vim-unimpaired', {
