@@ -1243,6 +1243,15 @@
     "     \ }
     " " }
 " }
+" RAML {
+    " IN3D/vim-raml - Vim syntax and language settings for RAML {
+        NeoBundleLazy 'IN3D/vim-raml', {
+            \ 'autoload': {
+                \ 'filetypes': ['raml']
+            \ }
+        \ }
+    " }
+" }
 " Shell, Bash {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
     "     NeoBundle 'edkolev/promptline.vim', {
