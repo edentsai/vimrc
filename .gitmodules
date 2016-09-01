@@ -22,6 +22,10 @@
     path = submodules/extended-molokai
     url = https://github.com/edentsai/extended-molokai
     ignore = dirty
+[submodule "submodules/fastfold"]
+	path = submodules/fastfold
+	url = https://github.com/Konfekt/FastFold.git
+    ignore = dirty
 [submodule "submodules/html-textobjects"]
     path = submodules/html-textobjects
     url = https://github.com/mjbrownie/html-textobjects
