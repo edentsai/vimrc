@@ -348,6 +348,18 @@
             nnoremap <Leader>uc viwU
             nnoremap <Leader>lc viwu
         " }
+        " Move lines to up / down {
+            nnoremap <M-j> :m .+1<CR>==
+            nnoremap <M-k> :m .-2<CR>==
+            vnoremap <M-j> :m '>+1<CR>gv=gv
+            vnoremap <M-k> :m '<-2<CR>gv=gv
+
+            " For iTerm2/Mac OSX if the option key acts as Normal
+            nnoremap ∆ :m .+1<CR>==
+            nnoremap ˚ :m .-2<CR>==
+            vnoremap ∆ :m '>+1<CR>gv=gv
+            vnoremap ˚ :m '<-2<CR>gv=gv
+        " }
         " Easier increment / decrement {
             nmap <silent> + <C-a>
             nmap <silent> - <C-x>
