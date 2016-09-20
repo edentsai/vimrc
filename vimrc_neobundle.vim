@@ -316,9 +316,6 @@
     " scrooloose/syntastic - A syntax checking plugin for Vim {
         NeoBundle 'scrooloose/syntastic', {
             \ 'depends': ['vim-airline/vim-airline'],
-            \ 'autoload': {
-                \ 'commands': ['SyntasticCheck'],
-            \ }
         \ }
 
         let g:syntastic_check_on_open = 0
