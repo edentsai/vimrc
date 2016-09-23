@@ -263,6 +263,8 @@
         let g:commentChar = {
             \ 'c'     : '//',
             \ 'cpp'   : '//',
+            \ 'gitcommit' : '#',
+            \ 'gitrebase' : '#',
             \ 'python': '#',
             \ 'php'   : '//',
             \ 'raml'   : '#',
@@ -708,6 +710,7 @@
         \ }
 
         autocmd Filetype cfg let b:commentary_format='# %s'
+        autocmd Filetype gitrebase,gitcommit let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
         autocmd Filetype raml let b:commentary_format='# %s'
     " }
