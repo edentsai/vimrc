@@ -261,13 +261,13 @@
         \ }
 
         let g:commentChar = {
-            \ 'vim'   : '"',
             \ 'c'     : '//',
             \ 'cpp'   : '//',
-            \ 'sh'    : '#',
             \ 'python': '#',
             \ 'php'   : '//',
-            \ 'raml'   : '#'
+            \ 'raml'   : '#',
+            \ 'sh'    : '#',
+            \ 'vim'   : '"',
         \ }
     " }
     " majutsushi/tagbar - Browsing the tags of source code files {
