@@ -267,6 +267,7 @@
             \ 'gitrebase' : '#',
             \ 'python': '#',
             \ 'php'   : '//',
+            \ 'sql'   : '--',
             \ 'raml'   : '#',
             \ 'sh'    : '#',
             \ 'vim'   : '"',
@@ -721,6 +722,7 @@
         autocmd Filetype gitrebase,gitcommit let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
         autocmd Filetype raml let b:commentary_format='# %s'
+        autocmd Filetype sql let b:commentary_format='-- %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
         NeoBundleLazy 'tpope/vim-unimpaired', {
