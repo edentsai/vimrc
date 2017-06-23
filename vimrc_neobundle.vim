@@ -406,8 +406,9 @@
         let g:UltiSnipsListSnippets = '<C-z>'
         let g:UltiSnipsEnableSnipMate = 1
         let g:UltiSnipsEditSplit = 'vertical'
-        let g:UltiSnipsSnippetsDir = $HOME . '/.vim/UltiSnips'
-        let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+        let g:UltiSnipsSnippetDirectories = [
+            \ $HOME . '/.vim/UltiSnips'
+        \ ]
     " }
 " }
 " Text Edition {
