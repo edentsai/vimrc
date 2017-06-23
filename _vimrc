@@ -133,7 +133,7 @@
         "     autocmd! BufWritePost .vimrc source %
         " " }
         " Auto remove all trailing whitespace when save file {
-            autocmd BufWritePre * :%s/\s\+$//e
+            autocmd BufWritePre * :call PreserveSearch("%s/\\s\\+$//ec")
         " }
         " Resize the divsions if the Vim window size changes {
             autocmd VimResized * exe "normal! \<c-w>="
@@ -194,7 +194,6 @@
         autocmd Filetype json
             \ setlocal foldmethod=syntax |
             \ setlocal foldlevel=1
-
     " }
     " RAML {
         autocmd Filetype raml
@@ -242,11 +241,17 @@
         " }
     " }
     " Cursor {
-        " Move cursor in insert mode by <C-hjkl> {
-            inoremap <C-h> <Left>
-            inoremap <C-j> <Down>
-            inoremap <C-k> <Up>
-            inoremap <C-l> <Right>
+        " Move cursor in insert mode by <M-hjkl> {
+            inoremap <M-h> <Left>
+            inoremap <M-j> <Down>
+            inoremap <M-k> <Up>
+            inoremap <M-l> <Right>
+
+            " For iTerm2/Mac OSX if the option key acts as Normal
+            inoremap ˙ <Left>
+            inoremap ∆ <Down>
+            inoremap ˚ <Up>
+            inoremap ¬ <Right>
         " }
         " Move cursor by display lines when wrapping {
             nnoremap j gj
@@ -331,15 +336,29 @@
             vnoremap <TAB> >gv
             if system('echo $TMUX') == ''
                 nnoremap <S-TAB> <<
+                inoremap <S-TAB> <C-O><<
                 vnoremap <S-TAB> <gv
             else
                 nnoremap [Z <<
+                inoremap [Z <C-O><<
                 vnoremap [Z <gv
             endif
         " }
         " Convert the current word to uppercase / lowercase {
             nnoremap <Leader>uc viwU
             nnoremap <Leader>lc viwu
+        " }
+        " Move lines to up / down {
+            nnoremap <M-j> :m .+1<CR>==
+            nnoremap <M-k> :m .-2<CR>==
+            vnoremap <M-j> :m '>+1<CR>gv=gv
+            vnoremap <M-k> :m '<-2<CR>gv=gv
+
+            " For iTerm2/Mac OSX if the option key acts as Normal
+            nnoremap ∆ :m .+1<CR>==
+            nnoremap ˚ :m .-2<CR>==
+            vnoremap ∆ :m '>+1<CR>gv=gv
+            vnoremap ˚ :m '<-2<CR>gv=gv
         " }
         " Easier increment / decrement {
             nmap <silent> + <C-a>
@@ -367,6 +386,9 @@
     if filereadable($HOME . '/.vim/vimrc_neobundle.vim')
         source $HOME/.vim/vimrc_neobundle.vim
     endif
+" }
+" Colorscheme {
+    colorscheme molokai
 " }
 " Local settings {
     " Include .vimrc_local if it exists {
