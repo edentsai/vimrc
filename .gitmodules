@@ -142,9 +142,6 @@
 [submodule "bundles/vim-markdown"]
     path = bundles/vim-markdown
     url = https://github.com/tpope/vim-markdown
-[submodule "bundles/vim-matchit"]
-    path = bundles/vim-matchit
-    url = https://github.com/edsono/vim-matchit
 [submodule "bundles/vim-multiple-cursors"]
     path = bundles/vim-multiple-cursors
     url = https://github.com/terryma/vim-multiple-cursors
