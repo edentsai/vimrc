@@ -340,7 +340,7 @@
         " Configure vim-airline extension
         let g:airline#extensions#syntastic#enabled = 1
 
-        nmap <Bslash>c :SyntasticToggleMode
+        nmap <Bslash>c :SyntasticToggleMode<CR>
     " }
     " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
         NeoBundleLazy 'Shougo/neocomplete.vim', {
