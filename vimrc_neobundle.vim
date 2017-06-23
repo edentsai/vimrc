@@ -8,7 +8,7 @@
             silent !mkdir -p $HOME/.vim/bundles
             silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundles/neobundle.vim
 
-            autocmd VimEnter * NeoBundleCheck
+            autocmd VimEnter * NeoBundleInstall
         endif
     " }
     " Set up NeoBundle {
@@ -40,8 +40,10 @@
     " }
 " }
 " User Interfaces {
-    " bling/vim-airline - Lean & mean status/tabline for vim that's light as air {
-        NeoBundle 'bling/vim-airline'
+    " vim-airline/vim-airline - Lean & mean status/tabline for vim that's light as air {
+        NeoBundle 'vim-airline/vim-airline', {
+            \ 'depends': ['vim-airline/vim-airline-themes']
+        \ }
 
         let g:airline_theme = 'murmur'
         let g:airline_detect_paste = 1
@@ -85,7 +87,7 @@
     " }
     " bling/vim-bufferline - Super simple vim plugin to show the list of buffers in the command bar {
         NeoBundle 'bling/vim-bufferline', {
-            \ 'depends': ['bling/vim-airline']
+            \ 'depends': ['vim-airline/vim-airline']
         \ }
 
         " Configure vim-airline extension
@@ -144,7 +146,7 @@
     " }
     " kien/ctrlp.vim - Full path fuzzy finder for Vim {
         NeoBundle 'kien/ctrlp.vim', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'commands': ['CtrlP'],
                 \ 'mappings': ['<Leader><C-p>'],
@@ -259,18 +261,19 @@
         \ }
 
         let g:commentChar = {
-            \ 'vim'   : '"',
             \ 'c'     : '//',
             \ 'cpp'   : '//',
-            \ 'sh'    : '#',
             \ 'python': '#',
-            \ 'php'   : '//'
+            \ 'php'   : '//',
+            \ 'raml'   : '#',
+            \ 'sh'    : '#',
+            \ 'vim'   : '"',
         \ }
     " }
     " majutsushi/tagbar - Browsing the tags of source code files {
         NeoBundleLazy 'majutsushi/tagbar', {
             \ 'depends': [
-                \ 'bling/vim-airline',
+                \ 'vim-airline/vim-airline',
                 \ 'vim-php/tagbar-phpctags.vim'
             \ ],
             \ 'autoload': {
@@ -312,10 +315,7 @@
     " }
     " scrooloose/syntastic - A syntax checking plugin for Vim {
         NeoBundle 'scrooloose/syntastic', {
-            \ 'depends': ['bling/vim-airline'],
-            \ 'autoload': {
-                \ 'commands': ['SyntasticCheck'],
-            \ }
+            \ 'depends': ['vim-airline/vim-airline'],
         \ }
 
         let g:syntastic_check_on_open = 0
@@ -336,6 +336,8 @@
 
         " Configure vim-airline extension
         let g:airline#extensions#syntastic#enabled = 1
+
+        nmap <Bslash>c :SyntasticToggleMode
     " }
     " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
         NeoBundleLazy 'Shougo/neocomplete.vim', {
@@ -345,16 +347,17 @@
             \ }
         \ }
 
-        let g:neocomplete#enable_cursor_hold_i = 0
         let g:acp_enableAtStartup = 0
-        let g:neocomplete#enable_auto_select = 1
         let g:neocomplete#enable_at_startup = 1
+        let g:neocomplete#enable_auto_select = 1
         let g:neocomplete#enable_smart_case = 1
         let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
         let g:neocomplete#min_keyword_length = 2
         let g:neocomplete#auto_completion_start_length = 3
         let g:neocomplete#manual_completion_start_length = 3
         let g:neocomplete#sources#syntax#min_keyword_length = 3
+        let g:neocomplete#release_cache_time = 300
+        let g:neocomplete#skip_auto_completion_time = 0.5
 
         " Define keyword.
         if !exists('g:neocomplete#keyword_patterns')
@@ -379,6 +382,8 @@
                 " <C-h>, <Left>: close popup and move backword char.
                 inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<Left>"
                 inoremap <expr><Left> neocomplete#smart_close_popup() . "\<Left>"
+
+                inoremap <expr><C-l> neocomplete#complete_common_string()
             endfunction
             call neobundle#untap()
         endif
@@ -573,6 +578,19 @@
         map <Leader>[% <Plug>(IndentWiseBlockScopeBoundaryBegin)
         map <Leader>]% <Plug>(IndentWiseBlockScopeBoundaryEnd)
     " }
+    " Konfekt/FastFold - Speed up Vim by updating folds only when called-for. {
+        NeoBundle 'Konfekt/FastFold'
+
+        let g:tex_fold_enabled=1
+        let g:fastfold_savehook = 1     " 在儲存時更新折疊資訊
+        let g:vimsyn_folding='af'
+        let g:xml_syntax_folding = 1
+        let g:php_folding = 1
+        let g:perl_fold = 1
+
+        " FastFold 只在 za/zA/zx/zX 時更新折疊資訊
+        let g:fastfold_fold_command_suffixes = ['a', 'A', 'x', 'X']
+    " }
     " kshenoy/vim-signature - A plugin to place, toggle and display marks {
         " Key mappings in Normal mode {
         "   m[a-zA-Z]    : Toggle mark
@@ -599,6 +617,7 @@
     " nishigori/increment-activator - Enhance to increment candidates {
         NeoBundleLazy 'nishigori/increment-activator', {
             \ 'autoload': {
+                \ 'filetypes': ['gitrebase'],
                 \ 'mappings': [
                     \ '<Plug>(increment-activator-'
                 \ ]
@@ -612,7 +631,7 @@
                 \ ['public', 'protected', 'private'],
                 \ ['class', 'interface', 'trait'],
             \ ],
-            \ 'git-rebase-todo': [
+            \ 'gitrebase': [
                 \ ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec'],
             \ ],
             \ 'go': [
@@ -627,9 +646,6 @@
 
         nmap <C-a> <Plug>(increment-activator-increment)
         nmap <C-x> <Plug>(increment-activator-decrement)
-
-        imap <C-a> <Plug>(increment-activator-increment)
-        imap <C-x> <Plug>(increment-activator-decrement)
     " }
     " rhysd/clever-f.vim - Extended f, F, t and T key mappings for Vim {
         NeoBundle 'rhysd/clever-f.vim'
@@ -699,7 +715,9 @@
             \ }
         \ }
 
+        autocmd Filetype cfg let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
+        autocmd Filetype raml let b:commentary_format='# %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
         NeoBundleLazy 'tpope/vim-unimpaired', {
@@ -1062,7 +1080,7 @@
 " CSV {
     " chrisbra/csv.vim - A Filetype plugin for csv files {
         NeoBundleLazy 'chrisbra/csv.vim', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'filetypes': ['csv', 'tsv'],
             \ }
@@ -1090,7 +1108,7 @@
 " Git {
     " mhinz/vim-signify - Show a VCS diff using Vim's sign column {
         NeoBundle 'mhinz/vim-signify', {
-            \ 'depends': ['bling/vim-airline']
+            \ 'depends': ['vim-airline/vim-airline']
         \ }
 
         let g:signify_vcs_list = ['git']
@@ -1104,10 +1122,17 @@
         let g:airline#extensions#hunks#enabled = 1
         let g:airline#extensions#hunks#non_zero_only = 1
         let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
+
+        nnoremap <Bslash>gt :SignifyToggle<CR>
+        nnoremap <Bslash>gh :SignifyToggleHighlight<CR>
+        nnoremap <Bslash>gr :SignifyRefresh<CR>
+        nnoremap <Bslash>gd :SignifyDebug<CR>
+        nmap <Bslash>gj <plug>(signify-next-hunk)
+        nmap <Bslash>gk <plug>(signify-prev-hunk)
     " }
     " tpope/vim-fugitive - A git wrapper so awesome {
         NeoBundleLazy 'tpope/vim-fugitive', {
-            \ 'depends': ['bling/vim-airline'],
+            \ 'depends': ['vim-airline/vim-airline'],
             \ 'autoload': {
                 \ 'commands': [
                     \ 'Git', 'Gdiff', 'Gstatus', 'Gwrite', 'Gcd', 'Glcd',
@@ -1230,10 +1255,19 @@
         \ }
     " }
 " }
+" RAML {
+    " IN3D/vim-raml - Vim syntax and language settings for RAML {
+        NeoBundleLazy 'IN3D/vim-raml', {
+            \ 'autoload': {
+                \ 'filetypes': ['raml']
+            \ }
+        \ }
+    " }
+" }
 " Shell, Bash {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
     "     NeoBundle 'edkolev/promptline.vim', {
-    "         \ 'depends': ['bling/vim-airline'],
+    "         \ 'depends': ['vim-airline/vim-airline'],
     "         \ 'autoload': {
     "                 \ 'commands': ['Promptline', 'PromptlineSnapshot'],
     "         \ }
@@ -1277,7 +1311,7 @@
     " }
     " " edkolev/tmuxline.vim - Simple tmux statusline generator with support for powerline symbols and airline integration {
     "     NeoBundleLazy 'edkolev/tmuxline.vim', {
-    "         \ 'depends': ['bling/vim-airline'],
+    "         \ 'depends': ['vim-airline/vim-airline'],
     "         \ 'autoload': {
     "             \ 'commands': ['Tmuxline']
     "         \ }
