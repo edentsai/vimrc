@@ -4,25 +4,27 @@
     " Download NeoBundle {
         let neoBundleReadme = expand($HOME . '/.vim/bundles/neobundle.vim/README.md')
         if !filereadable(neoBundleReadme)
-            echo "Download NeoBundle to '"
+            echo "Download NeoBundle:\n"
             silent !mkdir -p $HOME/.vim/bundles
             silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundles/neobundle.vim
 
-            autocmd VimEnter * NeoBundleInstall
+            autocmd VimEnter * NeoBundleCheck
         endif
     " }
     " Set up NeoBundle {
         if has('vim_starting')
-            if &compatible
-                set nocompatible   " Be Improved
-            endif
+            set nocompatible   " Be Improved
 
             set runtimepath+=$HOME/.vim/bundles/neobundle.vim/
         endif
 
-        call neobundle#begin(expand($HOME.'/.vim/bundles/'))
-        " Is better if NeoBundle rules NeoBundle (needed!)
+        call neobundle#begin(expand($HOME . '/.vim/bundles/'))
+
+        " Requred: Let NeoBundle manage NeoBundle
         NeoBundleFetch 'Shougo/neobundle.vim'
+
+        " The default protocol used for git (GitHub)
+        let g:neobundle#types#git#default_protocol = 'ssh'
     " }
 " }
 
