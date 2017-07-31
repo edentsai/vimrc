@@ -469,14 +469,6 @@
             call neobundle#untap()
         endif
     " }
-    " edsono/vim-matchit - extended % matching for HTML, LaTeX, and many other languages {
-        NeoBundleLazy 'edsono/vim-matchit', {
-            \ 'autoload': {
-                \ 'filetypes': ['xml', 'htm', 'html', 'xhtml', 'phtml'],
-                \ 'mappings': ['%', 'g%']
-            \ }
-        \ }
-    " }
     " godlygeek/tabular - vim script for text filtering and alignment {
         NeoBundleLazy 'godlygeek/tabular', {
             \ 'autoload': {
