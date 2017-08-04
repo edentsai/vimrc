@@ -240,9 +240,9 @@ if 0 | endif
             \ setlocal foldmethod=syntax |
             \ setlocal foldlevel=1
     " }
-    " RAML {
-        autocmd Filetype raml
-            \ setlocal syntax=raml |
+    " YAML, RAML {
+        autocmd Filetype yml,yaml,raml
+            \ setlocal syntax=yaml |
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
             \ setlocal shiftwidth=2
