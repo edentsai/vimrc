@@ -337,10 +337,6 @@ if 0 | endif
         " Toggle wrap mode {
             nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &wrap<CR>
         " }
-        " Toggle folding {
-            nnoremap <Bslash>f za
-            vnoremap <Bslash>f za
-        " }
         " Toggle number line {
             nnoremap <Bslash>n :set invnumber<CR> :echo 'Set number =' &number<CR>
             nnoremap <Bslash>rn :set invrelativenumber<CR> :echo 'Set relativenumber =' &relativenumber<CR>
