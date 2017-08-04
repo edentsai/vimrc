@@ -1,5 +1,9 @@
 " vim: set filetype=vim
 
+" Skip initialization for vim-tiny or vim-small. {
+if 0 | endif
+" }
+
 " Functions {
     " isMacOSX() {
         function! IsMacOSX()
