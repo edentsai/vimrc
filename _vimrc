@@ -237,7 +237,10 @@ if 0 | endif
     " JSON {
         autocmd Filetype json
             \ setlocal foldmethod=syntax |
-            \ setlocal foldlevel=1
+            \ setlocal foldlevel=1 |
+            \ setlocal tabstop=4 |
+            \ setlocal softtabstop=4 |
+            \ setlocal shiftwidth=4
     " }
     " YAML, RAML {
         autocmd Filetype yml,yaml,raml
