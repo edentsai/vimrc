@@ -98,7 +98,7 @@ if 0 | endif
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
     " }
     " History {
-        set history=1000                " How many commands be stored in history.
+        set history=500                 " How many commands be stored in history.
     " }
     " Directory, File {
         set autochdir                   " Auto change to the directory containing the file which was opened file.
