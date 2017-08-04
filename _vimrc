@@ -172,6 +172,7 @@
         set noerrorbells                " Disable the error bells.
     " }
 " }
+
 " Auto Commands {
     " File & Directory {
         " Restore cursor to file position in previous editing session {
@@ -259,6 +260,7 @@
         " }
     " }
 " }
+
 " Mapping Keys {
     " <leader> & <Localleader> {
         let mapleader = "\<Space>"
@@ -421,14 +423,17 @@
         " }
     " }
 " }
+
 " Bundles (Plugins) {
     if filereadable($HOME . '/.vim/vimrc_neobundle.vim')
         source $HOME/.vim/vimrc_neobundle.vim
     endif
 " }
+
 " Colorscheme {
     colorscheme molokai
 " }
+
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')
