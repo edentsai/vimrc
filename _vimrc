@@ -108,9 +108,6 @@ if 0 | endif
         set backupdir=$HOME/.vim/tmp/backup/
         set directory=$HOME/.vim/tmp/swap/
         set undodir=$HOME/.vim/tmp/undo/
-        silent! call MakeDirIfNoExists(&backupdir)
-        silent! call MakeDirIfNoExists(&directory)
-        silent! call MakeDirIfNoExists(&undodir)
     " }
     " Text Editor {
         set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
