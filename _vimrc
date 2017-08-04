@@ -329,8 +329,8 @@ if 0 | endif
         " Toggle paste mode {
             nnoremap <Bslash>p :set invpaste<CR> :echo 'Set paste =' &paste<CR>
         " }
-        " Toggle highlight search Mode {
-            nnoremap <Bslash>s :nohlsearch<CR>
+        " Toggle highlight search mode {
+            nnoremap <Bslash>s :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
         " }
         " Toggle Wrap mode {
             nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &invwrap<CR>
