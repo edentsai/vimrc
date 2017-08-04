@@ -88,6 +88,8 @@ if 0 | endif
         set numberwidth=5               " Speficy the width of number line.
         set ruler                       " Show the line and column number of the cursor position.
         set scrolloff=4                 " Minimal number of screen lines to keep above and below the cursor.
+        set sidescroll=1                " Minimal number of columns to scroll horizontally.
+        set sidescrolloff=10            " Minimal number of screen columns to keep to the left and to the right.
         set showcmd                     " Show command in the last line of the screen.
         set showmode                    " Show the mode line.
         set showtabline=2               " Always show the tab line.
@@ -332,8 +334,8 @@ if 0 | endif
         " Toggle highlight search mode {
             nnoremap <Bslash>s :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
         " }
-        " Toggle Wrap mode {
-            nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &invwrap<CR>
+        " Toggle wrap mode {
+            nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &wrap<CR>
         " }
         " Toggle folding {
             nnoremap <Bslash>f za
