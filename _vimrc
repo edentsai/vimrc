@@ -23,8 +23,8 @@
             endif
         endfunction
     " }
-    " PreserveSearch() - save last search, and cursor position. {
-        function! PreserveSearch(command)
+    " Preserve() - save last search, and cursor position. {
+        function! Preserve(command)
             let _s=@/
             let l = line(".")
             let c = col(".")
@@ -165,7 +165,7 @@
         "     autocmd! BufWritePost .vimrc source %
         " " }
         " Auto remove all trailing whitespace when save file {
-            autocmd BufWritePre * :call PreserveSearch("%s/\\s\\+$//ec")
+            autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
         " }
         " Resize the divsions if the Vim window size changes {
             autocmd VimResized * exe "normal! \<c-w>="
