@@ -97,8 +97,10 @@ if 0 | endif
         " Strings to use in 'list' mode and for the :list command.
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
     " }
-    " History, File, Directory {
-        set history=500                 " How many commands be stored in history.
+    " History {
+        set history=1000                " How many commands be stored in history.
+    " }
+    " Directory, File {
         set autochdir                   " Auto change to the directory containing the file which was opened file.
         set nobackup                    " Do not make a backup before overwriting a file.
         set noswapfile                  " Do not use a swapfile for the buffer.
