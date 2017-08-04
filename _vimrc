@@ -435,7 +435,11 @@ if 0 | endif
 " }
 
 " Colorscheme {
-    colorscheme molokai
+    try
+        colorscheme molokai
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme elflord
+    endtry
 " }
 
 " Local settings {
