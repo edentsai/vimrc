@@ -1,12 +1,61 @@
 " vim: set filetype=vim
 
+" Skip initialization for vim-tiny or vim-small. {
+if 0 | endif
+" }
+
 " Functions {
-    " Include vimrc_functions.vim if it exists {
-        if filereadable($HOME . '/.vim/vimrc_functions.vim')
-            source $HOME/.vim/vimrc_functions.vim
-        endif
+    " isMacOSX() {
+        function! IsMacOSX()
+            return has('macunix')
+        endfunction
+    " }
+    " isLinux() {
+        function! IsLinux()
+            return has('unix') && !has('macunix') && !has('win32unix')
+        endfunction
+    " }
+    " isWindows() {
+        function! IsWindows()
+            return has('win16') || has('win32') || has('win64')
+        endfunction
+    " }
+    " MakeDirIfNoExists() - Make directory if no exists. {
+        function! MakeDirIfNoExists(path)
+            if !isdirectory(expand(a:path))
+                call mkdir(expand(a:path), "p")
+            endif
+        endfunction
+    " }
+    " Preserve() - save last search, and cursor position. {
+        function! Preserve(command)
+            let _s=@/
+            let l = line(".")
+            let c = col(".")
+
+            " Do the business:
+            execute a:command
+
+            " Clean up: restore previous search history, and cursor position.
+            let @/=_s
+            call cursor(l, c)
+        endfunction
+    " }
+    " Restore cursor to file position in previous editing session {
+        function! RestoreCursorFromPreviousSession()
+            set viminfo='10,\"100,:20,%,n~/.viminfo
+
+            if line("'\"") > 0
+                if line("'\"") <= line("$")
+                    exe "norm '\""
+                else
+                    exe "norm $"
+                endif
+            endif
+        endfunction
     " }
 " }
+
 " Settings {
     " Compatible, Filetype, Syntax {
         set nocompatible                " Do not compatible with the old-fashion vi mode.
@@ -39,6 +88,8 @@
         set numberwidth=5               " Speficy the width of number line.
         set ruler                       " Show the line and column number of the cursor position.
         set scrolloff=4                 " Minimal number of screen lines to keep above and below the cursor.
+        set sidescroll=1                " Minimal number of columns to scroll horizontally.
+        set sidescrolloff=10            " Minimal number of screen columns to keep to the left and to the right.
         set showcmd                     " Show command in the last line of the screen.
         set showmode                    " Show the mode line.
         set showtabline=2               " Always show the tab line.
@@ -48,8 +99,10 @@
         " Strings to use in 'list' mode and for the :list command.
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
     " }
-    " History, File, Directory {
+    " History {
         set history=500                 " How many commands be stored in history.
+    " }
+    " Directory, File {
         set autochdir                   " Auto change to the directory containing the file which was opened file.
         set nobackup                    " Do not make a backup before overwriting a file.
         set noswapfile                  " Do not use a swapfile for the buffer.
@@ -59,9 +112,6 @@
         set backupdir=$HOME/.vim/tmp/backup/
         set directory=$HOME/.vim/tmp/swap/
         set undodir=$HOME/.vim/tmp/undo/
-        silent! call MakeDirIfNoExists(&backupdir)
-        silent! call MakeDirIfNoExists(&directory)
-        silent! call MakeDirIfNoExists(&undodir)
     " }
     " Text Editor {
         set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
@@ -127,27 +177,17 @@
         set noerrorbells                " Disable the error bells.
     " }
 " }
+
 " Auto Commands {
     " File & Directory {
-        " " Auto reload vimrc when editing it {
-        "     autocmd! BufWritePost .vimrc source %
-        " " }
+        " Restore cursor to file position in previous editing session {
+            autocmd BufReadPost * :call RestoreCursorFromPreviousSession()
+        " }
         " Auto remove all trailing whitespace when save file {
-            autocmd BufWritePre * :call PreserveSearch("%s/\\s\\+$//ec")
+            autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
         " }
         " Resize the divsions if the Vim window size changes {
             autocmd VimResized * exe "normal! \<c-w>="
-        " }
-        " Restore cursor to file position in previous editing session {
-            set viminfo='10,\"100,:20,%,n~/.viminfo
-            autocmd BufReadPost *
-                \ if line("'\"") > 0 |
-                    \ if line("'\"") <= line("$") |
-                        \ exe("norm '\"") |
-                    \ else |
-                        \ exe "norm $" |
-                    \ endif |
-                \ endif
         " }
     " }
     " Vim, Tmux, Conf {
@@ -199,11 +239,14 @@
     " JSON {
         autocmd Filetype json
             \ setlocal foldmethod=syntax |
-            \ setlocal foldlevel=1
+            \ setlocal foldlevel=1 |
+            \ setlocal tabstop=4 |
+            \ setlocal softtabstop=4 |
+            \ setlocal shiftwidth=4
     " }
-    " RAML {
-        autocmd Filetype raml
-            \ setlocal syntax=raml |
+    " YAML, RAML {
+        autocmd Filetype yml,yaml,raml
+            \ setlocal syntax=yaml |
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
             \ setlocal shiftwidth=2
@@ -221,10 +264,10 @@
                     \     setlocal omnifunc=syntaxcomplete#Complete |
                     \ endif
             endif
-            set cot-=preview        " Disable doc preview in omnicomplete
         " }
     " }
 " }
+
 " Mapping Keys {
     " <leader> & <Localleader> {
         let mapleader = "\<Space>"
@@ -288,15 +331,11 @@
         " Toggle paste mode {
             nnoremap <Bslash>p :set invpaste<CR> :echo 'Set paste =' &paste<CR>
         " }
-        " Toggle highlight search Mode {
-            nnoremap <Bslash>s :nohlsearch<CR>
+        " Toggle highlight search mode {
+            nnoremap <Bslash>s :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
         " }
-        " Toggle Wrap mode {
-            nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &invwrap<CR>
-        " }
-        " Toggle folding {
-            nnoremap <Bslash>f za
-            vnoremap <Bslash>f za
+        " Toggle wrap mode {
+            nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &wrap<CR>
         " }
         " Toggle number line {
             nnoremap <Bslash>n :set invnumber<CR> :echo 'Set number =' &number<CR>
@@ -387,14 +426,21 @@
         " }
     " }
 " }
+
 " Bundles (Plugins) {
     if filereadable($HOME . '/.vim/vimrc_neobundle.vim')
         source $HOME/.vim/vimrc_neobundle.vim
     endif
 " }
+
 " Colorscheme {
-    colorscheme molokai
+    try
+        colorscheme molokai
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme elflord
+    endtry
 " }
+
 " Local settings {
     " Include .vimrc_local if it exists {
         if filereadable($HOME . '/.vimrc_local')

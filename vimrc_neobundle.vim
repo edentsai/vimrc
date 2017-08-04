@@ -4,25 +4,27 @@
     " Download NeoBundle {
         let neoBundleReadme = expand($HOME . '/.vim/bundles/neobundle.vim/README.md')
         if !filereadable(neoBundleReadme)
-            echo "Download NeoBundle to '"
+            echo "Download NeoBundle:\n"
             silent !mkdir -p $HOME/.vim/bundles
             silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundles/neobundle.vim
 
-            autocmd VimEnter * NeoBundleInstall
+            autocmd VimEnter * NeoBundleCheck
         endif
     " }
     " Set up NeoBundle {
         if has('vim_starting')
-            if &compatible
-                set nocompatible   " Be Improved
-            endif
+            set nocompatible   " Be Improved
 
             set runtimepath+=$HOME/.vim/bundles/neobundle.vim/
         endif
 
-        call neobundle#begin(expand($HOME.'/.vim/bundles/'))
-        " Is better if NeoBundle rules NeoBundle (needed!)
+        call neobundle#begin(expand($HOME . '/.vim/bundles/'))
+
+        " Requred: Let NeoBundle manage NeoBundle
         NeoBundleFetch 'Shougo/neobundle.vim'
+
+        " The default protocol used for git (GitHub)
+        let g:neobundle#types#git#default_protocol = 'ssh'
     " }
 " }
 
@@ -263,8 +265,11 @@
         let g:commentChar = {
             \ 'c'     : '//',
             \ 'cpp'   : '//',
+            \ 'gitcommit' : '#',
+            \ 'gitrebase' : '#',
             \ 'python': '#',
             \ 'php'   : '//',
+            \ 'sql'   : '--',
             \ 'raml'   : '#',
             \ 'sh'    : '#',
             \ 'vim'   : '"',
@@ -337,7 +342,7 @@
         " Configure vim-airline extension
         let g:airline#extensions#syntastic#enabled = 1
 
-        nmap <Bslash>c :SyntasticToggleMode
+        nmap <Bslash>c :SyntasticToggleMode<CR>
     " }
     " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
         NeoBundleLazy 'Shougo/neocomplete.vim', {
@@ -403,8 +408,9 @@
         let g:UltiSnipsListSnippets = '<C-z>'
         let g:UltiSnipsEnableSnipMate = 1
         let g:UltiSnipsEditSplit = 'vertical'
-        let g:UltiSnipsSnippetsDir = $HOME . '/.vim/UltiSnips'
-        let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+        let g:UltiSnipsSnippetDirectories = [
+            \ $HOME . '/.vim/UltiSnips'
+        \ ]
     " }
 " }
 " Text Edition {
@@ -708,8 +714,10 @@
         \ }
 
         autocmd Filetype cfg let b:commentary_format='# %s'
+        autocmd Filetype gitrebase,gitcommit let b:commentary_format='# %s'
         autocmd Filetype php let b:commentary_format='// %s'
         autocmd Filetype raml let b:commentary_format='# %s'
+        autocmd Filetype sql let b:commentary_format='-- %s'
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
         NeoBundleLazy 'tpope/vim-unimpaired', {
@@ -766,22 +774,6 @@
         nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
         nnoremap <silent> n :call WordNavigation('forward')<CR>
         nnoremap <silent> N :call WordNavigation('backward')<CR>
-    " }
-    " vim-scripts/YankRing.vim - Maintains a history of previous yanks, changes and deletes {
-        NeoBundleLazy 'vim-scripts/YankRing.vim', {
-            \ 'autoload': {
-                \ 'mappings': ['y', 'p', 'c', 'd', 'Y', 'P', 'C', 'D'],
-                \ 'commands': ['YRShow'],
-            \ }
-        \ }
-
-        let g:yankring_history_dir = $HOME . '/.vim/tmp'
-        let g:yankring_max_history = 25
-        let g:yankring_max_element_length = 1048576 " 1M
-        let g:yankring_ignore_duplicate = 1
-        let g:yankring_paste_check_default_register = 1
-
-        nmap <Bslash>y :YRShow<CR>
     " }
 " }
 " Text Object Selection {
