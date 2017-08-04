@@ -1,12 +1,44 @@
 " vim: set filetype=vim
 
 " Functions {
-    " Include vimrc_functions.vim if it exists {
-        if filereadable($HOME . '/.vim/vimrc_functions.vim')
-            source $HOME/.vim/vimrc_functions.vim
-        endif
+    " isMacOSX() {
+        function! IsMacOSX()
+            return has('macunix')
+        endfunction
+    " }
+    " isLinux() {
+        function! IsLinux()
+            return has('unix') && !has('macunix') && !has('win32unix')
+        endfunction
+    " }
+    " isWindows() {
+        function! IsWindows()
+            return has('win16') || has('win32') || has('win64')
+        endfunction
+    " }
+    " MakeDirIfNoExists() - Make directory if no exists. {
+        function! MakeDirIfNoExists(path)
+            if !isdirectory(expand(a:path))
+                call mkdir(expand(a:path), "p")
+            endif
+        endfunction
+    " }
+    " PreserveSearch() - save last search, and cursor position. {
+        function! PreserveSearch(command)
+            let _s=@/
+            let l = line(".")
+            let c = col(".")
+
+            " Do the business:
+            execute a:command
+
+            " Clean up: restore previous search history, and cursor position.
+            let @/=_s
+            call cursor(l, c)
+        endfunction
     " }
 " }
+
 " Settings {
     " Compatible, Filetype, Syntax {
         set nocompatible                " Do not compatible with the old-fashion vi mode.
