@@ -262,7 +262,6 @@ if 0 | endif
                     \     setlocal omnifunc=syntaxcomplete#Complete |
                     \ endif
             endif
-            set cot-=preview        " Disable doc preview in omnicomplete
         " }
     " }
 " }
