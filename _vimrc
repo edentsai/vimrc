@@ -161,9 +161,6 @@
 " }
 " Auto Commands {
     " File & Directory {
-        " " Auto reload vimrc when editing it {
-        "     autocmd! BufWritePost .vimrc source %
-        " " }
         " Auto remove all trailing whitespace when save file {
             autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
         " }
