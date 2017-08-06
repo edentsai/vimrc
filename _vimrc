@@ -95,6 +95,7 @@ if 0 | endif
         set showtabline=2               " Always show the tab line.
         set title                       " Set the terminal title to the current file.
         set fillchars+=vert:│           " Characters to fill the statuslines and vertical separators.
+        set updatetime=1000             " If this many milliseconds nothing is typed the swap file will be written to disk
 
         " Strings to use in 'list' mode and for the :list command.
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
@@ -166,7 +167,7 @@ if 0 | endif
     " }
     " Mouse, Keyboard {
         set mouse=                      " Disable the use of the mouse.
-        set selection=exclusive         " Defines the behavior of the selection.
+        set selection=inclusive         " Defines the behavior of the selection.
         set selectmode=key,mouse        " Start a selection by mouse or shifted special keys.
         set timeoutlen=1000             " The time in milliseconds that is waited for a key code or mapped key sequence to complete.
     " }
@@ -225,7 +226,8 @@ if 0 | endif
             \ setlocal omnifunc=csscomplete#CompleteCSS |
             \ setlocal foldmethod=marker |
             \ setlocal foldmarker={,} |
-            \ setlocal foldlevel=1
+            \ setlocal foldlevel=1 |
+            \ setlocal iskeyword+=-
     " }
     " Javascript {
         autocmd Filetype javascript,js
@@ -331,7 +333,8 @@ if 0 | endif
             nnoremap <Bslash>p :set invpaste<CR> :echo 'Set paste =' &paste<CR>
         " }
         " Toggle highlight search mode. {
-            nnoremap <Bslash>s :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
+            nnoremap <Bslash>hs :nohlsearch<CR>
+            nnoremap <Bslash>hS :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
         " }
         " Toggle wrap mode. {
             nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &wrap<CR>
