@@ -41,7 +41,7 @@ if 0 | endif
             call cursor(l, c)
         endfunction
     " }
-    " Restore cursor to file position in previous editing session {
+    " Restore cursor to file position in previous editing session. {
         function! RestoreCursorFromPreviousSession()
             set viminfo='10,\"100,:20,%,n~/.viminfo
 
@@ -74,8 +74,8 @@ if 0 | endif
         set fileencodings=utf-8,ucs-bom,ig5,gb2312,latin1
     " }
     " Terminal Options {
-        set t_Co=256                    " Number of colors in terminal
-        set ttyfast                     " Indicates a fast terminal connection
+        set t_Co=256                    " Number of colors in terminal.
+        set ttyfast                     " Indicates a fast terminal connection.
     " }
     " Interfaces {
         set colorcolumn=120             " Highlight the screen column.
@@ -95,6 +95,7 @@ if 0 | endif
         set showtabline=2               " Always show the tab line.
         set title                       " Set the terminal title to the current file.
         set fillchars+=vert:│           " Characters to fill the statuslines and vertical separators.
+        set updatetime=1000             " If this many milliseconds nothing is typed the swap file will be written to disk
 
         " Strings to use in 'list' mode and for the :list command.
         set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
@@ -107,8 +108,7 @@ if 0 | endif
         set nobackup                    " Do not make a backup before overwriting a file.
         set noswapfile                  " Do not use a swapfile for the buffer.
 
-        " List of directory names for the backup/swap/undo files,
-        " And make the directories if no exists.
+        " List of directory names for the backup/swap/undo files.
         set backupdir=$HOME/.vim/tmp/backup/
         set directory=$HOME/.vim/tmp/swap/
         set undodir=$HOME/.vim/tmp/undo/
@@ -129,12 +129,12 @@ if 0 | endif
         set softtabstop=4               " Number of spaces that a <Tab> counts for while performing editing operations.
 
         " Folding
-        set foldenable                  " Enable folding
+        set foldenable                  " Enable folding.
         set foldlevel=2                 " Folds with a higher level will be closed.
-        set foldlevelstart=1            " Sets 'foldlevel' when starting to edit another buffer in a window
-        set foldmarker={,}              " The start and end marker used when the 'foldmethod' is 'marker'
-        set foldmethod=syntax           " Folding by syntax highlight for the current window
-        set foldnestmax=2               " The maximum nesting of oflds for the 'foldmethod' is 'indent' and 'syntax'
+        set foldlevelstart=1            " Sets 'foldlevel' when starting to edit another buffer in a window.
+        set foldmarker={,}              " The start and end marker used when the 'foldmethod' is 'marker'.
+        set foldmethod=syntax           " Folding by syntax highlight for the current window.
+        set foldnestmax=2               " The maximum nesting of oflds for the 'foldmethod' is 'indent' and 'syntax'.
     " }
     " Search {
         set hlsearch                   " Highlight all matches of search pattern.
@@ -152,23 +152,23 @@ if 0 | endif
         set wildmode=list:longest,full  " Completion mode is used for the character specified with 'wildchar'.
 
         " A list of file patterns is ignored when expanding wildcards.
-        set wildignore+=*.sw?                       " Vim swap files
-        set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~ " Backup files
-        set wildignore+=*.luac                      " Lua byte code
-        set wildignore+=*.jar                       " Java archives
-        set wildignore+=*.pyc                       " Python byte code
-        set wildignore+=*.stats                     " Pylint stats
+        set wildignore+=*.sw?                       " Vim swap files.
+        set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~ " Backup files.
+        set wildignore+=*.luac                      " Lua byte code.
+        set wildignore+=*.jar                       " Java archives.
+        set wildignore+=*.pyc                       " Python byte code.
+        set wildignore+=*.stats                     " Pylint stats.
         set wildignore+=*.class,*.o
         set wildignore+=*.zip
         set wildignore+=*.exe
 
-        " Files with these suffixes get a lower priority when multiple files match a wildcard
+        " Files with these suffixes get a lower priority when multiple files match a wildcard.
         set suffixes=.bak,~,.o,.info,.swp,.obj
     " }
     " Mouse, Keyboard {
         set mouse=                      " Disable the use of the mouse.
-        set selection=exclusive         " Defines the behavior of the selection.
-        set selectmode=key,mouse        " Start a selection by mouse or shifted special keys
+        set selection=inclusive         " Defines the behavior of the selection.
+        set selectmode=key,mouse        " Start a selection by mouse or shifted special keys.
         set timeoutlen=1000             " The time in milliseconds that is waited for a key code or mapped key sequence to complete.
     " }
     " Sound {
@@ -180,13 +180,13 @@ if 0 | endif
 
 " Auto Commands {
     " File & Directory {
-        " Restore cursor to file position in previous editing session {
+        " Restore cursor to file position in previous editing session. {
             autocmd BufReadPost * :call RestoreCursorFromPreviousSession()
         " }
-        " Auto remove all trailing whitespace when save file {
+        " Auto remove all trailing whitespace when save file. {
             autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
         " }
-        " Resize the divsions if the Vim window size changes {
+        " Resize the divsions if the Vim window size changes. {
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
@@ -226,7 +226,8 @@ if 0 | endif
             \ setlocal omnifunc=csscomplete#CompleteCSS |
             \ setlocal foldmethod=marker |
             \ setlocal foldmarker={,} |
-            \ setlocal foldlevel=1
+            \ setlocal foldlevel=1 |
+            \ setlocal iskeyword+=-
     " }
     " Javascript {
         autocmd Filetype javascript,js
@@ -274,79 +275,80 @@ if 0 | endif
         let maplocalleader = "\<Space>"
     " }
     " Copy, Paste {
-        " Copy & Paste with system clipboard {
+        " Copy & Paste with system clipboard. {
             map <Leader>Y "+y$
             map <Leader>y "+y
             map <Leader>P "+P
             map <Leader>p "+p
             map <Leader>d "+d
         " }
-        " Paste mutiple lines multiple time with simple ppp {
+        " Paste mutiple lines multiple time with simple ppp. {
             nnoremap <silent> p p`]
             vnoremap <silent> p p`]
         " }
-        " Quickly select text you just pasted {
+        " Quickly select text you just pasted. {
             nnoremap gV `[v`]
         " }
     " }
     " Cursor {
-        " Move cursor in insert mode by <M-hjkl> {
+        " Move cursor in insert mode by <M-hjkl>. {
             inoremap <M-h> <Left>
             inoremap <M-j> <Down>
             inoremap <M-k> <Up>
             inoremap <M-l> <Right>
 
-            " For iTerm2/Mac OSX if the option key acts as Normal
+            " For iTerm2/Mac OSX if the option key acts as Normal.
             inoremap ˙ <Left>
             inoremap ∆ <Down>
             inoremap ˚ <Up>
             inoremap ¬ <Right>
         " }
-        " Move cursor by display lines when wrapping {
+        " Move cursor by display lines when wrapping. {
             nnoremap j gj
             nnoremap k gk
             nnoremap $ g$
             nnoremap ^ g^
             nnoremap 0 g0
         " }
-        " Use <Leader><CR> as G {
+        " Use <Leader><CR> as G. {
             nnoremap <Leader><CR> G
         " }
     " }
     " File, Directory {
-        " File operations {
+        " File operations. {
             nnoremap <Leader>w :update<CR>
             nnoremap <Leader>q :quit<CR>
             nnoremap <Leader>wq :update<CR>:q<CR>
             nnoremap <Leader>qa :qa<CR>
         " }
-        " `<Leader>cd` to the directory containing the file in the buffer {
+        " `<Leader>cd` to the directory containing the file in the buffer. {
             nnoremap <Leader>cd :lcd %:h<CR>
         " }
     " }
     " Toggle Modes {
-        " Toggle list chars mode {
+        " Toggle list chars mode. {
             nnoremap <Bslash>lc :set invlist<CR> :echo 'Set list =' &list<CR>
         " }
-        " Toggle paste mode {
+        " Toggle paste mode. {
             nnoremap <Bslash>p :set invpaste<CR> :echo 'Set paste =' &paste<CR>
         " }
-        " Toggle highlight search mode {
-            nnoremap <Bslash>s :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
+        " Toggle highlight search mode. {
+            nnoremap <Bslash>hs :nohlsearch<CR>
+            nnoremap <Bslash>hS :set invhlsearch<CR> :echo 'Set hlsearch =' &hlsearch<CR>
         " }
-        " Toggle wrap mode {
+        " Toggle wrap mode. {
             nnoremap <Bslash>wp :set invwrap<CR> :echo 'Set wrap =' &wrap<CR>
         " }
-        " Toggle number line {
+        " Toggle line number mode. {
             nnoremap <Bslash>n :set invnumber<CR> :echo 'Set number =' &number<CR>
             nnoremap <Bslash>rn :set invrelativenumber<CR> :echo 'Set relativenumber =' &relativenumber<CR>
         " }
-        " Toggle spell checking with english {
+        " Toggle spell checking with english. {
             nnoremap <Bslash>se :setlocal invspell spelllang=en<CR> :echo 'Set spell =' &spell<CR>
         " }
     " }
     " Windows {
-        " Moving cursor to other windows {
+        " Moving cursor to other windows. {
             nnoremap <C-h> <C-w>h
             nnoremap <C-j> <C-w>j
             nnoremap <C-k> <C-w>k
@@ -354,11 +356,11 @@ if 0 | endif
         "}
     " }
     " Tabs {
-        " Continuous moving cursor to other tabs {
+        " Continuous moving cursor to other tabs. {
             nmap <C-t><C-p> gT<C-t>
             nmap <C-t><C-n> gt<C-t>
         " }
-        " Mapping <C-t># switch to the #number tab {
+        " Mapping <C-t># switch to the #number tab. {
             nnoremap <C-t>1 1gt
             nnoremap <C-t>2 2gt
             nnoremap <C-t>3 3gt
@@ -371,7 +373,7 @@ if 0 | endif
         " }
     " }
     " Text Editor {
-        " Continuous indent {
+        " Continuous indent. {
             nnoremap > >>
             nnoremap < <<
             vnoremap < <gv
@@ -388,35 +390,35 @@ if 0 | endif
                 vnoremap [Z <gv
             endif
         " }
-        " Convert the current word to uppercase / lowercase {
+        " Convert the current word to uppercase / lowercase. {
             nnoremap <Leader>uc viwU
             nnoremap <Leader>lc viwu
         " }
-        " Move lines to up / down {
+        " Move lines to up / down. {
             nnoremap <M-j> :m .+1<CR>==
             nnoremap <M-k> :m .-2<CR>==
             vnoremap <M-j> :m '>+1<CR>gv=gv
             vnoremap <M-k> :m '<-2<CR>gv=gv
 
-            " For iTerm2/Mac OSX if the option key acts as Normal
+            " For iTerm2/Mac OSX if the option key acts as Normal.
             nnoremap ∆ :m .+1<CR>==
             nnoremap ˚ :m .-2<CR>==
             vnoremap ∆ :m '>+1<CR>gv=gv
             vnoremap ˚ :m '<-2<CR>gv=gv
         " }
-        " Easier increment / decrement {
+        " Easier increment / decrement. {
             nmap <silent> + <C-a>
             nmap <silent> - <C-x>
         " }
     " }
     " Search {
-        " Keep search pattern at the center of the screen {
+        " Keep search pattern at the center of the screen. {
             nnoremap <silent> n nzz
             nnoremap <silent> N Nzz
             nnoremap <silent> * *zz
             nnoremap <silent> # #zz
         " }
-        " Continuous replacing all search matches {
+        " Continuous replacing all search matches. {
             " 1. I search things usual way using `/something`
             " 2. I hit `cw`, replace first match, and hit <Esc>
             " 3. I hit `n.n.n.n.n.` reviewing and replacing all matches
@@ -428,8 +430,8 @@ if 0 | endif
 " }
 
 " Bundles (Plugins) {
-    if filereadable($HOME . '/.vim/vimrc_neobundle.vim')
-        source $HOME/.vim/vimrc_neobundle.vim
+    if filereadable($HOME . '/.vim/vimrc_dein.vim')
+        source $HOME/.vim/vimrc_dein.vim
     endif
 " }
 
@@ -442,7 +444,7 @@ if 0 | endif
 " }
 
 " Local settings {
-    " Include .vimrc_local if it exists {
+    " Include .vimrc_local if it exists. {
         if filereadable($HOME . '/.vimrc_local')
             source $HOME/.vimrc_local
         endif
