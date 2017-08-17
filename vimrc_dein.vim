@@ -1252,10 +1252,11 @@
     "     let airline#extensions#tmuxline#color_template = 'replace'
     "     let airline#extensions#tmuxline#snapshot_file = '~/.tmux/colorschemes/tmuxlineSnapshot.conf'
     " " }
-    " vimez/vim-tmux - Vim syntax highlighting for tmux.conf {
-        call dein#add('vimez/vim-tmux', {
+    " ericpruitt/tmux.vim - Vim syntax file for tmux configuration files {
+        call dein#add('ericpruitt/tmux.vim', {
             \ 'lazy': 1,
             \ 'on_ft': ['conf', 'tmux'],
+            \ 'rtp': 'vim/',
         \ })
     " }
     " vimez/vim-tmux - Vim syntax highlighting for tmux.conf {
