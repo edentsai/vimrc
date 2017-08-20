@@ -352,6 +352,9 @@
 
             inoremap <expr><C-g> neocomplete#undo_completion()
             inoremap <expr><C-l> neocomplete#complete_common_string()
+
+            " Disable sort.
+            call neocomplete#custom#source('_', 'sorters', [''])
         endfunction
     " }
     " SirVer/ultisnips - The ultimate snippet solution for Vim {
