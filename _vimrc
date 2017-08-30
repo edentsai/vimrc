@@ -202,6 +202,8 @@ if 0 | endif
     " }
     " Golang {
         autocmd FileType go
+            \ setlocal foldmethod=syntax |
+            \ setlocal foldlevel=10 |
             \ setlocal noexpandtab |
             \ setlocal syntax=go |
             \ setlocal omnifunc=go#complete#Complete
