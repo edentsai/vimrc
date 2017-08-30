@@ -19,7 +19,7 @@
 " }
 
 " if dein#load_state(expand($HOME . '/.vim/dein'))
-    call dein#begin(expand($HOME . '/.vim/dein'))
+    call dein#begin(expand($HOME . '/.vim/dein'), [expand($HOME . '/.vim/vimrc_dein.vim')])
     " Shougo/dein.vim - Dark powered Vim/Neovim plugin manager {
         call dein#add('Shougo/dein.vim')
 
