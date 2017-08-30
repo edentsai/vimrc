@@ -269,6 +269,9 @@ if 0 | endif
             endif
         " }
     " }
+    " Misc {
+        autocmd BufNewFile,BufRead *.fish setlocal filetype=fish
+    " }
 " }
 
 " Mapping Keys {
