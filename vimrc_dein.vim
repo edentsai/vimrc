@@ -1249,6 +1249,12 @@
             \ 'on_ft': ['conf', 'tmux'],
         \ })
     " }
+    " vimez/vim-tmux - Vim syntax highlighting for tmux.conf {
+        call dein#add('vimez/vim-tmux', {
+            \ 'lazy': 1,
+            \ 'on_ft': ['conf', 'tmux'],
+        \ })
+    " }
 " }
 " Plugins For Misc {
     " uarun/vim-protobuf - Vim syntax highlighting for Google's Protocol Buffers {
