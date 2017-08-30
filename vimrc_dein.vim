@@ -531,7 +531,11 @@
         let g:xml_syntax_folding = 1
 
         " FastFold 只在 za/zA/zx/zX 時更新折疊資訊
-        let g:fastfold_fold_command_suffixes = ['a', 'A', 'x', 'X']
+        " let g:fastfold_fold_command_suffixes = ['a', 'A', 'x', 'X']
+        " let g:fastfold_skip_filetypes = [
+        "     \ 'vim',
+        "     \ 'taglist',
+        " \ ]
     " }
     " kshenoy/vim-signature - A plugin to place, toggle and display marks {
         " Key mappings in Normal mode {
