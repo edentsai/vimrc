@@ -135,6 +135,10 @@ if 0 | endif
         set foldmarker={,}              " The start and end marker used when the 'foldmethod' is 'marker'.
         set foldmethod=syntax           " Folding by syntax highlight for the current window.
         set foldnestmax=2               " The maximum nesting of oflds for the 'foldmethod' is 'indent' and 'syntax'.
+
+        " Split Windows
+        set splitright                  " Splitting a window will put the new window right of the current one.
+        set splitbelow                  " Splitting a window will put the new window below the current one.
     " }
     " Search {
         set hlsearch                   " Highlight all matches of search pattern.
