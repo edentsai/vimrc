@@ -47,18 +47,27 @@
         endif
 
         " Configure vim-airline extensions
-        let g:airline#extensions#tabline#enabled = 1
         let g:airline#extensions#tabline#buffer_idx_mode = 1
+        let g:airline#extensions#tabline#enabled = 1
         let g:airline#extensions#tabline#fnamemod = ':t'
         let g:airline#extensions#tabline#show_buffers = 0
+        let g:airline#extensions#tabline#show_splits = 1
         let g:airline#extensions#tabline#show_tab_nr = 1
+        let g:airline#extensions#tabline#show_tabs = 1
         let g:airline#extensions#tabline#tab_nr_type = 0
+        let g:airline#extensions#tabline#keymap_ignored_filetypes = ['vimfiler', 'nerdtree']
+        let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
         let g:airline#extensions#whitespace#enabled = 1
         let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
         let g:airline#extensions#whitespace#show_message = 1
     " }
     " bling/vim-bufferline - Super simple vim plugin to show the list of buffers in the command bar {
         call dein#add('bling/vim-bufferline')
+
+        let g:bufferline_echo = 0
+        let g:bufferline_fname_mod = ':p:~'
+        let g:bufferline_rotate = 0
+        let g:bufferline_solo_highlight = 1
 
         " Configure vim-airline extension
         let g:airline#extensions#bufferline#enabled = 1
