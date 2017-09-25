@@ -236,7 +236,7 @@ if 0 | endif
             \ setlocal iskeyword+=-
     " }
     " Javascript {
-        autocmd Filetype javascript,js
+        autocmd FileType javascript,js
             \ setlocal syntax=javascript |
             \ setlocal omnifunc=javascriptcomplete#CompleteJS |
             \ setlocal foldmethod=marker |
@@ -244,7 +244,7 @@ if 0 | endif
             \ setlocal foldnestmax=3
     " }
     " JSON {
-        autocmd Filetype json
+        autocmd FileType json
             \ setlocal foldmethod=syntax |
             \ setlocal foldlevel=1 |
             \ setlocal tabstop=4 |
@@ -252,7 +252,7 @@ if 0 | endif
             \ setlocal shiftwidth=4
     " }
     " YAML, RAML {
-        autocmd Filetype yml,yaml,raml
+        autocmd FileType yml,yaml,raml
             \ setlocal syntax=yaml |
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
@@ -266,7 +266,7 @@ if 0 | endif
 
         " Use syntax complete if nothing else available {
             if has("autocmd") && exists("+omnifunc")
-                autocmd Filetype *
+                autocmd FileType *
                     \ if &omnifunc == "" |
                     \     setlocal omnifunc=syntaxcomplete#Complete |
                     \ endif
