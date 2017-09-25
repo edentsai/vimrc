@@ -1192,6 +1192,22 @@
         \ })
     " }
 " }
+" Plugins For Terraform {
+    " hashivim/vim-terraform - basic vim/terraform integration {
+        call dein#add('hashivim/vim-terraform', {
+            \ 'lazy': 1,
+            \ 'on_ft': ['tf', 'terraform'],
+        \ })
+
+        let g:terraform_align=1
+    " }
+    " juliosueiras/vim-terraform-completion - A Vim Autocompletion and linter for Terraform, a HashiCorp tool {
+        call dein#add('juliosueiras/vim-terraform-completion', {
+            \ 'lazy': 1,
+            \ 'on_ft': ['tf', 'terraform'],
+        \ })
+    " }
+" }
 " Plugins For Shell, Bash, TMUX {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
     "     call dein#add('edkolev/promptline.vim', {

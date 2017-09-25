@@ -272,6 +272,13 @@ if 0 | endif
             \ setlocal shiftwidth=2 |
             \ setlocal commentstring=#\ %s
     " }
+    " Terraform {
+        autocmd FileType terraform
+            \ setlocal tabstop=2 |
+            \ setlocal softtabstop=2 |
+            \ setlocal shiftwidth=2 |
+            \ setlocal commentstring=#\ %s
+    " }
     " Omni Completion {
         autocmd FileType c setlocal omnifunc=ccomplete#Complete
         autocmd FileType java setlocal omnifunc=javacomplete#Complet
