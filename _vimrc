@@ -194,6 +194,10 @@ if 0 | endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
+    " Cfg {
+        autocmd FileType cfg
+            \ setlocal commentstring=#\ %s
+    " }
     " Vim, Tmux, Conf {
         autocmd FileType vim,tmux,conf
             \ setlocal foldmethod=marker |
@@ -202,7 +206,12 @@ if 0 | endif
     " PHP {
         autocmd FileType php
             \ setlocal syntax=php |
-            \ setlocal omnifunc=phpcomplete#CompletePHP
+            \ setlocal omnifunc=phpcomplete#CompletePHP |
+            \ setlocal commentstring=//\ %s
+    " }
+    " Git {
+        autocmd FileType gitcommit,gitconfig,gitignore,gitrebase
+            \ setlocal commentstring=#\ %s
     " }
     " Golang {
         autocmd FileType go
@@ -251,12 +260,17 @@ if 0 | endif
             \ setlocal softtabstop=4 |
             \ setlocal shiftwidth=4
     " }
+    " SQL {
+        autocmd FileType sql
+            \ setlocal commentstring=--\ %s
+    " }
     " YAML, RAML {
         autocmd FileType yml,yaml,raml
             \ setlocal syntax=yaml |
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
-            \ setlocal shiftwidth=2
+            \ setlocal shiftwidth=2 |
+            \ setlocal commentstring=#\ %s
     " }
     " Omni Completion {
         autocmd FileType c setlocal omnifunc=ccomplete#Complete

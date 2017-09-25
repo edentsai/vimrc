@@ -673,11 +673,8 @@
             \ 'on_map': ['gc'],
         \ })
 
-        autocmd Filetype cfg let b:commentary_format='# %s'
-        autocmd Filetype gitrebase,gitcommit let b:commentary_format='# %s'
-        autocmd Filetype php let b:commentary_format='// %s'
-        autocmd Filetype raml let b:commentary_format='# %s'
-        autocmd Filetype sql let b:commentary_format='-- %s'
+        " To custom the comment string for a specific filetype
+        " autocmd FileType sql setlocal commentstring=--\ %s
     " }
     " tpope/vim-unimpaired - pairs of handy bracket mappings {
         call dein#add('tpope/vim-unimpaired', {
