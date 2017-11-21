@@ -989,7 +989,7 @@
     " ekalinin/dockerfile.vim - Vim syntax file & snippets for Docker's Dockerfile {
         call dein#add('ekalinin/dockerfile.vim', {
             \ 'lazy': 1,
-            \ 'on_ft': ['dockerfile'],
+            \ 'on_ft': ['dockerfile', 'docker-compose'],
         \ })
     " }
 " }
