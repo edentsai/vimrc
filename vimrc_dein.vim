@@ -319,7 +319,7 @@
         let g:neocomplete#manual_completion_start_length = 2
         let g:neocomplete#sources#syntax#min_keyword_length = 2
         let g:neocomplete#release_cache_time = 300
-        let g:neocomplete#skip_auto_completion_time = 0.5
+        let g:neocomplete#skip_auto_completion_time = "0.5"
         let g:neocomplete#fallback_mappings = ["\<C-x>\<C-o>", "\<C-x>\<C-n>"]
 
         if !exists('g:neocomplete#delimiter_patterns')
