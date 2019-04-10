@@ -1041,7 +1041,7 @@
             \ 'lazy': 1,
             \ 'on_ft': ['go'],
             \ 'hook_post_source': 'call SetupVimGo()',
-            \ 'build': ':GoInstallBinaries',
+            \ 'hook_post_update': ':GoUpdateBinaries',
         \ })
 
         let g:go_auto_type_info = 0
@@ -1080,7 +1080,6 @@
             nmap <Leader>gr <Plug>(go-run)
             nmap <Leader>gt <Plug>(go-test)
         endfunction
-
     " }
 " }
 " Plugins For HTML, XML {
