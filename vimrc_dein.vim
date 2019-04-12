@@ -1036,13 +1036,15 @@
 " }
 " Plugins For Golang {
     " fatih/vim-go - Go development plugin for Vim {
-        call dein#add('fatih/vim-go', {
-            \ 'depends': ['ctrlp.vim'],
-            \ 'lazy': 1,
-            \ 'on_ft': ['go'],
-            \ 'hook_post_source': 'call SetupVimGo()',
-            \ 'hook_post_update': ':GoUpdateBinaries',
-        \ })
+        if executable('go')
+            call dein#add('fatih/vim-go', {
+                \ 'depends': ['ctrlp.vim'],
+                \ 'lazy': 1,
+                \ 'on_ft': ['go'],
+                \ 'hook_post_source': 'call SetupVimGo()',
+                \ 'hook_post_update': ':GoUpdateBinaries',
+            \ })
+        endif
 
         let g:go_auto_type_info = 0
         let g:go_auto_sameids = 0
