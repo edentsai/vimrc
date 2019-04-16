@@ -194,20 +194,22 @@ if 0 | endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
+    " C {
+        autocmd FileType c
+            \ setlocal omnifunc=ccomplete#Complete
+    " }
     " Cfg {
         autocmd FileType cfg
             \ setlocal commentstring=#\ %s
     " }
-    " Vim, Tmux, Conf {
-        autocmd FileType vim,tmux,conf
+    " CSS, SCSS, SASS {
+        autocmd FileType css,scss,sass
+            \ setlocal syntax=css |
+            \ setlocal omnifunc=csscomplete#CompleteCSS |
             \ setlocal foldmethod=marker |
-            \ setlocal foldlevel=1
-    " }
-    " PHP {
-        autocmd FileType php
-            \ setlocal syntax=php |
-            \ setlocal omnifunc=phpcomplete#CompletePHP |
-            \ setlocal commentstring=//\ %s
+            \ setlocal foldmarker={,} |
+            \ setlocal foldlevel=1 |
+            \ setlocal iskeyword+=-
     " }
     " Git {
         autocmd FileType gitcommit,gitconfig,gitignore,gitrebase
@@ -230,19 +232,9 @@ if 0 | endif
             \ vnoremap <Bslash>f zfat
         autocmd BufNewFile,BufRead *.phtml setlocal filetype=html
     " }
-    " XML {
-        autocmd FileType xml
-            \ setlocal syntax=xml |
-            \ setlocal omnifunc=xmlcomplete#CompleteTags
-    " }
-    " CSS, SCSS, SASS {
-        autocmd FileType css,scss,sass
-            \ setlocal syntax=css |
-            \ setlocal omnifunc=csscomplete#CompleteCSS |
-            \ setlocal foldmethod=marker |
-            \ setlocal foldmarker={,} |
-            \ setlocal foldlevel=1 |
-            \ setlocal iskeyword+=-
+    " Java {
+        autocmd FileType java
+            \ setlocal omnifunc=javacomplete#Complet
     " }
     " Javascript {
         autocmd FileType javascript,js
@@ -260,9 +252,41 @@ if 0 | endif
             \ setlocal softtabstop=4 |
             \ setlocal shiftwidth=4
     " }
+    " Markdown {
+        autocmd FileType markdown,md
+            \ setlocal syntax=markdown |
+            \ setlocal omnifunc=htmlcomplete#CompleteTags
+    " }
+    " PHP {
+        autocmd FileType php
+            \ setlocal syntax=php |
+            \ setlocal omnifunc=phpcomplete#CompletePHP |
+            \ setlocal commentstring=//\ %s
+    " }
+    " Python {
+        autocmd FileType python
+            \ setlocal omnifunc=pythoncomplete#Complete
+    " }
     " SQL {
         autocmd FileType sql
             \ setlocal commentstring=--\ %s
+    " }
+    " Terraform {
+        autocmd FileType terraform
+            \ setlocal tabstop=2 |
+            \ setlocal softtabstop=2 |
+            \ setlocal shiftwidth=2 |
+            \ setlocal commentstring=#\ %s
+    " }
+    " Vim, Tmux, Conf {
+        autocmd FileType vim,tmux,conf
+            \ setlocal foldmethod=marker |
+            \ setlocal foldlevel=1
+    " }
+    " XML {
+        autocmd FileType xml
+            \ setlocal syntax=xml |
+            \ setlocal omnifunc=xmlcomplete#CompleteTags
     " }
     " YAML, RAML {
         autocmd FileType yml,yaml,raml
@@ -272,19 +296,7 @@ if 0 | endif
             \ setlocal shiftwidth=2 |
             \ setlocal commentstring=#\ %s
     " }
-    " Terraform {
-        autocmd FileType terraform
-            \ setlocal tabstop=2 |
-            \ setlocal softtabstop=2 |
-            \ setlocal shiftwidth=2 |
-            \ setlocal commentstring=#\ %s
-    " }
     " Omni Completion {
-        autocmd FileType c setlocal omnifunc=ccomplete#Complete
-        autocmd FileType java setlocal omnifunc=javacomplete#Complet
-        autocmd FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-
         " Use syntax complete if nothing else available {
             if has("autocmd") && exists("+omnifunc")
                 autocmd FileType *
