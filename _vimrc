@@ -251,6 +251,13 @@ if 0 | endif
             \ setlocal foldlevel=1 |
             \ setlocal foldnestmax=3
     " }
+    " Jenkinsfile {
+        autocmd FileType Jenkinsfile
+            \ setlocal tabstop=2 |
+            \ setlocal softtabstop=2 |
+            \ setlocal shiftwidth=2 |
+            \ setlocal commentstring=//\ %s
+    " }
     " JSON {
         autocmd FileType json
             \ setlocal foldmethod=syntax |
