@@ -537,7 +537,8 @@
 
         let g:tex_fold_enabled = 1
         let g:fastfold_savehook = 1     " 在儲存時更新折疊資訊
-        let g:perl_fold = 1
+        " Temporary disable g:perl_fold, it cause folding issue in vimrc
+        " let g:perl_fold = 1
         let g:php_folding = 1
         let g:vimsyn_folding = 'af'
         let g:xml_syntax_folding = 1
