@@ -276,6 +276,14 @@ if 0 | endif
             \ setlocal syntax=php |
             \ setlocal omnifunc=phpcomplete#CompletePHP |
             \ setlocal commentstring=//\ %s
+
+        " php-cs-fixer configuration.
+        autocmd BufNewFile,BufRead .php_cs,.php_cs.dist
+            \ setlocal filetype=php |
+            \ setlocal syntax=php |
+            \ setlocal omnifunc=phpcomplete#CompletePHP |
+            \ setlocal commentstring=//\ %s
+
     " }
     " Python {
         autocmd FileType python
