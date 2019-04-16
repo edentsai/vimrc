@@ -299,7 +299,12 @@ if 0 | endif
     " }
     " XML {
         autocmd FileType xml
+            \ let xml_syntax_folding=1 |
             \ setlocal syntax=xml |
+            \ setlocal foldmethod=syntax |
+            \ setlocal foldlevel=4 |
+            \ setlocal foldlevelstart=5 |
+            \ setlocal foldnestmax=6 |
             \ setlocal omnifunc=xmlcomplete#CompleteTags
     " }
     " YAML, RAML {

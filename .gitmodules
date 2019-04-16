@@ -330,6 +330,10 @@
     path = submodules/winresizer
     url = https://github.com/jimsei/winresizer
     ignore = dirty
+[submodule "submodules/xml.vim"]
+    path = submodules/xml.vim
+    url = https://github.com/othree/xml.vim.git
+    ignore = dirty
 [submodule "submodules/xterm-color-table.vim"]
     path = submodules/xterm-color-table.vim
     url = https://github.com/guns/xterm-color-table.vim
