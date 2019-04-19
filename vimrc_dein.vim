@@ -1321,5 +1321,7 @@ filetype plugin indent on
 syntax enable
 
 if dein#check_install()
+    set cmdheight=40
     call dein#install()
+    set cmdheight=1
 endif

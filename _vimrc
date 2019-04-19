@@ -78,6 +78,7 @@ if 0 | endif
         set ttyfast                     " Indicates a fast terminal connection.
     " }
     " Interfaces {
+        set cmdheight=1                 " Command line height.
         set colorcolumn=120             " Highlight the screen column.
         set cursorcolumn                " Highlight the screen column of the cursor.
         set cursorline                  " Highlight the screen line of the cursor.
