@@ -304,7 +304,8 @@ if 0 | endif
     " Vim, Tmux, Conf {
         autocmd FileType vim,tmux,conf
             \ setlocal foldmethod=marker |
-            \ setlocal foldlevel=1
+            \ setlocal foldlevel=1 |
+            \ setlocal foldminlines=5
     " }
     " XML {
         autocmd FileType xml
