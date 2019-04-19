@@ -1119,6 +1119,12 @@
             \ 'on_ft': ['htm', 'html'],
         \ })
     " }
+    " othree/xml.vim - Helps editing XML (and [x]html, sgml, xslt) files {
+        call dein#add('othree/xml.vim', {
+            \ 'lazy': 1,
+            \ 'on_ft': ['xml'],
+        \ })
+    " }
     " tpope/vim-ragtag - HTML/XML mappings {
         call dein#add('tpope/vim-ragtag', {
             \ 'lazy': 1,
