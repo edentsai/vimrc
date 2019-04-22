@@ -1166,6 +1166,10 @@
 " Plugins For PHP {
     " 2072/php-indenting-for-vim - The official VIm indent script for PHP {
         call dein#add('2072/php-indenting-for-vim')
+
+        let g:PHP_autoformatcomment = 0
+        let g:PHP_BracesAtCodeLevel = 1
+        let g:PHP_noArrowMatching = 1
     " }
     " rayburgemeestre/phpfolding.vim - Automatic folding of PHP {
         call dein#add('rayburgemeestre/phpfolding.vim', {
