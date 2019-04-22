@@ -1165,16 +1165,10 @@
 " }
 " Plugins For PHP {
     " 2072/php-indenting-for-vim - The official VIm indent script for PHP {
-        call dein#add('2072/php-indenting-for-vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['php'],
-        \ })
+        call dein#add('2072/php-indenting-for-vim')
     " }
     " rayburgemeestre/phpfolding.vim - Automatic folding of PHP {
         call dein#add('rayburgemeestre/phpfolding.vim', {
-            \ 'lazy': 1,
-            \ 'on_cmd': ['EnablePHPFolds', 'EnableFastPHPFolds'],
-            \ 'on_ft': ['php'],
             \ 'hook_post_source': 'call SetupPHPFolding()',
         \ })
 
@@ -1188,10 +1182,7 @@
         " autocmd InsertLeave *.php if &modified && exists(":EnableFastPHPFolds") | :EnableFastPHPFolds
     " }
     " shawncplus/phpcomplete.vim - Improved PHP omnicompletion {
-        call dein#add('shawncplus/phpcomplete.vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['php'],
-        \ })
+        call dein#add('shawncplus/phpcomplete.vim')
 
         let g:phpcomplete_relax_static_constraint = 1
     " }
