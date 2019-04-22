@@ -276,6 +276,8 @@ if 0 | endif
         autocmd FileType php
             \ setlocal syntax=php |
             \ setlocal omnifunc=phpcomplete#CompletePHP |
+            \ setlocal foldlevel=1 |
+            \ setlocal foldlevelstart=2 |
             \ setlocal commentstring=//\ %s
 
         " php-cs-fixer configuration.
@@ -283,6 +285,8 @@ if 0 | endif
             \ setlocal filetype=php |
             \ setlocal syntax=php |
             \ setlocal omnifunc=phpcomplete#CompletePHP |
+            \ setlocal foldlevel=1 |
+            \ setlocal foldlevelstart=2 |
             \ setlocal commentstring=//\ %s
 
     " }
