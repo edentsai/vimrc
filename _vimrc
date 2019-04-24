@@ -266,6 +266,9 @@ if 0 | endif
             \ setlocal tabstop=4 |
             \ setlocal softtabstop=4 |
             \ setlocal shiftwidth=4
+
+        autocmd BufNewFile,BufRead *.json.example
+            \ setlocal filetype=json
     " }
     " Markdown {
         autocmd FileType markdown,md
@@ -281,7 +284,7 @@ if 0 | endif
             \ setlocal commentstring=//\ %s
 
         " php-cs-fixer configuration.
-        autocmd BufNewFile,BufRead .php_cs,.php_cs.dist
+        autocmd BufNewFile,BufRead *.php_cs,*.php_cs.dist
             \ setlocal filetype=php |
             \ setlocal syntax=php |
             \ setlocal omnifunc=phpcomplete#CompletePHP |
