@@ -1197,7 +1197,13 @@
     "     \ })
     " " }
 " }
-" Plugins For RAML {
+" Plugins For YAML, RAML {
+    " stephpy/vim-yaml - Override vim syntax for yaml files {
+        call dein#add('stephpy/vim-yaml', {
+            \ 'lazy': 1,
+            \ 'on_ft': ['yaml'],
+        \ })
+    " }
     " IN3D/vim-raml - Vim syntax and language settings for RAML {
         call dein#add('IN3D/vim-raml', {
             \ 'lazy': 1,
