@@ -330,6 +330,8 @@ if 0 | endif
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
             \ setlocal shiftwidth=2 |
+            \ setlocal foldlevel=5 |
+            \ setlocal foldlevelstart=6 |
             \ setlocal commentstring=#\ %s
     " }
     " Omni Completion {
