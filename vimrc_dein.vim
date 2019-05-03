@@ -312,6 +312,7 @@
         let g:acp_enableAtStartup = 0
         let g:neocomplete#enable_at_startup = 1
         let g:neocomplete#enable_auto_select = 1
+        let g:neocomplete#enable_ignore_case = 1
         let g:neocomplete#enable_smart_case = 1
         let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
         let g:neocomplete#min_keyword_length = 2
@@ -364,14 +365,13 @@
             \ 'lazy': 1,
             \ 'on_i': 1,
         \ })
-
         let g:UltiSnipsExpandTrigger = '<C-Bslash>'
         let g:UltiSnipsJumpForwardTrigger = '<C-p>'
         let g:UltiSnipsJumpBackwardTrigger = '<C-n>'
         let g:UltiSnipsListSnippets = '<C-z>'
         let g:UltiSnipsEditSplit = 'vertical'
         let g:UltiSnipsSnippetDirectories = [
-            \ $HOME . '/.vim/untisnips',
+            \ $HOME . '/.vim/UltiSnips',
         \ ]
     " }
 " }
