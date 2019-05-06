@@ -346,6 +346,11 @@ if 0 | endif
     " }
     " Misc {
         autocmd BufNewFile,BufRead *.fish setlocal filetype=fish
+
+        " .env configurations
+        autocmd BufNewFile,BufRead *.env,*.env.example
+            \ setlocal filetype=conf |
+            \ setlocal commentstring=#\ %s
     " }
 " }
 
