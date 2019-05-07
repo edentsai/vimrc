@@ -434,10 +434,15 @@ if 0 | endif
     " }
     " Windows {
         " Moving cursor to other windows. {
-            nnoremap <C-h> <C-w>h
-            nnoremap <C-j> <C-w>j
             nnoremap <C-k> <C-w>k
+            nnoremap <C-j> <C-w>j
             nnoremap <C-l> <C-w>l
+            nnoremap <C-h> <C-w>h
+
+            nnoremap <C-w>OA <C-w>k
+            nnoremap <C-w>OB <C-w>j
+            nnoremap <C-w>OC <C-w>l
+            nnoremap <C-w>OD <C-w>h
         "}
     " }
     " Tabs {
