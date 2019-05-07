@@ -8,3 +8,5 @@ Thumbs.db
 /bundles/NeoBundle.lock
 /dein/*
 /tmp/yankring_history_v2.txt
+/tmp/gutentags/*
+.netrwhist

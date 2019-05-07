@@ -1189,6 +1189,8 @@
         call dein#add('shawncplus/phpcomplete.vim')
 
         let g:phpcomplete_relax_static_constraint = 1
+        let g:phpcomplete_enhance_jump_to_definition = 1
+
     " }
     " " StanAngeloff/php.vim {
     "     call dein#add('StanAngeloff/php.vim', {
@@ -1321,6 +1323,21 @@
             \ 'lazy': 1,
             \ 'on_ft': ['proto'],
         \ })
+    " }
+    " ludovicchabant/vim-gutentags - A Vim plugin that manages your tag files {
+        " https://robertbasic.com/blog/current-vim-setup-for-php-development/
+        call dein#add('ludovicchabant/vim-gutentags')
+
+        let g:gutentags_ctags_executable="~/.vim/bin/ctags"
+        let g:gutentags_cache_dir = '~/.vim/tmp/gutentags'
+        let g:gutentags_exclude = [
+            \ '*.css',
+            \ '*.html', '*.js', '*.json', '*.xml',
+            \ '*.phar', '*.ini', '*.rst', '*.md',
+            \ '*vendor/*/test*', '*vendor/*/Test*',
+            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
+            \ '*var/cache*', '*var/log*'
+        \ ]
     " }
 " }
     call dein#end()
