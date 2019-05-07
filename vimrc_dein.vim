@@ -1210,8 +1210,8 @@
     " }
     " " StanAngeloff/php.vim {
     "     call dein#add('StanAngeloff/php.vim', {
-            " \ 'lazy': 1,
-            " \ 'on_ft': ['php'],
+    "         \ 'lazy': 1,
+    "         \ 'on_ft': ['php'],
     "     \ })
     " " }
 " }
