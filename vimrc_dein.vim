@@ -237,7 +237,17 @@
             \ 'kinds': [
                 \ 'c:classes',
                 \ 's:selectors',
-                \ 'i:identities'
+                \ 'i:identities',
+            \ ]
+        \ }
+        let g:tagbar_type_php  = {
+            \ 'ctagstype' : 'php',
+            \ 'kinds'     : [
+                \ 'i:interfaces',
+                \ 'c:classes',
+                \ 'd:constants',
+                \ 'f:functions',
+                \ 'j:javascript functions:1'
             \ ]
         \ }
         let g:tagbar_type_go = {
