@@ -1344,9 +1344,10 @@
         " https://robertbasic.com/blog/current-vim-setup-for-php-development/
         call dein#add('ludovicchabant/vim-gutentags')
 
-        let g:gutentags_ctags_executable="~/.vim/bin/ctags"
+        let g:gutentags_enabled = 1
+        let g:gutentags_ctags_executable='~/.vim/bin/ctags'
         let g:gutentags_cache_dir = '~/.vim/tmp/gutentags'
-        let g:gutentags_exclude = [
+        let g:gutentags_ctags_exclude = [
             \ '*.css',
             \ '*.html', '*.js', '*.json', '*.xml',
             \ '*.phar', '*.ini', '*.rst', '*.md',
@@ -1354,6 +1355,7 @@
             \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
             \ '*var/cache*', '*var/log*'
         \ ]
+        let g:gutentags_exclude_filetypes = []
     " }
 " }
     call dein#end()
