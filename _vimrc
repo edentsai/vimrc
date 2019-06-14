@@ -333,6 +333,9 @@ if 0 | endif
             \ setlocal foldlevel=5 |
             \ setlocal foldlevelstart=6 |
             \ setlocal commentstring=#\ %s
+
+        autocmd BufNewFile,BufRead .yamllint
+            \ setlocal filetype=yaml
     " }
     " Omni Completion {
         " Use syntax complete if nothing else available {
