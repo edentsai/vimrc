@@ -512,6 +512,18 @@ if 0 | endif
     " }
 " }
 
+" Source all .vim files in directory by glob {
+    function! SourceVimFilesInDirectoryByGlob(dir, glob)
+        if isdirectory(a:dir)
+            for s:filepath in split(globpath(a:dir, a:glob), '\n')
+                exe 'source' s:filepath
+            endfor
+        endif
+    endfunction
+
+    call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/vim.d', '*.vim')
+" }
+
 " Bundles (Plugins) {
     if filereadable($HOME . '/.vim/vimrc_dein.vim')
         source $HOME/.vim/vimrc_dein.vim
