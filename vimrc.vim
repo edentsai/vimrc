@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " C {
-        autocmd FileType c
-            \ setlocal omnifunc=ccomplete#Complete
-    " }
     " Cfg {
         autocmd FileType cfg
             \ setlocal commentstring=#\ %s
