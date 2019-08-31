@@ -197,15 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " CSS, SCSS, SASS {
-        autocmd FileType css,scss,sass
-            \ setlocal syntax=css |
-            \ setlocal omnifunc=csscomplete#CompleteCSS |
-            \ setlocal foldmethod=marker |
-            \ setlocal foldmarker={,} |
-            \ setlocal foldlevel=1 |
-            \ setlocal iskeyword+=-
-    " }
     " Docker {
         autocmd FileType Dockerfile
             \ setlocal tabstop=4 |
