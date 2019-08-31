@@ -197,13 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Jenkinsfile {
-        autocmd FileType Jenkinsfile
-            \ setlocal tabstop=2 |
-            \ setlocal softtabstop=2 |
-            \ setlocal shiftwidth=2 |
-            \ setlocal commentstring=//\ %s
-    " }
     " JSON {
         autocmd FileType json
             \ setlocal foldmethod=syntax |
