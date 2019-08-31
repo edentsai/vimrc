@@ -10,3 +10,9 @@ autocmd FileType php
 " PHP-CS-Fixer configuration.
 autocmd BufNewFile,BufRead *.php_cs,*.php_cs.dist
     \ setlocal filetype=php
+
+" Configure commentstring when enter window of a PHP file
+autocmd WinEnter *.php |
+    \ if &filetype == 'php' |
+        \ setlocal commentstring=//\ %s |
+    \ endif |
