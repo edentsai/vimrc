@@ -1,4 +1,4 @@
-" vim: set filetype=vim
+" vim: filetype=vim
 
 " Skip initialization for vim-tiny or vim-small. {
 if 0 | endif
