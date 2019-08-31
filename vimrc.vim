@@ -197,11 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Markdown {
-        autocmd FileType markdown,md
-            \ setlocal syntax=markdown |
-            \ setlocal omnifunc=htmlcomplete#CompleteTags
-    " }
     " PHP {
         autocmd FileType php
             \ setlocal syntax=php |
