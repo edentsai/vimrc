@@ -197,14 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Javascript {
-        autocmd FileType javascript,js
-            \ setlocal syntax=javascript |
-            \ setlocal omnifunc=javascriptcomplete#CompleteJS |
-            \ setlocal foldmethod=marker |
-            \ setlocal foldlevel=1 |
-            \ setlocal foldnestmax=3
-    " }
     " Jenkinsfile {
         autocmd FileType Jenkinsfile
             \ setlocal tabstop=2 |
