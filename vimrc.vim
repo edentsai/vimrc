@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " SQL {
-        autocmd FileType sql
-            \ setlocal commentstring=--\ %s
-    " }
     " Terraform {
         autocmd FileType terraform
             \ setlocal tabstop=2 |
