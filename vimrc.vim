@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Cfg {
-        autocmd FileType cfg
-            \ setlocal commentstring=#\ %s
-    " }
     " CSS, SCSS, SASS {
         autocmd FileType css,scss,sass
             \ setlocal syntax=css |
