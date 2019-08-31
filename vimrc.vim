@@ -197,8 +197,8 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Vim, Tmux, Conf {
-        autocmd FileType vim,tmux,conf
+    " Tmux, Conf {
+        autocmd FileType tmux,conf
             \ setlocal foldmethod=marker |
             \ setlocal foldlevel=1 |
             \ setlocal foldminlines=5
