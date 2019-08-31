@@ -197,17 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " JSON {
-        autocmd FileType json
-            \ setlocal foldmethod=syntax |
-            \ setlocal foldlevel=1 |
-            \ setlocal tabstop=4 |
-            \ setlocal softtabstop=4 |
-            \ setlocal shiftwidth=4
-
-        autocmd BufNewFile,BufRead *.json.example
-            \ setlocal filetype=json
-    " }
     " Markdown {
         autocmd FileType markdown,md
             \ setlocal syntax=markdown |
