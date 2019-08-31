@@ -197,13 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Terraform {
-        autocmd FileType terraform
-            \ setlocal tabstop=2 |
-            \ setlocal softtabstop=2 |
-            \ setlocal shiftwidth=2 |
-            \ setlocal commentstring=#\ %s
-    " }
     " Vim, Tmux, Conf {
         autocmd FileType vim,tmux,conf
             \ setlocal foldmethod=marker |
