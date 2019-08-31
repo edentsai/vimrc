@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Java {
-        autocmd FileType java
-            \ setlocal omnifunc=javacomplete#Complet
-    " }
     " Javascript {
         autocmd FileType javascript,js
             \ setlocal syntax=javascript |
