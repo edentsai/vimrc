@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Git {
-        autocmd FileType gitcommit,gitconfig,gitignore,gitrebase
-            \ setlocal commentstring=#\ %s
-    " }
     " Golang {
         autocmd FileType go
             \ setlocal foldmethod=syntax |
