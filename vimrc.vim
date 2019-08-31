@@ -197,8 +197,8 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " YAML, RAML {
-        autocmd FileType yml,yaml,raml
+    " RAML {
+        autocmd FileType raml
             \ setlocal syntax=yaml |
             \ setlocal tabstop=2 |
             \ setlocal softtabstop=2 |
@@ -206,9 +206,6 @@ endif
             \ setlocal foldlevel=5 |
             \ setlocal foldlevelstart=6 |
             \ setlocal commentstring=#\ %s
-
-        autocmd BufNewFile,BufRead .yamllint
-            \ setlocal filetype=yaml
     " }
     " Misc {
         autocmd BufNewFile,BufRead *.fish setlocal filetype=fish
