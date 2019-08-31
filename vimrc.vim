@@ -197,10 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Python {
-        autocmd FileType python
-            \ setlocal omnifunc=pythoncomplete#Complete
-    " }
     " SQL {
         autocmd FileType sql
             \ setlocal commentstring=--\ %s
