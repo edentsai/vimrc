@@ -11,3 +11,6 @@ autocmd FileType xml
     \ setlocal omnifunc=xmlcomplete#CompleteTags |
     \ setlocal syntax=xml
 
+" For example: phpunit.xml.dist
+autocmd BufNewFile,BufRead *.xml.dist
+    \ setlocal filetype=xml
