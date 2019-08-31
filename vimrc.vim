@@ -197,15 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " HTML, PHTML {
-        autocmd FileType htm,html,phtml
-            \ setlocal syntax=html |
-            \ setlocal omnifunc=htmlcomplete#CompleteTags |
-            \ setlocal foldmethod=manual |
-            \ nnoremap <Bslash>f zfat |
-            \ vnoremap <Bslash>f zfat
-        autocmd BufNewFile,BufRead *.phtml setlocal filetype=html
-    " }
     " Java {
         autocmd FileType java
             \ setlocal omnifunc=javacomplete#Complet
