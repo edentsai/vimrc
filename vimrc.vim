@@ -197,13 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Docker {
-        autocmd FileType Dockerfile
-            \ setlocal tabstop=4 |
-            \ setlocal softtabstop=4 |
-            \ setlocal shiftwidth=4 |
-            \ setlocal commentstring=#\ %s
-    " }
     " Git {
         autocmd FileType gitcommit,gitconfig,gitignore,gitrebase
             \ setlocal commentstring=#\ %s
