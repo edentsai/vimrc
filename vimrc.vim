@@ -337,16 +337,6 @@ if 0 | endif
         autocmd BufNewFile,BufRead .yamllint
             \ setlocal filetype=yaml
     " }
-    " Omni Completion {
-        " Use syntax complete if nothing else available {
-            if has("autocmd") && exists("+omnifunc")
-                autocmd FileType *
-                    \ if &omnifunc == "" |
-                    \     setlocal omnifunc=syntaxcomplete#Complete |
-                    \ endif
-            endif
-        " }
-    " }
     " Misc {
         autocmd BufNewFile,BufRead *.fish setlocal filetype=fish
 
@@ -542,4 +532,13 @@ if 0 | endif
             source $HOME/.vimrc_local
         endif
     " }
+" }
+
+" Use syntax complete as omnifunc if nothing else available {
+    if has("autocmd") && exists("+omnifunc")
+        autocmd FileType *
+            \ if &omnifunc == "" |
+            \     setlocal omnifunc=syntaxcomplete#Complete |
+            \ endif
+    endif
 " }
