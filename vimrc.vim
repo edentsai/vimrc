@@ -197,24 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " PHP {
-        autocmd FileType php
-            \ setlocal syntax=php |
-            \ setlocal omnifunc=phpcomplete#CompletePHP |
-            \ setlocal foldlevel=1 |
-            \ setlocal foldlevelstart=2 |
-            \ setlocal commentstring=//\ %s
-
-        " php-cs-fixer configuration.
-        autocmd BufNewFile,BufRead *.php_cs,*.php_cs.dist
-            \ setlocal filetype=php |
-            \ setlocal syntax=php |
-            \ setlocal omnifunc=phpcomplete#CompletePHP |
-            \ setlocal foldlevel=1 |
-            \ setlocal foldlevelstart=2 |
-            \ setlocal commentstring=//\ %s
-
-    " }
     " Python {
         autocmd FileType python
             \ setlocal omnifunc=pythoncomplete#Complete
