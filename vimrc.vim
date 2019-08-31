@@ -197,14 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Golang {
-        autocmd FileType go
-            \ setlocal foldmethod=syntax |
-            \ setlocal foldlevel=10 |
-            \ setlocal noexpandtab |
-            \ setlocal syntax=go |
-            \ setlocal omnifunc=go#complete#Complete
-    " }
     " HTML, PHTML {
         autocmd FileType htm,html,phtml
             \ setlocal syntax=html |
