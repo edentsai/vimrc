@@ -197,12 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Conf {
-        autocmd FileType conf
-            \ setlocal foldmethod=marker |
-            \ setlocal foldlevel=1 |
-            \ setlocal foldminlines=5
-    " }
     " XML {
         autocmd FileType xml
             \ let xml_syntax_folding=1 |
