@@ -28,15 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " terryma/vim-expand-region - To visually select increasingly larger regions of text using the same key combination {
-        call dein#add('terryma/vim-expand-region', {
-            \ 'lazy': 1,
-            \ 'on_map': ['<Plug>(expand_region_'],
-        \ })
-
-        vmap v <Plug>(expand_region_expand)
-        vmap V <Plug>(expand_region_shrink)
-    "  }
     " terryma/vim-multiple-cursors - True Sublime Text style multiple selections for Vim {
         call dein#add('terryma/vim-multiple-cursors', {
             \ 'lazy': 1,
