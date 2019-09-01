@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " AndrewRadev/splitjoin.vim - simplifies the transition between multiline and single-line code {
-        call dein#add('AndrewRadev/splitjoin.vim', {
-            \ 'lazy': 1,
-            \ 'on_map': ['gS', 'gJ'],
-        \ })
-    " }
     " easymotion/vim-easymotion - Provides a much simpler way to use some motions in Vim {
         " Key mappings in Normal mode {
         " <Leader><Leader> : To jump cursor fast
