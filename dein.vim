@@ -27,24 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Syntax & Completion {
-    " SirVer/ultisnips - The ultimate snippet solution for Vim {
-        call dein#add('honza/vim-snippets', {'lazy': 1})
-        call dein#add('SirVer/ultisnips', {
-            \ 'depends': ['vim-snippets'],
-            \ 'lazy': 1,
-            \ 'on_i': 1,
-        \ })
-        let g:UltiSnipsExpandTrigger = '<C-Bslash>'
-        let g:UltiSnipsJumpForwardTrigger = '<C-p>'
-        let g:UltiSnipsJumpBackwardTrigger = '<C-n>'
-        let g:UltiSnipsListSnippets = '<C-z>'
-        let g:UltiSnipsEditSplit = 'vertical'
-        let g:UltiSnipsSnippetDirectories = [
-            \ $HOME . '/.vim/UltiSnips',
-        \ ]
-    " }
-" }
 " Plugins For Text Editing {
     " AndrewRadev/splitjoin.vim - simplifies the transition between multiline and single-line code {
         call dein#add('AndrewRadev/splitjoin.vim', {
