@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-lastpat - Text objects for the last searched pattern {
-        call dein#add('kana/vim-textobj-lastpat', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'a/'],
-                \ ['xo', 'i/'],
-            \ ],
-        \ })
-    " }
     " kana/vim-textobj-line - Text objects for the current line {
         call dein#add('kana/vim-textobj-line', {
             \ 'depends': ['vim-textobj-user'],
