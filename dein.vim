@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " h1mesuke/textobj-wiw - Text object to select a range of words for humans {
-        call dein#add('h1mesuke/textobj-wiw', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'a,w'],
-                \ ['xo', 'i,w'],
-            \ ],
-        \ })
-    " }
     " mattn/vim-textobj-url - Text objects for url {
         call dein#add('mattn/vim-textobj-url', {
             \ 'depends': ['vim-textobj-user'],
