@@ -28,18 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For User Interface {
-    " bling/vim-bufferline - Super simple vim plugin to show the list of buffers in the command bar {
-        call dein#add('bling/vim-bufferline')
-
-        let g:bufferline_echo = 0
-        let g:bufferline_fname_mod = ':p:~'
-        let g:bufferline_rotate = 0
-        let g:bufferline_solo_highlight = 1
-
-        " Configure vim-airline extension
-        let g:airline#extensions#bufferline#enabled = 1
-        let g:airline#extensions#bufferline#overwrite_variables = 1
-    " }
     " guns/xterm-color-table.vim - All 256 xterm colors with their RGB equivalents {
         call dein#add('guns/xterm-color-table.vim', {
             \ 'lazy': 1,
