@@ -28,9 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " editorconfig/editorconfig-vim - EditorConfig plugin for Vim {
-        call dein#add('editorconfig/editorconfig-vim')
-    " }
     " godlygeek/tabular - vim script for text filtering and alignment {
         call dein#add('godlygeek/tabular', {
             \ 'lazy': 1,
