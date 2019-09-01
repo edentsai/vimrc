@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " akiyan/vim-textobj-xml-attribute - Text objects for xml attribute {
-        call dein#add('akiyan/vim-textobj-xml-attribute', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'axa'],
-                \ ['xo', 'ixa'],
-            \ ],
-        \ })
-    " }
     " fvictorio/vim-textobj-backticks - Text objects for regions inside backticks {
         call dein#add('fvictorio/vim-textobj-backticks', {
             \ 'depends': ['vim-textobj-user'],
