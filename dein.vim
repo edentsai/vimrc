@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For File & Directory Management {
-    " chrisbra/vim-diff-enhanced - Better Diff options for Vim {
-        call dein#add('chrisbra/vim-diff-enhanced', {
-            \ 'lazy' : 1,
-            \ 'on_cmd' : ['EnhancedDiff', 'PatienceDiff'],
-        \ })
-    " }
     " ctrlpvim/ctrlp.vim - Full path fuzzy finder for Vim {
         call dein#add('ctrlpvim/ctrlp.vim', {
             \ 'depends': ['vim-airline'],
