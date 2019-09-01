@@ -27,14 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For PHP {
-    " " StanAngeloff/php.vim {
-    "     call dein#add('StanAngeloff/php.vim', {
-    "         \ 'lazy': 1,
-    "         \ 'on_ft': ['php'],
-    "     \ })
-    " " }
-" }
 " Plugins For YAML, RAML {
     " stephpy/vim-yaml - Override vim syntax for yaml files {
         call dein#add('stephpy/vim-yaml', {
