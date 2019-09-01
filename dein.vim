@@ -27,15 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For User Interface {
-    " edentsai/extended-molokai - Extended molokai color scheme for Vim {
-        call dein#add('edentsai/extended-molokai')
-
-        let g:molokai_original = 0
-        let g:molokai_transparent = 0
-        let g:rehash256 = 0
-    " }
-" }
 " Plugins For File & Directory Management {
     " chrisbra/vim-diff-enhanced - Better Diff options for Vim {
         call dein#add('chrisbra/vim-diff-enhanced', {
