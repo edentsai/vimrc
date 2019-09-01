@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " saihoooooooo/vim-textobj-space - Text objects for continuity space {
-        call dein#add('saihoooooooo/vim-textobj-space', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'aS'],
-                \ ['xo', 'iS'],
-            \ ],
-        \ })
-    " }
     " sgur/vim-textobj-parameter - Text objects for parameter {
         call dein#add('sgur/vim-textobj-parameter', {
             \ 'depends': ['vim-textobj-user'],
