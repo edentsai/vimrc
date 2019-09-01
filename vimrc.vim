@@ -193,9 +193,6 @@ endif
         " Auto remove all trailing whitespace when save file. {
             autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
         " }
-        " Resize the divsions if the Vim window size changes. {
-            autocmd VimResized * exe "normal! \<c-w>="
-        " }
     " }
 " }
 
