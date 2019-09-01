@@ -28,30 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Git {
-    " mhinz/vim-signify - Show a VCS diff using Vim's sign column {
-        call dein#add('mhinz/vim-signify', {
-            \ 'depends': ['vim-airline']
-        \ })
-
-        let g:signify_vcs_list = ['git']
-        let g:signify_disable_by_default = 0
-        let g:signify_line_highlight = 0
-        let g:signify_mapping_toggle = '<leader>gt'
-        let g:signify_mapping_prev_hunk = '<leader>gk'
-        let g:signify_mapping_next_hunk = '<leader>gj'
-
-        " Configure vim-airline extension
-        let g:airline#extensions#hunks#enabled = 1
-        let g:airline#extensions#hunks#non_zero_only = 1
-        let g:airline#extensions#hunks#hunk_symbols = ['+', '~', '-']
-
-        nnoremap <Bslash>gt :SignifyToggle<CR>
-        nnoremap <Bslash>gh :SignifyToggleHighlight<CR>
-        nnoremap <Bslash>gr :SignifyRefresh<CR>
-        nnoremap <Bslash>gd :SignifyDebug<CR>
-        nmap <Bslash>gj <plug>(signify-next-hunk)
-        nmap <Bslash>gk <plug>(signify-prev-hunk)
-    " }
     " tpope/vim-fugitive - A git wrapper so awesome {
         call dein#add('tpope/vim-fugitive', {
             \ 'depends': ['vim-airline'],
