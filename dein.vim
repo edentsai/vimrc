@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-entire - Text objects for entire buffer {
-        call dein#add('kana/vim-textobj-entire', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'ae'],
-                \ ['xo', 'ie'],
-            \ ],
-        \ })
-    " }
     " kana/vim-textobj-fold - Text objects for foldings {
         call dein#add('kana/vim-textobj-fold', {
             \ 'depends': ['vim-textobj-user'],
