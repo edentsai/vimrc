@@ -28,19 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For File & Directory Management {
-    " mbbill/undotree - The ultimate undo history visualizer for Vim {
-        call dein#add('mbbill/undotree', {
-            \ 'lazy': 1,
-            \ 'on_cmd': ['UndotreeToggle', 'UndotreeShow', 'UndotreeHide'],
-        \ })
-
-        let g:undotree_SplitWidth = 30
-        let g:undotree_DiffpanelHeight = 15
-        let g:undotree_DiffAutoOpen = 1
-        let g:undotree_SetFocusWhenToggle = 1
-
-        nmap <Bslash>u :UndotreeToggle<CR>
-    " }
     " mhinz/vim-startify - A start screen for Vim {
         call dein#add('mhinz/vim-startify', {
             \ 'lazy': 1,
