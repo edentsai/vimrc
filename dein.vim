@@ -27,16 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For JSON {
-    " elzr/vim-json - Distinct highlighting of keywords vs values {
-        call dein#add('elzr/vim-json', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['json'],
-        \ })
-
-        let g:vim_json_syntax_conceal = 0
-    " }
-" }
 " Plugins For Markdown {
     " tpope/vim-markdown - Markdown runtime files {
         call dein#add('tpope/vim-markdown', {
