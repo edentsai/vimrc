@@ -197,12 +197,6 @@ endif
             autocmd VimResized * exe "normal! \<c-w>="
         " }
     " }
-    " Misc {
-        " .env configurations
-        autocmd BufNewFile,BufRead *.env,*.env.example
-            \ setlocal filetype=conf |
-            \ setlocal commentstring=#\ %s
-    " }
 " }
 
 " Mapping Keys {
