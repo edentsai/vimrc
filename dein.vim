@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-fold - Text objects for foldings {
-        call dein#add('kana/vim-textobj-fold', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'az'],
-                \ ['xo', 'iz'],
-            \ ],
-        \ })
-    " }
     " kana/vim-textobj-indent - Text objects for indented blocks of lines {
         call dein#add('kana/vim-textobj-indent', {
             \ 'depends': ['vim-textobj-user'],
