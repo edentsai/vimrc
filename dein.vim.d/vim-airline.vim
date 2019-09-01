@@ -29,6 +29,11 @@ if 0 == g:airline_powerline_fonts
     let g:airline_symbols.whitespace = 'Ξ'
 endif
 
+" Configure branch extension.
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#empty_message = ''
+let g:airline#extensions#branch#format = 0
+
 " Configure tabline extension
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#enabled = 1

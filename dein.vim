@@ -27,23 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Git {
-    " tpope/vim-fugitive - A git wrapper so awesome {
-        call dein#add('tpope/vim-fugitive', {
-            \ 'depends': ['vim-airline'],
-            \ 'lazy': 1,
-            \ 'on_cmd': [
-                \ 'Git', 'Gdiff', 'Gstatus', 'Gwrite', 'Gcd', 'Glcd',
-                \ 'Ggrep', 'Glog', 'Gcommit', 'Gblame', 'Gbrowse',
-            \ ],
-        \ })
-
-        " Configure vim-airline extension
-        let g:airline#extensions#branch#enabled = 1
-        let g:airline#extensions#branch#empty_message = ''
-        let g:airline#extensions#branch#format = 0
-    " }
-" }
 " Plugins For Golang {
     " fatih/vim-go - Go development plugin for Vim {
         if executable('go')
