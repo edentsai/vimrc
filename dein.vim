@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-syntax - Text objects for syntax highlighted items {
-        call dein#add('kana/vim-textobj-syntax', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'ay'],
-                \ ['xo', 'iy'],
-            \ ],
-        \ })
-    " }
     " akiyan/vim-textobj-php - Vim text object plugin for PHP view template {
         call dein#add('akiyan/vim-textobj-php', {
             \ 'depends': ['vim-textobj-user'],
