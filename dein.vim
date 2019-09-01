@@ -27,22 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For File & Directory Management {
-    " scrooloose/nerdtree - A tree explorer plugin for Vim {
-        call dein#add('scrooloose/nerdtree', {
-            \ 'depends': ['nerdtree-git-plugin'],
-            \ 'lazy': 1,
-            \ 'on_cmd': ['NERDTreeToggle'],
-        \ })
-        call dein#add('Xuyuanp/nerdtree-git-plugin', {"lazy": 1})
-
-        nnoremap <Bslash><Bslash> :NERDTreeToggle<CR>
-
-        let NERDTreeShowLineNumbers = 1
-        let NERDTreeShowHidden = 0
-        let NERDTreeIgnore = ['\~$', '\.lo$', '\.la$', '\.pyc']
-    " }
-" }
 " Plugins For Syntax & Completion {
     " neitanod/vim-clevertab - Tiny replacement for Supertab that DOES do what I need {
         call dein#add('neitanod/vim-clevertab', {
