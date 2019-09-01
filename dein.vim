@@ -27,16 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Markdown {
-    " tpope/vim-markdown - Markdown runtime files {
-        call dein#add('tpope/vim-markdown', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['markdown', 'md'],
-        \ })
-
-        autocmd BufNewFile,BufReadPost *.md setlocal filetype=markdown
-    " }
-" }
 " Plugins For PHP {
     " 2072/php-indenting-for-vim - The official VIm indent script for PHP {
         call dein#add('2072/php-indenting-for-vim')
