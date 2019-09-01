@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-indent - Text objects for indented blocks of lines {
-        call dein#add('kana/vim-textobj-indent', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'aI'],
-                \ ['xo', 'iI'],
-            \ ]
-        \ })
-    " }
     " kana/vim-textobj-lastpat - Text objects for the last searched pattern {
         call dein#add('kana/vim-textobj-lastpat', {
             \ 'depends': ['vim-textobj-user'],
