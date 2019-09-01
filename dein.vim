@@ -27,14 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Docker {
-    " ekalinin/dockerfile.vim - Vim syntax file & snippets for Docker's Dockerfile {
-        call dein#add('ekalinin/dockerfile.vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['dockerfile', 'docker-compose', 'yaml.docker-compose'],
-        \ })
-    " }
-" }
 " Plugins For Git {
     " mhinz/vim-signify - Show a VCS diff using Vim's sign column {
         call dein#add('mhinz/vim-signify', {
