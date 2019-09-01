@@ -28,17 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " tpope/vim-surround - To surround vim objects with a pair of identical chars {
-        " Key mappings in Normal mode {
-        "   ds  : Delete surrondings
-        "   c   : Change surrondings
-        "   ys  : takes a valid Vim motion or text object as the first object,
-        "         and wraps it using the second argument
-        "   yss : Operates on the current line, ignoring leading whitespace.
-        "
-        " }
-        call dein#add('tpope/vim-surround')
-    " }
     " tpope/vim-speeddating - Use CTRL-A/CTRL-X to increment dates, times, and more {
         call dein#add('tpope/vim-speeddating', {
             \ 'lazy': 1,
