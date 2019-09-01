@@ -18,11 +18,15 @@
 
 " if dein#load_state(expand($HOME . '/.vim/dein'))
     call dein#begin(expand($HOME . '/.vim/dein'), [expand($HOME . '/.vim/dein.vim')])
+
     " Shougo/dein.vim - Dark powered Vim/Neovim plugin manager {
         call dein#add('Shougo/dein.vim')
 
         let g:dein#install_message_type='echo'
     " }
+
+    call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
+
 " Plugins For User Interface {
     " vim-airline/vim-airline - lean & mean status/tabline for vim that's light as air {
         call dein#add('vim-airline/vim-airline', {
