@@ -27,15 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For HTML, XML {
-    " tpope/vim-ragtag - HTML/XML mappings {
-        call dein#add('tpope/vim-ragtag', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['xml', 'htm', 'html', 'xhtml', 'phtml'],
-            \ 'on_map': ['<Plug>ragtag'],
-        \ })
-    " }
-" }
 " Plugins For JavaScript {
     " pangloss/vim-javascript - Vastly improved Javascript indentation and syntax support in Vim {
         call dein#add('pangloss/vim-javascript', {
