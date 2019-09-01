@@ -28,20 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For PHP {
-    " rayburgemeestre/phpfolding.vim - Automatic folding of PHP {
-        call dein#add('rayburgemeestre/phpfolding.vim', {
-            \ 'hook_post_source': 'call SetupPHPFolding()',
-        \ })
-
-        let php_folding = 1
-
-        function! SetupPHPFolding()
-            nnoremap <Bslash>pf :EnableFastPHPFolds<CR>
-        endfunction
-
-        " " Refresh PHPFolds on insert leave
-        " autocmd InsertLeave *.php if &modified && exists(":EnableFastPHPFolds") | :EnableFastPHPFolds
-    " }
     " shawncplus/phpcomplete.vim - Improved PHP omnicompletion {
         call dein#add('shawncplus/phpcomplete.vim')
 
