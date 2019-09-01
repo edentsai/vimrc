@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For User Interface {
-    " guns/xterm-color-table.vim - All 256 xterm colors with their RGB equivalents {
-        call dein#add('guns/xterm-color-table.vim', {
-            \ 'lazy': 1,
-            \ 'on_cmd': ['XtermColorTable'],
-        \ })
-    " }
     " simeji/winresizer - very simple vim plugin for easy resizing of your vim windows {
         " Key mappings in Normal mode {
         "   <Ctrl+w>r : Start window resize mode
