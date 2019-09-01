@@ -28,14 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " godlygeek/tabular - vim script for text filtering and alignment {
-        call dein#add('godlygeek/tabular', {
-            \ 'lazy': 1,
-            \ 'on_cmd': ['Tabularize'],
-        \ })
-
-        noremap <Leader><Tab>/ :Tabularize /
-    " }
     " gregsexton/MatchTag - highlights the matching HTML tag when the cursor is positioned on a tag {
         call dein#add('gregsexton/MatchTag', {
             \ 'lazy': 1,
