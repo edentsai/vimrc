@@ -28,9 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Syntax & Completion {
-    " Shougo/vimproc.vim - Interactive command execution in Vim. {
-        call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-    " }
     " Shougo/neocomplete.vim - Next generation completion framework after neocomplcache {
         call dein#add('Shougo/neocomplete.vim', {
             \ 'depends': ['vimproc.vim'],
