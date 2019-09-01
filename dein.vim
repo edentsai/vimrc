@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " gregsexton/MatchTag - highlights the matching HTML tag when the cursor is positioned on a tag {
-        call dein#add('gregsexton/MatchTag', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['xml', 'htm', 'html', 'xhtml', 'phtml'],
-        \ })
-    " }
     " haya14busa/incsearch.vim - incrementally highlights ALL pattern matches unlike default 'incsearch' {
         call dein#add('haya14busa/incsearch.vim', {
             \ 'lazy': 1,
