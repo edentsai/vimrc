@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Misc {
-    " uarun/vim-protobuf - Vim syntax highlighting for Google's Protocol Buffers {
-        call dein#add('uarun/vim-protobuf', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['proto'],
-        \ })
-    " }
     " ludovicchabant/vim-gutentags - A Vim plugin that manages your tag files {
         " https://robertbasic.com/blog/current-vim-setup-for-php-development/
         call dein#add('ludovicchabant/vim-gutentags')
