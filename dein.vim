@@ -28,9 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " ntpeters/vim-better-whitespace - Better whitespace highlighting for Vim {
-        call dein#add('ntpeters/vim-better-whitespace')
-    " }
     " rhysd/clever-f.vim - Extended f, F, t and T key mappings for Vim {
         call dein#add('rhysd/clever-f.vim', {
             \ 'lazy': 1,
