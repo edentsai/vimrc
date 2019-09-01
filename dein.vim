@@ -28,13 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-user - Create your own text objects {
-        " Reference: https://github.com/kana/vim-textobj-user/wiki
-        call dein#add('kana/vim-textobj-user', {
-            \ 'lazy': 1,
-            \ 'on_func': 'textobj#user',
-        \ })
-    " }
     " kana/vim-textobj-datetime - Text objects for date and time {
         call dein#add('kana/vim-textobj-datetime', {
             \ 'depends': ['vim-textobj-user'],
