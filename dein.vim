@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " mattn/vim-textobj-url - Text objects for url {
-        call dein#add('mattn/vim-textobj-url', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'au'],
-                \ ['xo', 'iu'],
-            \ ],
-        \ })
-    " }
     " mjbrownie/html-textobjects - Some advanced vim html textobject mappings {
         call dein#add('mjbrownie/html-textobjects', {
             \ 'depends': ['vim-textobj-user'],
