@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " sgur/vim-textobj-parameter - Text objects for parameter {
-        call dein#add('sgur/vim-textobj-parameter', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'a,'],
-                \ ['xo', 'i,'],
-            \ ],
-        \ })
-    " }
     " thinca/vim-textobj-between - Text objects for a range between a character {
         call dein#add('thinca/vim-textobj-between', {
             \ 'depends': ['vim-textobj-user'],
