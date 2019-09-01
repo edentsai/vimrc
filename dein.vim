@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " tpope/vim-unimpaired - pairs of handy bracket mappings {
-        call dein#add('tpope/vim-unimpaired', {
-            \ 'lazy': 1,
-            \ 'on_map': ['[', ']'],
-        \ })
-    " }
     " tpope/vim-surround - To surround vim objects with a pair of identical chars {
         " Key mappings in Normal mode {
         "   ds  : Delete surrondings
