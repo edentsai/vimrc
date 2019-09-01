@@ -27,25 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Misc {
-    " ludovicchabant/vim-gutentags - A Vim plugin that manages your tag files {
-        " https://robertbasic.com/blog/current-vim-setup-for-php-development/
-        call dein#add('ludovicchabant/vim-gutentags')
-
-        let g:gutentags_enabled = 1
-        let g:gutentags_ctags_executable='~/.vim/bin/ctags'
-        let g:gutentags_cache_dir = '~/.vim/tmp/gutentags'
-        let g:gutentags_ctags_exclude = [
-            \ '*.css',
-            \ '*.html', '*.js', '*.json', '*.xml',
-            \ '*.phar', '*.ini', '*.rst', '*.md',
-            \ '*vendor/*/test*', '*vendor/*/Test*',
-            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
-            \ '*var/cache*', '*var/log*'
-        \ ]
-        let g:gutentags_exclude_filetypes = []
-    " }
-" }
     call dein#end()
     " call dein#save_state()
 " endif
