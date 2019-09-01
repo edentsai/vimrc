@@ -146,8 +146,8 @@ endif
 " }
 
 " Bundles (Plugins) {
-    if filereadable($HOME . '/.vim/vimrc_dein.vim')
-        source $HOME/.vim/vimrc_dein.vim
+    if filereadable($HOME . '/.vim/dein.vim')
+        source $HOME/.vim/dein.vim
     endif
 " }
 
