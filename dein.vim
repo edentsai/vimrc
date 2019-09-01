@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For YAML, RAML {
-    " stephpy/vim-yaml - Override vim syntax for yaml files {
-        call dein#add('stephpy/vim-yaml', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['yaml'],
-        \ })
-    " }
     " pedrohdz/vim-yaml-folds - YAML, RAML, EYAML & SaltStack SLS folding for Vim {
         call dein#add('pedrohdz/vim-yaml-folds', {
             \ 'lazy': 1,
