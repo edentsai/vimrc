@@ -27,14 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For YAML, RAML {
-    " IN3D/vim-raml - Vim syntax and language settings for RAML {
-        call dein#add('IN3D/vim-raml', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['raml'],
-        \ })
-    " }
-" }
 " Plugins For Terraform {
     " hashivim/vim-terraform - basic vim/terraform integration {
         call dein#add('hashivim/vim-terraform', {
