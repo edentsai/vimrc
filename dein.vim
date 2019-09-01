@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " fvictorio/vim-textobj-backticks - Text objects for regions inside backticks {
-        call dein#add('fvictorio/vim-textobj-backticks', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'a`'],
-                \ ['xo', 'i`'],
-            \ ],
-        \ })
-    " }
     " h1mesuke/textobj-wiw - Text object to select a range of words for humans {
         call dein#add('h1mesuke/textobj-wiw', {
             \ 'depends': ['vim-textobj-user'],
