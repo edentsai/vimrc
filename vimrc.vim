@@ -7,28 +7,6 @@ endif
 " }
 
 " Functions {
-    " isMacOSX() {
-        function! IsMacOSX()
-            return has('macunix')
-        endfunction
-    " }
-    " isLinux() {
-        function! IsLinux()
-            return has('unix') && !has('macunix') && !has('win32unix')
-        endfunction
-    " }
-    " isWindows() {
-        function! IsWindows()
-            return has('win16') || has('win32') || has('win64')
-        endfunction
-    " }
-    " MakeDirIfNoExists() - Make directory if no exists. {
-        function! MakeDirIfNoExists(path)
-            if !isdirectory(expand(a:path))
-                call mkdir(expand(a:path), "p")
-            endif
-        endfunction
-    " }
     " Preserve() - save last search, and cursor position. {
         function! Preserve(command)
             let _s=@/
