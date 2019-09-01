@@ -27,18 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Text Object Selection {
-    " thinca/vim-textobj-comment - Text objects for a comment {
-        call dein#add('thinca/vim-textobj-comment', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'ac'],
-                \ ['xo', 'ic'],
-            \ ],
-        \ })
-    " }
-" }
 " Plugins For CSS {
     " ap/vim-css-color - Highlight colors in css files {
         call dein#add('ap/vim-css-color', {
