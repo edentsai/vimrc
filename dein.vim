@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " tpope/vim-repeat - Extend repeatitions by the '.' key {
-        call dein#add('tpope/vim-repeat', {
-            \ 'lazy': 1,
-            \ 'on_map': ['.'],
-        \ })
-    " }
     " vasconcelloslf/vim-interestingwords - Allows you to highlight and navigate through (multiple) different words in a buffer {
         call dein#add('vasconcelloslf/vim-interestingwords', {
             \ 'lazy': 1,
