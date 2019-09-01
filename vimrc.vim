@@ -6,23 +6,6 @@ if !1
 endif
 " }
 
-" Functions {
-    " Preserve() - save last search, and cursor position. {
-        function! Preserve(command)
-            let _s=@/
-            let l = line(".")
-            let c = col(".")
-
-            " Do the business:
-            execute a:command
-
-            " Clean up: restore previous search history, and cursor position.
-            let @/=_s
-            call cursor(l, c)
-        endfunction
-    " }
-" }
-
 " Settings {
     " Compatible, Filetype, Syntax {
         set nocompatible                " Do not compatible with the old-fashion vi mode.
@@ -147,14 +130,6 @@ endif
         set t_vb=
         set novisualbell                " Disable the visual bell.
         set noerrorbells                " Disable the error bells.
-    " }
-" }
-
-" Auto Commands {
-    " File & Directory {
-        " Auto remove all trailing whitespace when save file. {
-            autocmd BufWritePre * :call Preserve("%s/\\s\\+$//ec")
-        " }
     " }
 " }
 
