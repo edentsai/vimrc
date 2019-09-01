@@ -27,14 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Terraform {
-    " juliosueiras/vim-terraform-completion - A Vim Autocompletion and linter for Terraform, a HashiCorp tool {
-        call dein#add('juliosueiras/vim-terraform-completion', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['tf', 'terraform'],
-        \ })
-    " }
-" }
 " Plugins For Shell, Bash, TMUX {
     " " edkolev/promptline.vim - Generate a fast shell prompt with powerline symbols and airline colors {
     "     call dein#add('edkolev/promptline.vim', {
