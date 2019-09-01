@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " reedes/vim-textobj-sentence  - Text objects for sentence {
-        call dein#add('reedes/vim-textobj-sentence', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'as'],
-                \ ['xo', 'is'],
-            \ ],
-        \ })
-    " }
     " saihoooooooo/vim-textobj-space - Text objects for continuity space {
         call dein#add('saihoooooooo/vim-textobj-space', {
             \ 'depends': ['vim-textobj-user'],
