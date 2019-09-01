@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Shell, Bash, TMUX {
-    " vimez/vim-tmux - Vim syntax highlighting for tmux.conf {
-        call dein#add('vimez/vim-tmux', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['conf', 'tmux'],
-        \ })
-    " }
     " dag/vim-fish - Vim support for editing fish scripts {
         call dein#add('dag/vim-fish', {
             \ 'lazy': 1,
