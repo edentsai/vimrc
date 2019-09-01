@@ -27,14 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Jenkinsfile {
-    " Jenkinsfile-vim-syntax - Jenkinsfile DSL vim syntax {
-        call dein#add('martinda/Jenkinsfile-vim-syntax', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['jenkinsfile', 'groovy'],
-        \ })
-    " }
-" }
 " Plugins For CSV {
     " chrisbra/csv.vim - A Filetype plugin for csv files {
         call dein#add('chrisbra/csv.vim', {
