@@ -27,16 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For JavaScript {
-    " pangloss/vim-javascript - Vastly improved Javascript indentation and syntax support in Vim {
-        call dein#add('pangloss/vim-javascript', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['htm', 'html', 'javascript'],
-        \ })
-
-        let javascript_enable_domhtmlcss = 1
-    " }
-" }
 " Plugins For JSON {
     " elzr/vim-json - Distinct highlighting of keywords vs values {
         call dein#add('elzr/vim-json', {
