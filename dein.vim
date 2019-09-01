@@ -28,23 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Editing {
-    " haya14busa/vim-asterisk - *-Improved {
-        call dein#add('haya14busa/vim-asterisk', {
-            \ 'lazy': 1,
-            \ 'on_map': ['<Plug>(asterisk-'],
-        \ })
-
-        let g:asterisk#keeppos = 1
-
-        map *   <Plug>(asterisk-*)
-        map #   <Plug>(asterisk-#)
-        map g*  <Plug>(asterisk-g*)
-        map g#  <Plug>(asterisk-g#)
-        map z*  <Plug>(asterisk-z*)
-        map gz* <Plug>(asterisk-gz*)
-        map z#  <Plug>(asterisk-z#)
-        map gz# <Plug>(asterisk-gz#)
-    " }
     " junegunn/vim-easy-align - a vim alignment plugin {
         call dein#add('junegunn/vim-easy-align', {
             \ 'lazy': 1,
