@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For HTML, XML {
-    " mattn/emmet-vim - The essential toolkit for web-developers {
-        call dein#add('mattn/emmet-vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['xml', 'htm', 'html', 'css', 'markdown'],
-        \ })
-    " }
     " othree/html5.vim - HTML5 omnicomplete and syntax  {
         call dein#add('othree/html5.vim', {
             \ 'lazy': 1,
