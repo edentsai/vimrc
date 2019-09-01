@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For HTML, XML {
-    " othree/html5-syntax.vim - HTML5 syntax for Vim {
-        call dein#add('othree/html5-syntax.vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['htm', 'html'],
-        \ })
-    " }
     " othree/xml.vim - Helps editing XML (and [x]html, sgml, xslt) files {
         call dein#add('othree/xml.vim', {
             \ 'lazy': 1,
