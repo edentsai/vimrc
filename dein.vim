@@ -28,12 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For CSS {
-    " ap/vim-css-color - Highlight colors in css files {
-        call dein#add('ap/vim-css-color', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['css', 'htm', 'html', 'xhtml', 'phtml'],
-        \ })
-    " }
     " hail2u/vim-css3-syntax - Add CSS3 syntax support to vim's built-in `syntax/css.vim`{
         call dein#add('hail2u/vim-css3-syntax', {
             \ 'lazy': 1,
