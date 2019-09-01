@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " akiyan/vim-textobj-php - Vim text object plugin for PHP view template {
-        call dein#add('akiyan/vim-textobj-php', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'ap'],
-                \ ['xo', 'ip'],
-            \ ],
-        \ })
-    " }
     " akiyan/vim-textobj-xml-attribute - Text objects for xml attribute {
         call dein#add('akiyan/vim-textobj-xml-attribute', {
             \ 'depends': ['vim-textobj-user'],
