@@ -27,19 +27,6 @@
 
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
-" Plugins For Text Editing {
-    " vasconcelloslf/vim-interestingwords - Allows you to highlight and navigate through (multiple) different words in a buffer {
-        call dein#add('vasconcelloslf/vim-interestingwords', {
-            \ 'lazy': 1,
-            \ 'on_func': ['InterestingWords', 'UncolorAllWords', 'WordNavigation'],
-        \ })
-
-        nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
-        nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
-        nnoremap <silent> n :call WordNavigation('forward')<CR>
-        nnoremap <silent> N :call WordNavigation('backward')<CR>
-    " }
-" }
 " Plugins For Text Object Selection {
     " kana/vim-textobj-user - Create your own text objects {
         " Reference: https://github.com/kana/vim-textobj-user/wiki
