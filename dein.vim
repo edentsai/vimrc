@@ -28,16 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For Text Object Selection {
-    " kana/vim-textobj-underscore - Underscore text-object for Vim {
-        call dein#add('kana/vim-textobj-underscore', {
-            \ 'depends': ['vim-textobj-user'],
-            \ 'lazy': 1,
-            \ 'on_map': [
-                \ ['xo', 'a_'],
-                \ ['xo', 'i_'],
-            \ ],
-        \ })
-    " }
     " kana/vim-textobj-syntax - Text objects for syntax highlighted items {
         call dein#add('kana/vim-textobj-syntax', {
             \ 'depends': ['vim-textobj-user'],
