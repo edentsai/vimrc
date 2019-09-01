@@ -28,17 +28,6 @@
     call SourceVimFilesInDirectoryByGlob($HOME . '/.vim/dein.vim.d', '*.vim')
 
 " Plugins For HTML, XML {
-    " othree/html5.vim - HTML5 omnicomplete and syntax  {
-        call dein#add('othree/html5.vim', {
-            \ 'lazy': 1,
-            \ 'on_ft': ['htm', 'html', 'css'],
-        \ })
-
-        let g:html5_event_handler_attributes_complete = 1
-        let g:html5_rdfa_attributes_complete = 1
-        let g:html5_microdata_attributes_complete = 1
-        let g:html5_aria_attributes_complete = 1
-    " }
     " othree/html5-syntax.vim - HTML5 syntax for Vim {
         call dein#add('othree/html5-syntax.vim', {
             \ 'lazy': 1,
